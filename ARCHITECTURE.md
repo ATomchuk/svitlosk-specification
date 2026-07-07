@@ -354,3 +354,94 @@ Referenced by:
 - TELEGRAM_PUBLICATION.md
 - DESIGN_SYSTEM.md
 - ENGINEERING.md
+
+# Core System Principles
+
+The SvitloSk architecture is based on a strict separation between data acquisition, interpretation, storage and publication.
+
+Every subsystem has a single responsibility.
+
+The system SHALL NOT contain components that perform unrelated functions.
+
+---
+
+## Principle 1 — Single Source of Truth
+
+Every published message SHALL originate from officially published open data.
+
+The system SHALL NOT generate information from assumptions or unofficial sources.
+
+---
+
+## Principle 2 — Interpretation
+
+The system interprets official data.
+
+Interpretation means transforming official technical information into a format understandable by residents of the Starokostiantyniv Community.
+
+Interpretation MAY include:
+
+- restructuring information;
+- grouping events;
+- calculating durations;
+- generating timelines;
+- generating visual schedules;
+- preparing publication layouts.
+
+Interpretation SHALL NEVER modify factual information.
+
+---
+
+## Principle 3 — Automation
+
+All routine operations SHOULD be automated whenever possible.
+
+Automation includes:
+
+- downloading official data;
+- validation;
+- interpretation;
+- publication generation;
+- archive creation;
+- notification preparation.
+
+Human participation SHOULD be required only for exceptional situations.
+
+---
+
+## Principle 4 — Deterministic Processing
+
+Identical input SHALL always produce identical output.
+
+The system SHALL avoid non-deterministic behaviour.
+
+---
+
+## Principle 5 — Traceability
+
+Every published artifact SHALL be traceable to:
+
+- source data;
+- processing time;
+- software version;
+- publication time.
+
+Traceability SHALL be preserved for archived publications.
+
+---
+
+## Principle 6 — Independence of Components
+
+Each architectural component SHALL have a clearly defined responsibility.
+
+Components SHOULD communicate only through documented interfaces.
+
+Internal implementation SHALL NOT affect external behaviour.
+
+---
+
+## Principle 7 — Extensibility
+
+New publication channels, parsers or visualization modules SHALL be addable without redesigning the entire architecture.
+
+Future expansion SHALL preserve backward compatibility whenever practical.
