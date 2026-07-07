@@ -24,7 +24,7 @@ This document defines the official structure of the SvitloSk Specification repos
 
 It provides a single authoritative index of all specification documents, their purpose, status, identifiers and relationships.
 
-Every normative document in the repository SHALL be listed here.
+Every normative document SHALL be listed here.
 
 ---
 
@@ -53,9 +53,10 @@ New contributors SHOULD read documents in the following order.
 3. PROJECT_PRINCIPLES.md
 4. DOCUMENT_INDEX.md
 5. EDITORIAL_STANDARDS.md
-6. RFC Process
-7. Architecture Specifications
-8. Component Specifications
+6. GLOSSARY.md
+7. RFC_PROCESS.md
+8. Architecture Specifications
+9. Component Specifications
 
 ---
 
@@ -73,11 +74,13 @@ Examples:
 
 - CHARTER
 - PROJECT_PRINCIPLES
+- DOCUMENT_INDEX
 - EDITORIAL_STANDARDS
+- GLOSSARY
+- RFC_PROCESS
 - ARCHITECTURE
 - DATA_MODEL
 - API
-- RFC
 
 ---
 
@@ -104,18 +107,18 @@ Examples:
 | DOC-000 | CHARTER.md | Normative | Stable | Defines project mission and governance |
 | DOC-001 | PROJECT_PRINCIPLES.md | Normative | Stable | Defines fundamental project principles |
 | DOC-002 | DOCUMENT_INDEX.md | Normative | Stable | Defines repository document index |
+| DOC-003 | EDITORIAL_STANDARDS.md | Normative | Stable | Defines editorial and writing rules |
+| DOC-004 | GLOSSARY.md | Normative | Stable | Defines official project terminology |
+| DOC-005 | RFC_PROCESS.md | Normative | Stable | Defines the lifecycle of RFC documents |
 
 ---
 
 # Planned Documents
 
-The following documents are planned.
+The following document identifiers are reserved.
 
-| Planned ID | Document |
-|------------|----------|
-| DOC-003 | EDITORIAL_STANDARDS.md |
-| DOC-004 | GLOSSARY.md |
-| DOC-005 | RFC_PROCESS.md |
+| Reserved ID | Document |
+|-------------|----------|
 | DOC-006 | ARCHITECTURE.md |
 | DOC-007 | DATA_MODEL.md |
 | DOC-008 | TELEGRAM_PUBLICATION.md |
@@ -146,6 +149,12 @@ DOCUMENT_INDEX
 EDITORIAL_STANDARDS
       │
       ▼
+GLOSSARY
+      │
+      ▼
+RFC_PROCESS
+      │
+      ▼
 Architecture Specifications
       │
       ▼
@@ -169,4 +178,4 @@ Depends on:
 
 Referenced by:
 
-- all future specification documents
+- all normative specification documents
