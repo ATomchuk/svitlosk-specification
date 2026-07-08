@@ -2,51 +2,41 @@
 
 Project Specification
 
----
+**Document ID:** DOC-002
 
-Document ID: DOC-002
+**Document:** DOCUMENT_INDEX.md
 
-Document: DOCUMENT_INDEX.md
+**Project:** SvitloSk
 
-Project: SvitloSk
+**Status:** Stable (Стабільний)
 
-Status: Stable (Стабільний)
+**Class:** Normative
 
-Class: Normative
-
-Maintainer: SvitloSk Project
+**Maintainer:** SvitloSk Project
 
 ---
 
-## Purpose
+# Purpose
 
-This document defines the official structure of the SvitloSk Specification repository.
+This document defines the official structure of the SvitloSk Project Specification.
 
-It provides a single authoritative index of all specification documents, their purpose, status, identifiers and relationships.
+It establishes the canonical organization of project documentation, the recommended reading order, document categories and repository rules.
 
-Every normative document SHALL be listed here.
+This document is normative.
 
 ---
 
 # Why this document exists
 
-The Specification repository is expected to evolve for many years.
+As the SvitloSk specification grows, documentation becomes a system rather than a collection of independent files.
 
-Without a single authoritative index it becomes difficult to understand
-
-- which documents exist;
-- which documents are normative;
-- which documents are informative;
-- which documents supersede older versions;
-- where new contributors should begin reading.
-
-DOCUMENT_INDEX.md solves this problem.
+This document provides a single entry point into the specification and defines how documents are organized and maintained.
 
 ---
 
 # Reading Order
 
-New contributors SHOULD read documents in the following order.
+New contributors SHOULD read the documents in the following order.
 
 1. README.md
 2. CHARTER.md
@@ -54,9 +44,94 @@ New contributors SHOULD read documents in the following order.
 4. DOCUMENT_INDEX.md
 5. EDITORIAL_STANDARDS.md
 6. GLOSSARY.md
-7. RFC_PROCESS.md
-8. Architecture Specifications
-9. Component Specifications
+7. TERRITORIAL_MODEL.md
+8. RFC_PROCESS.md
+9. ARCHITECTURE.md
+10. DATA_MODEL.md
+11. Component Specifications (SSP)
+12. Telegram Journal Specifications (TJS)
+
+---
+
+# Repository Structure
+
+The specification is organized into four logical groups.
+
+## 1. Core Governance
+
+Documents defining the project itself.
+
+- CHARTER.md
+- PROJECT_PRINCIPLES.md
+
+---
+
+## 2. Repository Governance
+
+Documents defining repository rules and common terminology.
+
+- DOCUMENT_INDEX.md
+- EDITORIAL_STANDARDS.md
+- GLOSSARY.md
+- TERRITORIAL_MODEL.md
+- RFC_PROCESS.md
+
+---
+
+## 3. System Architecture
+
+Documents describing the overall architecture of SvitloSk.
+
+- ARCHITECTURE.md
+- DATA_MODEL.md
+
+---
+
+## 4. Component Specifications
+
+Detailed specifications of individual system components.
+
+Directory:
+
+```
+/specification
+```
+
+Current specifications include:
+
+- SSP-001 — Data Pipeline
+- SSP-002 — Parser
+- SSP-003 — Publication Engine
+- SSP-004 — Telegram Channel
+- SSP-005 — Data Storage
+- SSP-006 — Schedule Generator
+- SSP-007 — Graphic Generator
+- SSP-008 — API
+- SSP-009 — Configuration
+- SSP-010 — Logging
+- SSP-011 — Monitoring
+- SSP-012 — Security
+- SSP-013 — Deployment
+
+---
+
+## 5. Telegram Journal Specifications
+
+Normative specifications describing the Public Information Journal.
+
+Directory:
+
+```
+/telegram
+```
+
+Current specifications include:
+
+- TJS-001 — Journal Concept
+- TJS-002 — Publication Lifecycle
+- TJS-003 — Post Structure
+- TJS-004 — Editorial Policy
+- TJS-005+ (future documents)
 
 ---
 
@@ -66,116 +141,115 @@ The repository contains two classes of documents.
 
 ## Normative
 
-Normative documents define mandatory project rules.
+Normative documents define mandatory project requirements.
 
-Normative documents use RFC 2119 terminology.
+Normative documents SHALL use RFC 2119 terminology where applicable.
 
-Examples:
+Examples include:
 
 - CHARTER
 - PROJECT_PRINCIPLES
-- DOCUMENT_INDEX
-- EDITORIAL_STANDARDS
 - GLOSSARY
-- RFC_PROCESS
+- TERRITORIAL_MODEL
 - ARCHITECTURE
 - DATA_MODEL
-- API
+- SSP Specifications
+- TJS Specifications
 
 ---
 
 ## Informative
 
-Informative documents explain ideas, examples, historical information or implementation notes.
+Informative documents provide explanations, examples and implementation guidance.
 
-They never introduce mandatory requirements.
+Informative documents SHALL NOT introduce mandatory requirements.
 
-Examples:
+Examples include:
 
 - ADR
-- Examples
-- Diagrams
 - Tutorials
+- Examples
 - Migration Guides
+- Design Notes
 
 ---
 
-# Current Specification Documents
+# Core Documents
 
 | ID | Document | Class | Status | Purpose |
-|----|----------|--------|---------|----------|
-| DOC-000 | CHARTER.md | Normative | Stable | Defines project mission and governance |
-| DOC-001 | PROJECT_PRINCIPLES.md | Normative | Stable | Defines fundamental project principles |
-| DOC-002 | DOCUMENT_INDEX.md | Normative | Stable | Defines repository document index |
-| DOC-003 | EDITORIAL_STANDARDS.md | Normative | Stable | Defines editorial and writing rules |
-| DOC-004 | GLOSSARY.md | Normative | Stable | Defines official project terminology |
-| DOC-005 | RFC_PROCESS.md | Normative | Stable | Defines the lifecycle of RFC documents |
+|----|----------|-------|--------|---------|
+| DOC-000 | CHARTER.md | Normative | Stable | Project mission and governance |
+| DOC-001 | PROJECT_PRINCIPLES.md | Normative | Stable | Fundamental engineering principles |
+| DOC-002 | DOCUMENT_INDEX.md | Normative | Stable | Repository structure and navigation |
+| DOC-003 | EDITORIAL_STANDARDS.md | Normative | Stable | Editorial and writing rules |
+| DOC-004 | GLOSSARY.md | Normative | Stable | Official terminology |
+| DOC-005 | TERRITORIAL_MODEL.md | Normative | Stable | Canonical territorial hierarchy |
+| DOC-006 | RFC_PROCESS.md | Normative | Stable | RFC lifecycle |
 
 ---
 
-# Planned Documents
-
-The following document identifiers are reserved.
-
-| Reserved ID | Document |
-|-------------|----------|
-| DOC-006 | ARCHITECTURE.md |
-| DOC-007 | DATA_MODEL.md |
-| DOC-008 | TELEGRAM_PUBLICATION.md |
-| DOC-009 | PARSER_SPECIFICATION.md |
-| DOC-010 | PUBLISHER_SPECIFICATION.md |
-| DOC-011 | GRAPH_SPECIFICATION.md |
-| DOC-012 | DESIGN_SYSTEM.md |
-| DOC-013 | ENGINEERING.md |
-
-Document identifiers SHALL NEVER be reused.
-
-Reserved identifiers SHALL remain reserved permanently.
-
----
-
-# Document Dependencies
+# Specification Hierarchy
 
 ```
+README
+   │
+   ▼
 CHARTER
-      │
-      ▼
+   │
+   ▼
 PROJECT_PRINCIPLES
-      │
-      ▼
+   │
+   ▼
 DOCUMENT_INDEX
-      │
-      ▼
+   │
+   ▼
 EDITORIAL_STANDARDS
-      │
-      ▼
+   │
+   ▼
 GLOSSARY
-      │
-      ▼
+   │
+   ▼
+TERRITORIAL_MODEL
+   │
+   ▼
 RFC_PROCESS
-      │
-      ▼
-Architecture Specifications
-      │
-      ▼
-Implementation Specifications
+   │
+   ▼
+ARCHITECTURE
+   │
+   ▼
+DATA_MODEL
+   │
+   ▼
+Component Specifications (SSP)
+   │
+   ▼
+Telegram Journal Specifications (TJS)
 ```
 
 ---
 
-# Repository Rule
+# Repository Rules
 
-Every new normative document MUST be added to this index before it becomes Stable.
+Every normative document SHALL be registered in this index.
+
+Document identifiers SHALL be unique.
+
+Reading order SHALL be maintained by this document.
+
+Normative documents SHALL belong to exactly one document group.
+
+New specifications SHALL be placed in their designated repository directory.
 
 ---
 
 # References
 
-Depends on:
+## Depends on
 
 - CHARTER.md
 - PROJECT_PRINCIPLES.md
 
-Referenced by:
+## Referenced by
 
-- all normative specification documents
+All normative documents.
