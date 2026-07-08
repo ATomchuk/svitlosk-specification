@@ -1,20 +1,26 @@
 # SSP-003 — Publication Engine
 
-Status: Draft
+**Status:** Stable (Стабільний)
 
-Specification ID: SSP-003
+**Specification ID:** SSP-003
 
-Author: SvitloSk Project
+**Component:** Publication Engine
+
+**Class:** Normative
+
+**Maintainer:** SvitloSk Project
 
 ---
 
 # 1. Purpose
 
-This specification defines the Publication Engine of the SvitloSk system.
+This specification defines the normative requirements for the SvitloSk Publication Engine.
 
-The Publication Engine transforms normalized data into public information products while preserving accuracy, consistency and traceability.
+The Publication Engine transforms the canonical Normalized Dataset into a deterministic Publication Package.
 
-This document is normative.
+Each Publication represents exactly one Territory and is rendered according to the Telegram Journal Specification.
+
+The Publication Engine SHALL NOT modify operational data produced by the Parser.
 
 ---
 
@@ -22,129 +28,278 @@ This document is normative.
 
 This specification applies to:
 
-- Telegram publications;
-- PWA data delivery;
+- publication generation;
+- territorial grouping;
+- publication ordering;
 - publication updates;
-- publication history;
-- future publication channels.
+- publication lifecycle;
+- publication metadata;
+- multi-channel publication preparation.
 
 ---
 
-# 3. Responsibilities
+# 3. Design Principles
 
-The Publication Engine shall:
+The Publication Engine SHALL operate according to the following principles:
 
-- consume only normalized datasets;
-- generate publications;
+- determinism;
+- reproducibility;
+- traceability;
+- territorial consistency;
+- editorial independence;
+- fail-safe processing.
+
+The same Normalized Dataset SHALL always produce the same Publication Package.
+
+---
+
+# 4. Responsibilities
+
+The Publication Engine SHALL:
+
+- consume the canonical Normalized Dataset;
+- group operational data by Territory;
+- generate Publications;
+- assemble Publication Packages;
+- maintain publication order;
 - detect publication changes;
-- update existing publications;
-- preserve publication consistency;
-- maintain publication metadata.
+- update existing Publications;
+- generate publication metadata.
 
-The Publication Engine shall never modify the source dataset.
+The Publication Engine SHALL NOT:
 
----
-
-# 4. Input
-
-The only accepted input is the normalized dataset produced by the Parser.
-
-Direct access to external data sources is prohibited.
+- retrieve Official Open Data;
+- modify operational data;
+- interpret official information;
+- perform data normalization;
+- calculate analytics.
 
 ---
 
-# 5. Publication Types
+# 5. Input
 
-The engine supports:
+The only accepted input SHALL be the Normalized Dataset produced by the Parser.
 
-- Planned outages;
-- Emergency outages;
-- Tomorrow schedule;
-- Tomorrow outage chart;
-- Service announcements;
-- Technical notifications.
+Direct access to Official Open Data sources SHALL NOT be permitted.
 
-New publication types may be introduced by future specifications.
+The input dataset SHALL conform to `DATA_MODEL.md`.
 
 ---
 
-# 6. Publication Rules
+# 6. Territorial Processing
 
-Every publication shall:
+Publications SHALL be generated according to the territorial hierarchy defined in `TERRITORIAL_MODEL.md`.
 
-- contain only official information;
+Each Publication SHALL represent exactly one Territory.
+
+A Territory SHALL be one of:
+
+- the Administrative Centre;
+- one Starosta District.
+
+Operational data SHALL be grouped by Territory before publication generation begins.
+
+---
+
+# 7. Publication
+
+A Publication is the smallest independently published information unit.
+
+Each Publication SHALL:
+
+- represent one Territory;
+- contain only Official Open Data;
 - be generated automatically;
-- have deterministic content;
-- include generation timestamp when required.
+- preserve source accuracy;
+- remain deterministic.
 
-Publications shall never contain manually added information.
+The Publication Engine SHALL NOT merge multiple Territories into one Publication.
 
 ---
 
-# 7. Update Policy
+# 8. Publication Package
 
-Publications may be:
+A Publication Package represents the complete set of Publications generated for one reporting day.
+
+A Publication Package SHALL contain zero or more Publications.
+
+The number of Publications depends entirely on the availability of Official Open Data.
+
+Every Publication SHALL belong to exactly one Publication Package.
+
+---
+
+# 9. Publication Order
+
+Within a Publication Package, Publications SHALL appear in the following order:
+
+1. Administrative Centre
+2. Starosta Districts
+3. Tomorrow Publications
+
+The order of Starosta Districts SHALL remain stable between executions.
+
+Temporary Tomorrow Publications SHALL always appear after current-day Publications.
+
+---
+
+# 10. Publication Content
+
+The Publication Engine defines WHAT information is published.
+
+The Telegram Journal Specification defines HOW the information is presented.
+
+Publication formatting SHALL NOT be defined by this specification.
+
+---
+
+# 11. Canonical Templates
+
+Every Publication SHALL be rendered using a Canonical Template defined by the Telegram Journal Specification.
+
+The Publication Engine SHALL select the appropriate template based on:
+
+- Territory;
+- publication purpose;
+- reporting day.
+
+---
+
+# 12. Publication Lifecycle
+
+A Publication MAY be:
 
 - created;
 - updated;
 - removed.
 
-Updates shall occur only when the normalized dataset changes.
+Publications SHALL only change when the underlying Normalized Dataset changes.
 
-Unchanged publications shall remain untouched.
+Unchanged Publications SHALL remain unchanged.
 
----
+Temporary Tomorrow Publications SHALL be removed after the reporting period ends.
 
-# 8. Telegram Behaviour
-
-Telegram is the official publication journal of SvitloSk.
-
-The Publication Engine shall:
-
-- publish daily information;
-- edit publications when official data changes;
-- preserve historical publications for the current day;
-- remove temporary "Tomorrow" publications after they become obsolete.
+Historical Publications SHALL remain preserved according to project policy.
 
 ---
 
-# 9. Publication Categories
+# 13. Metadata
 
-The official publication order is:
+Each Publication SHALL contain metadata including:
 
-1. Planned outages.
-2. Emergency outages.
-3. Tomorrow schedule.
-4. Tomorrow outage chart.
-5. Service information.
+- Publication ID;
+- Package ID;
+- Territory ID;
+- dataset version;
+- generation timestamp;
+- publication status.
 
----
-
-# 10. Publication Integrity
-
-Every publication shall represent the current official state at the time of generation.
-
-No publication may contain speculative information.
+Metadata SHALL accompany every Publication.
 
 ---
 
-# 11. Error Handling
+# 14. Idempotency
 
-Publication failures shall:
+Publication generation SHALL be idempotent.
 
-- be logged;
-- be retryable;
-- never corrupt previous publications.
+Generating Publications multiple times from an identical Normalized Dataset SHALL always produce identical output.
 
 ---
 
-# 12. References
+# 15. Error Handling
 
+Publication failures SHALL NEVER modify previously published information.
+
+Possible actions include:
+
+- logging processing errors;
+- retrying publication;
+- preserving previous Publications;
+- reporting publication failures.
+
+Partial publication SHALL NOT corrupt an existing Publication Package.
+
+---
+
+# 16. Artificial Intelligence
+
+The Publication Engine MAY use AI-assisted techniques as implementation details.
+
+AI MAY assist with:
+
+- publication optimization;
+- layout preparation;
+- template selection;
+- quality validation.
+
+AI SHALL NOT:
+
+- generate operational facts;
+- modify Official Open Data;
+- change territorial grouping;
+- alter editorial rules.
+
+All generated Publications SHALL remain fully deterministic.
+
+---
+
+# 17. Multi-Channel Publishing
+
+The Publication Engine SHALL remain independent of any specific publication platform.
+
+Telegram Journal is the current primary publication channel.
+
+Future publication channels MAY include:
+
+- PWA;
+- Web Portal;
+- Public API;
+- Push Notifications.
+
+Publication generation SHALL remain channel-independent.
+
+---
+
+# 18. Non-Goals
+
+The Publication Engine SHALL NOT:
+
+- collect Official Open Data;
+- normalize datasets;
+- archive datasets;
+- calculate analytics;
+- modify territorial relationships.
+
+These responsibilities belong to other system components.
+
+---
+
+# 19. Repository Rule
+
+Normative documents SHALL reference the Publication Engine as the only component responsible for generating Publications from the Normalized Dataset.
+
+Editorial presentation SHALL be defined exclusively by the Telegram Journal Specification.
+
+---
+
+# 20. References
+
+## Depends on
+
+- CHARTER.md
+- PROJECT_PRINCIPLES.md
+- GLOSSARY.md
+- TERRITORIAL_MODEL.md
+- DATA_MODEL.md
 - SSP-001 — Data Pipeline
 - SSP-002 — Parser
-- SYSTEM_OVERVIEW.md
-- ARCHITECTURE.md
+
+## Referenced by
+
+- Telegram Journal Specification
+- SSP-005 — Data Storage
+- Future Publication Channels
 
 ---
 
-End of Specification.
+# End of Specification
