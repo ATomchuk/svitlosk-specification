@@ -1,13 +1,12 @@
 # SvitloSk Specification (SSP)
 
 ![Status](https://img.shields.io/badge/status-active%20development-orange)
-![Specification](https://img.shields.io/badge/specification-Core%20v0.1-blue)
+![Specification](https://img.shields.io/badge/specification-stable-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
-![Documentation](https://img.shields.io/badge/docs-complete-success)
 
 > **Official Technical Specification of the SvitloSk Project**
 
-SvitloSk is an **Automated Open Data Information System** designed to collect, process and publish official information about electricity outages for residents of the **Starokostiantyniv Territorial Community (Ukraine)**.
+SvitloSk is an **Automated Open Data Information System** designed to collect, interpret and publish official information about electricity outages for residents of the Starokostiantyniv Territorial Community (Ukraine).
 
 This repository contains the official specification governing the architecture, engineering principles, technical standards and documentation of the SvitloSk project.
 
@@ -28,13 +27,13 @@ SvitloSk solves this problem.
 
 The system continuously processes official public data and automatically transforms it into clear, structured and accessible information without changing the meaning of the original source.
 
-The project demonstrates how open data can become a practical public service.
+The project demonstrates how open data can become a practical public information service.
 
 ---
 
 # Official Definition
 
-> **SvitloSk is an Automated Open Data Information System that continuously processes official public information about electricity outages and delivers understandable, structured and timely information to residents of the Starokostiantyniv Territorial Community through automated digital services.**
+**SvitloSk** is an **Automated Open Data Information System** that continuously processes official public information about electricity outages and delivers understandable, structured and timely information to residents through automated digital services while preserving the meaning of the original source.
 
 ---
 
@@ -48,7 +47,7 @@ Transform complex official electricity outage information into reliable, underst
 
 SvitloSk aims to become a reference implementation of a community-level public information platform based entirely on official open data.
 
-Although the architecture is designed to be reusable, the current project is dedicated exclusively to the **Starokostiantyniv Territorial Community**.
+Although the architecture is designed to be reusable, the current implementation is dedicated exclusively to the Starokostiantyniv Territorial Community.
 
 ---
 
@@ -73,39 +72,29 @@ The project is guided by the following values.
 
 SvitloSk follows several fundamental engineering principles.
 
-## One document — one complete idea
+### One document — one complete idea
 
 Each document has one clearly defined responsibility.
 
----
+### Deterministic processing
 
-## Deterministic processing
+The same input SHALL always produce the same output.
 
-The same input shall always produce the same output.
-
----
-
-## Respect for open data
+### Respect for Open Data
 
 Official public information is never modified.
 
 Only its presentation is improved.
 
----
-
-## Automation first
+### Automation First
 
 Every repeatable process should eventually become automated.
 
----
-
-## Organic evolution
+### Organic Evolution
 
 The specification grows by extending the existing architecture rather than replacing it.
 
----
-
-## Stable specifications
+### Stable Specifications
 
 Published specifications remain stable.
 
@@ -115,64 +104,58 @@ Architectural changes require documented decisions.
 
 # System Architecture
 
-```mermaid
-flowchart LR
-
-A[Official Public Data]
---> B[Parser]
-
-B --> C[Normalization]
-
-C --> D[Data Storage]
-
-D --> E[Schedule Generator]
-
-E --> F[Graphic Generator]
-
-E --> G[Publication Engine]
-
-F --> G
-
-G --> H[Telegram Channel]
-
-G --> I[PWA Application]
-
-D --> J[Historical Archive]
-
-J --> K[Analytics]
+```text
+Official Open Data
+        │
+        ▼
+     Parser
+        │
+        ▼
+ Interpretation
+        │
+        ▼
+  Data Model
+        │
+        ▼
+ Publication Engine
+        │
+        ├──────────────┐
+        ▼              ▼
+ Telegram         Future Services
+ Publisher
 ```
 
 ---
 
 # Repository Structure
 
-```
+```text
 .
 ├── specification/
 │   ├── SSP-001-Data-Pipeline.md
 │   ├── SSP-002-Parser.md
 │   ├── SSP-003-Publication-Engine.md
-│   ├── SSP-004-Telegram-Channel.md
-│   ├── SSP-005-Data-Storage.md
-│   ├── SSP-006-Schedule-Generator.md
-│   ├── SSP-007-Graphic-Generator.md
-│   ├── SSP-008-API.md
-│   ├── SSP-009-Configuration.md
-│   ├── SSP-010-Logging.md
-│   ├── SSP-011-Monitoring.md
-│   ├── SSP-012-Security.md
+│   ├── ...
 │   └── SSP-013-Deployment.md
+│
+├── telegram/
+│   ├── TJS-001-Journal-Concept.md
+│   ├── TJS-002-Publication-Lifecycle.md
+│   ├── TJS-003-Post-Structure.md
+│   ├── TJS-004-Editorial-Policy.md
+│   └── TJS-005-...
 │
 ├── README.md
 ├── CHARTER.md
 ├── PROJECT_PRINCIPLES.md
+├── DOCUMENT_INDEX.md
+├── EDITORIAL_STANDARDS.md
+├── GLOSSARY.md
+├── TERRITORIAL_MODEL.md
+├── RFC_PROCESS.md
 ├── ARCHITECTURE.md
 ├── SYSTEM_OVERVIEW.md
 ├── DATA_MODEL.md
-├── GLOSSARY.md
-├── RFC_PROCESS.md
-├── EDITORIAL_STANDARDS.md
-├── DOCUMENT_INDEX.md
 └── LICENSE
 ```
 
@@ -180,46 +163,75 @@ J --> K[Analytics]
 
 # Documentation
 
-## Repository Documents
+The specification is organized into five logical groups.
 
-| Document | Purpose |
-|----------|---------|
-| [README.md](README.md) | Repository overview |
-| [CHARTER.md](CHARTER.md) | Project charter |
-| [PROJECT_PRINCIPLES.md](PROJECT_PRINCIPLES.md) | Engineering principles |
-| [ARCHITECTURE.md](ARCHITECTURE.md) | Overall architecture |
-| [SYSTEM_OVERVIEW.md](SYSTEM_OVERVIEW.md) | High-level system description |
-| [DATA_MODEL.md](DATA_MODEL.md) | Data model |
-| [GLOSSARY.md](GLOSSARY.md) | Official terminology |
-| [RFC_PROCESS.md](RFC_PROCESS.md) | RFC workflow |
-| [EDITORIAL_STANDARDS.md](EDITORIAL_STANDARDS.md) | Documentation rules |
-| [DOCUMENT_INDEX.md](DOCUMENT_INDEX.md) | Documentation index |
+## Core Governance
+
+- CHARTER.md
+- PROJECT_PRINCIPLES.md
+
+## Repository Governance
+
+- DOCUMENT_INDEX.md
+- EDITORIAL_STANDARDS.md
+- GLOSSARY.md
+- TERRITORIAL_MODEL.md
+- RFC_PROCESS.md
+
+## System Architecture
+
+- ARCHITECTURE.md
+- SYSTEM_OVERVIEW.md
+- DATA_MODEL.md
+
+## Component Specifications
+
+Located in:
+
+```text
+/specification
+```
+
+Includes the SSP series describing individual system components.
+
+## Telegram Journal Specification
+
+Located in:
+
+```text
+/telegram
+```
+
+Includes the TJS series defining the Public Information Journal.
 
 ---
 
-## Technical Specifications
+# Specification Hierarchy
 
-| Specification | Description |
-|--------------|-------------|
-| SSP-001 | Data Pipeline |
-| SSP-002 | Parser |
-| SSP-003 | Publication Engine |
-| SSP-004 | Telegram Channel |
-| SSP-005 | Data Storage |
-| SSP-006 | Schedule Generator |
-| SSP-007 | Graphic Generator |
-| SSP-008 | Internal API |
-| SSP-009 | Configuration |
-| SSP-010 | Logging |
-| SSP-011 | Monitoring |
-| SSP-012 | Security |
-| SSP-013 | Deployment |
+```text
+README
+   │
+   ▼
+Core Governance
+   │
+   ▼
+Repository Governance
+   │
+   ▼
+System Architecture
+   │
+   ▼
+Component Specifications (SSP)
+   │
+   ▼
+Telegram Journal Specifications (TJS)
+```
 
 ---
 
 # Open Data Principles
 
-SvitloSk is built upon official public information.
+SvitloSk is built entirely upon official public information.
 
 The system:
 
@@ -233,11 +245,13 @@ The system:
 
 # Current Status
 
-Current development stage:
+**Core Specification** — Complete
 
-**Core Specification Completed**
+**Telegram Journal Specification** — In Progress
 
-The repository currently contains the complete Core Specification describing the architecture and engineering standards of the SvitloSk platform.
+The repository currently contains the complete architectural specification of the SvitloSk platform.
+
+Development is focused on standardizing the Telegram Public Information Journal.
 
 ---
 
@@ -245,18 +259,17 @@ The repository currently contains the complete Core Specification describing the
 
 Current priorities:
 
-- Repository audit
-- Editorial review
-- Ukrainian documentation
-- Extended specifications
-- Reference implementation
-- Public release
+- Telegram Journal Specification
+- Repository Audit
+- Ukrainian Translation
+- Reference Implementation
+- Public Release
 
 ---
 
 # Contributing
 
-The repository currently serves as the official project specification.
+This repository currently serves as the official project specification.
 
 Contribution guidelines will be published after Specification Version 1.0.
 
@@ -266,14 +279,12 @@ Contribution guidelines will be published after Specification Version 1.0.
 
 Distributed under the terms of the MIT License.
 
-See [LICENSE](LICENSE).
+See `LICENSE`.
 
 ---
 
 # Project Status
 
-Active Development
-
----
+**Active Development**
 
 © SvitloSk Project
