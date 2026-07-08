@@ -1,22 +1,26 @@
 # SSP-002 — Parser
 
-Status: Draft
+**Status:** Stable (Стабільний)
 
-Specification ID: SSP-002
+**Specification ID:** SSP-002
 
-Author: SvitloSk Project
+**Component:** Parser
+
+**Class:** Normative
+
+**Maintainer:** SvitloSk Project
 
 ---
 
 # 1. Purpose
 
-This specification defines the official requirements for the SvitloSk data parser.
+This specification defines the normative requirements for the SvitloSk Parser.
 
-The parser is responsible for collecting official public data, validating it, normalizing it and producing a consistent internal dataset.
+The Parser is responsible for collecting Official Open Data, validating it, normalizing it and producing a canonical Normalized Dataset for downstream system components.
 
-The parser is the only component allowed to create the internal data model.
+The Parser is the only component authorized to transform external Official Open Data into the internal logical representation defined by `DATA_MODEL.md`.
 
-This document is normative.
+The Parser SHALL NOT interpret information, generate publications or modify official facts.
 
 ---
 
@@ -26,146 +30,266 @@ This specification applies to:
 
 - data acquisition;
 - source validation;
-- data normalization;
+- change detection;
+- normalization;
+- territorial resolution;
 - metadata generation;
-- dataset publishing.
+- dataset production.
 
 ---
 
-# 3. Responsibilities
+# 3. Design Principles
 
-The parser shall:
+The Parser SHALL operate according to the following principles:
 
-- retrieve official public data;
-- detect updates;
-- validate received data;
-- normalize information;
-- generate metadata;
-- publish a normalized dataset.
+- determinism;
+- reproducibility;
+- traceability;
+- source transparency;
+- fail-safe processing.
 
-The parser shall never modify or interpret official information.
+The same input SHALL always produce the same output.
+
+Execution environment, locale or execution time SHALL NOT affect the generated dataset.
 
 ---
 
-# 4. Data Sources
+# 4. Responsibilities
 
-The parser accepts only official publicly available sources.
+The Parser SHALL:
 
-Examples include:
+- retrieve Official Open Data;
+- validate received information;
+- detect dataset changes;
+- normalize all operational data;
+- resolve territorial entities;
+- generate processing metadata;
+- produce one canonical Normalized Dataset.
 
-- planned outage schedules;
-- emergency outage notifications;
-- official operator publications;
+The Parser SHALL NOT:
+
+- interpret operational information;
+- generate publications;
+- apply editorial formatting;
+- calculate analytics;
+- modify official facts.
+
+---
+
+# 5. Official Data Sources
+
+The Parser SHALL accept only Official Open Data.
+
+Typical sources include:
+
+- planned power outage schedules;
+- emergency power outage notifications;
+- official Distribution System Operator publications;
 - official public registries.
 
-Unofficial sources are prohibited.
+Unofficial sources SHALL NOT be processed.
 
 ---
 
-# 5. Input Requirements
+# 6. Input Requirements
 
-Each input source shall contain sufficient information to identify:
+Each accepted dataset SHALL contain sufficient information to identify, where applicable:
 
 - publication date;
-- affected territory;
-- affected settlements;
-- outage periods;
-- affected addresses.
+- publication time;
+- affected Territory;
+- affected Settlement;
+- affected Address;
+- outage interval;
+- official source.
 
-Incomplete datasets shall be reported.
+Incomplete or invalid datasets SHALL be rejected or reported.
 
 ---
 
-# 6. Normalization
+# 7. Normalization
 
-The parser converts all incoming data into the internal data model.
+The Parser SHALL transform incoming data into entities conforming to `DATA_MODEL.md`.
 
-Normalization includes:
+Territorial entities SHALL conform to `TERRITORIAL_MODEL.md`.
 
-- administrative hierarchy;
-- settlement names;
-- street names;
-- house numbers;
+Normalization MAY include:
+
+- canonical settlement names;
+- canonical street names;
+- building numbers;
 - outage intervals;
-- metadata.
+- queue identifiers;
+- subqueue identifiers;
+- metadata enrichment.
 
-After normalization all publication modules consume identical data.
+Normalization SHALL preserve the meaning of the original Official Open Data.
 
 ---
 
-# 7. Change Detection
+# 8. Territorial Resolution
 
-The parser shall detect:
+The Parser SHALL resolve every affected Address to the official territorial hierarchy defined by `TERRITORIAL_MODEL.md`.
+
+The Parser SHALL NOT define or modify territorial relationships.
+
+---
+
+# 9. Change Detection
+
+The Parser SHALL detect:
 
 - new records;
 - modified records;
 - removed records.
 
-Each detected change shall be reflected in the generated dataset.
+Every detected change SHALL be reflected in the produced dataset.
+
+The generated metadata SHOULD include a dataset version identifier.
 
 ---
 
-# 8. Metadata
+# 10. Metadata
 
-Each dataset shall include metadata:
+Each Normalized Dataset SHALL contain metadata including:
 
 - generation timestamp;
 - source identifier;
+- source publication timestamp (when available);
 - parser version;
 - dataset identifier;
+- dataset version;
 - processing status.
 
-Metadata shall accompany every publication.
+Metadata SHALL accompany every generated dataset.
 
 ---
 
-# 9. Error Handling
+# 11. Artificial Intelligence
 
-Parser failures shall never generate fictional information.
+The Parser MAY use AI-assisted processing techniques as implementation details.
 
-Possible actions:
+AI MAY be used for:
 
-- reject dataset;
-- report validation errors;
-- preserve previous valid dataset;
-- log processing details.
+- document structure recognition;
+- extraction from semi-structured sources;
+- anomaly detection;
+- normalization assistance.
+
+Regardless of implementation, the produced Normalized Dataset SHALL remain deterministic.
+
+AI SHALL NOT:
+
+- create operational facts;
+- modify official information;
+- infer missing operational data;
+- replace the Official Open Data source.
+
+Official Open Data SHALL remain the only operational source of truth.
 
 ---
 
-# 10. Output
+# 12. Error Handling
 
-The parser produces exactly one normalized dataset.
+Parser failures SHALL NEVER generate fictional information.
 
-This dataset becomes the official source for:
+The Parser SHALL fail safely.
 
-- Telegram Publisher;
+Possible actions include:
+
+- rejecting the dataset;
+- reporting validation errors;
+- preserving the previous valid dataset;
+- logging processing details.
+
+---
+
+# 13. Processing Pipeline
+
+Every successful execution SHALL follow the logical processing pipeline.
+
+```text
+Retrieve Official Open Data
+
+↓
+
+Validate
+
+↓
+
+Normalize
+
+↓
+
+Resolve Territory
+
+↓
+
+Generate Metadata
+
+↓
+
+Produce Normalized Dataset
+```
+
+---
+
+# 14. Output
+
+Each successful execution SHALL produce exactly one immutable Normalized Dataset.
+
+The produced dataset SHALL conform to `DATA_MODEL.md`.
+
+The dataset becomes the canonical input for:
+
+- Publication Engine;
+- Telegram Journal;
 - PWA application;
-- historical archive;
-- future public API.
+- Historical Archive;
+- future Public API.
 
 ---
 
-# 11. Non-Goals
+# 15. Non-Goals
 
-The parser does not:
+The Parser SHALL NOT:
 
-- publish messages;
+- publish Telegram messages;
 - generate graphics;
-- edit Telegram posts;
-- calculate analytics;
-- send notifications.
+- determine editorial presentation;
+- send notifications;
+- archive publications;
+- calculate analytics.
 
-These responsibilities belong to downstream components.
+These responsibilities belong to downstream system components.
 
 ---
 
-# 12. References
+# 16. Repository Rule
 
-- SSP-001 — Data Pipeline
+Normative documents SHALL reference the Parser as the only component responsible for producing the canonical Normalized Dataset.
+
+No downstream component MAY modify operational data received from the Parser.
+
+---
+
+# 17. References
+
+## Depends on
+
+- CHARTER.md
+- PROJECT_PRINCIPLES.md
+- GLOSSARY.md
+- TERRITORIAL_MODEL.md
 - DATA_MODEL.md
-- SYSTEM_OVERVIEW.md
-- ARCHITECTURE.md
+- SSP-001 — Data Pipeline
+
+## Referenced by
+
+- SSP-003 — Publication Engine
+- SSP-005 — Data Storage
+- Telegram Journal Specification
 
 ---
 
-End of Specification.
+# End of Specification
