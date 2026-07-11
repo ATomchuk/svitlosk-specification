@@ -1,48 +1,38 @@
 # PROJECT PRINCIPLES
 
-Project Specification
-
----
+Status: Stable (Стабільний)
 
 Document ID: DOC-001
 
-Document: PROJECT_PRINCIPLES.md
+Document Class: Normative
 
-Project: SvitloSk
-
-Status:
-Stable (Стабільний)
-
-Document Class:
-Normative
-
-Maintainer:
-SvitloSk Project
+Author: SvitloSk Project
 
 ---
 
-## 1. Purpose
+# 1. Purpose
 
-This document defines the fundamental principles governing every decision within the SvitloSk Project.
+This document establishes the engineering philosophy of the SvitloSk project.
 
-These principles are mandatory for the evolution of the project specification, software architecture, documentation, public communication, and future development.
+These principles are mandatory for the evolution of the project specification, software architecture, documentation, public communication and future development.
 
-Whenever a technical, architectural, or organizational decision is made, these principles shall prevail unless superseded through the formal Architecture Decision Record (ADR) process.
+Whenever a technical, architectural or organizational decision is made, these principles SHALL prevail unless superseded through the formal Architecture Decision Record (ADR) process.
 
 ---
 
-## 2. Scope
+# 2. Scope
 
 These principles apply to:
 
 - the Project Specification repository;
+- repository governance;
 - software architecture;
 - documentation;
 - automation processes;
 - public information channels;
 - future extensions of the project.
 
-They remain valid regardless of implementation technologies.
+These principles remain valid regardless of implementation technologies.
 
 ---
 
@@ -52,7 +42,7 @@ They remain valid regardless of implementation technologies.
 
 SvitloSk exists primarily to serve the residents of the Starokostiantyniv Community.
 
-Every decision shall improve accessibility, clarity, reliability, or usefulness of public information.
+Every decision SHALL improve accessibility, clarity, reliability or usefulness of public information.
 
 Technology is a tool, not the purpose of the project.
 
@@ -62,19 +52,19 @@ Technology is a tool, not the purpose of the project.
 
 SvitloSk respects official public information as the only source of operational data.
 
-The project shall never modify, reinterpret, fabricate, or replace official information.
+The project SHALL never alter, fabricate or replace official information.
 
-Every published message must be traceable to officially published data.
+Every published message SHALL remain traceable to officially published data.
 
 ---
 
 ## P-03. Interpretation Instead of Modification
 
-SvitloSk transforms complex public information into understandable information.
+SvitloSk transforms officially published information into understandable information.
 
 The project interprets data without changing their factual meaning.
 
-No assumptions, forecasts, or predictions shall be presented as facts.
+No assumptions, forecasts or predictions SHALL be presented as facts.
 
 ---
 
@@ -84,25 +74,29 @@ Publishing information quickly is important.
 
 Publishing accurate information is mandatory.
 
-Whenever these goals conflict, accuracy takes priority.
+Whenever these goals conflict, accuracy SHALL take priority.
 
 ---
 
 ## P-05. Automation by Design
 
-Every repetitive process should eventually become automated.
+Every repetitive process SHOULD eventually become automated.
 
-Automation must improve consistency, reliability, and reproducibility.
+Automation SHALL improve consistency, reliability and reproducibility.
 
-Manual work should remain only where human judgment is required.
+Automation SHALL never reduce the transparency or reliability of the system.
+
+Manual work SHOULD remain only where human judgment is required.
 
 ---
 
 ## P-06. Transparency
 
-The project shall remain transparent.
+The project SHALL remain transparent.
 
-Its documentation, architecture, terminology, and development principles must be publicly available.
+Its documentation, architecture, terminology and engineering principles SHALL be publicly available.
+
+Architectural decisions SHOULD be publicly traceable.
 
 Transparency builds trust.
 
@@ -112,7 +106,7 @@ Transparency builds trust.
 
 Although SvitloSk may become applicable elsewhere in the future, its primary mission is serving the residents of the Starokostiantyniv Community.
 
-Future scalability shall never reduce the quality of service for the primary community.
+Future scalability SHALL never reduce the quality of service for the primary community.
 
 ---
 
@@ -120,9 +114,11 @@ Future scalability shall never reduce the quality of service for the primary com
 
 The project evolves incrementally.
 
-Every new component must solve an existing problem.
+Every new component SHALL solve an existing problem.
 
-Features shall never be added solely because they may become useful.
+Complexity SHALL grow only when justified by real project needs.
+
+Features SHALL never be added solely because they may become useful.
 
 ---
 
@@ -130,31 +126,33 @@ Features shall never be added solely because they may become useful.
 
 Each approved technical term has exactly one meaning.
 
-Once adopted, terminology remains stable.
+Once adopted, terminology SHALL remain stable.
 
 Changing terminology requires an Architecture Decision Record (ADR).
 
 ---
 
-## P-10. One Document — One Complete Idea
+## P-10. One Document — One Subject
 
 Every normative document defines one complete subject.
 
-Documents should complement one another instead of overlapping.
+Documents SHOULD complement one another instead of overlapping.
 
 ---
 
-## P-11. Repository Contains No Temporary Solutions
+## P-11. Canonical Repository
 
-The Project Specification repository documents approved knowledge only.
+The canonical repository SHALL contain approved knowledge only.
 
-Drafts, experimental materials, temporary notes, and unfinished specifications shall not become part of the repository history.
+Temporary audit artifacts SHALL remain isolated from the canonical documentation.
+
+Drafts, experimental materials, temporary notes and unfinished specifications SHALL NOT become part of the canonical repository.
 
 ---
 
-## P-12. Every Commit Tells a Complete Story
+## P-12. Meaningful Repository History
 
-Each commit shall represent one logically completed change.
+Each commit SHOULD represent one logical engineering change.
 
 Repository history is considered part of the project documentation.
 
@@ -162,9 +160,19 @@ Readable history is an engineering asset.
 
 ---
 
+## P-13. Canonical Documentation
+
+English documentation SHALL be the canonical source of the project.
+
+All translations SHALL preserve the meaning of the canonical documentation.
+
+Architectural changes SHALL always be introduced in the canonical English documentation before being reflected in translated versions.
+
+---
+
 # 4. Principles Priority
 
-If principles appear to conflict, they shall be applied in the following order:
+If principles appear to conflict, they SHALL be applied in the following order:
 
 1. Public Service First
 2. Respect for Open Data
@@ -175,30 +183,42 @@ If principles appear to conflict, they shall be applied in the following order:
 7. Transparency
 8. Organic Growth
 9. Stable Terminology
-10. Repository Quality Principles
+10. Canonical Repository
+11. Canonical Documentation
 
 ---
 
 # 5. Relationship with Other Documents
 
-This document extends:
+## This document extends
 
 - CHARTER.md
 
-Future documents based on these principles include:
+## Core Documents derived from these principles
 
+- DOCUMENT_INDEX.md
 - EDITORIAL_STANDARDS.md
-- ENGINEERING.md
+- GLOSSARY.md
+- TERRITORIAL_MODEL.md
+- RFC_PROCESS.md
 - ARCHITECTURE.md
-- AUTOMATION.md
-- DATA_PIPELINE.md
+- DATA_MODEL.md
+- SYSTEM_OVERVIEW.md
+- REPOSITORY_CERTIFICATION.md
+- REPOSITORY_FREEZE.md
 
 ---
 
-## References
+# References
 
-CHARTER.md
+## Depends on
+
+- CHARTER.md
+
+## Referenced by
+
+All normative repository documents.
 
 ---
 
-End of Document
+**End of Document**

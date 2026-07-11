@@ -1,52 +1,78 @@
 # DATA_MODEL
 
-Project Specification
+Status: Stable (Стабільний)
 
-**Document ID:** DOC-007
+Document ID: DOC-008
 
-**Document:** DATA_MODEL.md
+Document Class: Normative
 
-**Project:** SvitloSk
-
-**Status:** Stable (Стабільний)
-
-**Class:** Normative
-
-**Maintainer:** SvitloSk Project
+Author: SvitloSk Project
 
 ---
 
 # Purpose
 
-This document defines the canonical logical data model used throughout the SvitloSk system.
+This document defines the canonical logical data model of the SvitloSk Project.
 
-The Data Model specifies the logical entities processed by the system, their relationships, lifecycle and integrity requirements.
+It establishes the logical entities processed by the system, their relationships, lifecycle and integrity requirements.
 
-All components of SvitloSk SHALL use the entities defined in this specification.
+This document defines logical data only.
 
-This document defines **logical data**, not administrative geography.
+Implementation details are intentionally excluded.
 
 ---
 
-# Relationship to the Territorial Model
+# Why this document matters
 
-Territorial entities used by the system are normatively defined in **TERRITORIAL_MODEL.md**.
+A stable logical data model provides consistency across the entire project.
 
-This document references those entities but SHALL NOT redefine their hierarchy or relationships.
+It enables independent evolution of software components while preserving compatibility, reproducibility and architectural integrity.
+
+All SSP specifications SHALL build upon the logical entities defined by this document.
+
+---
+
+# Relationship with Core Documents
+
+This document defines the logical representation of information processed by SvitloSk.
+
+| Document | Responsibility |
+|----------|----------------|
+| CHARTER.md | Defines the mission of the project |
+| PROJECT_PRINCIPLES.md | Defines engineering principles |
+| GLOSSARY.md | Defines canonical terminology |
+| TERRITORIAL_MODEL.md | Defines territorial entities |
+| ARCHITECTURE.md | Defines system organization |
+| DATA_MODEL.md | Defines logical data representation |
 
 ---
 
 # Scope
 
-This specification applies to:
+This specification defines:
 
-- data collection;
-- normalization;
-- interpretation;
-- publication;
-- storage;
-- archiving;
-- analytics.
+- logical entities;
+- logical relationships;
+- data lifecycle;
+- integrity requirements;
+- logical categories;
+- data governance principles.
+
+Administrative geography is intentionally excluded.
+
+Territorial relationships are defined exclusively in TERRITORIAL_MODEL.md.
+
+---
+
+# Data Governance
+
+The logical data model is the canonical representation of information used throughout the SvitloSk Project.
+
+All SSP specifications SHALL reference the entities defined by this document.
+
+No specification SHALL redefine logical entities independently.
+
+Changes to the logical data model SHALL be introduced through the repository governance process.
 
 ---
 
@@ -57,140 +83,148 @@ Official Open Data SHALL remain the only operational source of truth.
 SvitloSk SHALL NOT:
 
 - modify official information;
-- create new operational facts;
-- predict events.
+- create operational facts;
+- predict future events.
 
-The system MAY enrich official information with technical metadata required for processing.
+The system MAY enrich operational information with technical metadata required for processing, traceability and archival purposes.
 
 ---
 
-# Core Entities
+# Logical Entity Groups
+
+The logical model consists of the following categories:
+
+## Reference Entities
+
+Stable entities describing the operational environment.
+
+Examples include:
+
+- Address
+- Queue
+- Subqueue
+
+---
+
+## Operational Entities
+
+Entities representing official operational information.
+
+Examples include:
+
+- Planned Power Outage
+- Emergency Power Outage
+- Schedule
+
+---
+
+## Publication Entities
+
+Entities created from interpreted operational information.
+
+Examples include:
+
+- Publication
+- Publication Package
+
+---
+
+## Archive Entities
+
+Entities supporting historical preservation and analytical processing.
+
+Examples include:
+
+- Daily Snapshot
+- Analytics Record
+
+---
+
+# Core Logical Entities
 
 ## Address
 
-The smallest geographical unit processed by SvitloSk.
+Logical reference to a physical location served by the project.
 
-An Address SHALL consist of:
-
-- Settlement;
-- Street;
-- Building Number.
-
-Territorial relationships are defined by **TERRITORIAL_MODEL.md**.
+Territorial hierarchy SHALL be defined exclusively by TERRITORIAL_MODEL.md.
 
 ---
 
 ## Queue
 
-An official electricity distribution Queue defined by the Distribution System Operator.
+Logical representation of an official electricity distribution queue.
 
-Allowed values:
-
-- 1
-- 2
-- 3
-- 4
-- 5
-- 6
+Operational values are determined by the official Data Source.
 
 ---
 
 ## Subqueue
 
-An official subdivision of a Queue.
+Logical subdivision of a Queue.
 
-Current implementation supports:
-
-- 1.1
-- 1.2
-- 2.1
-- 2.2
-- 3.1
-- 3.2
-- 4.1
-- 4.2
-- 5.1
-- 5.2
-- 6.1
-- 6.2
+Supported operational values are defined by the current operational configuration.
 
 ---
 
 ## Planned Power Outage
 
-Officially announced scheduled interruption of electricity supply.
+Logical representation of an officially announced scheduled interruption of electricity supply.
 
-Attributes SHALL include:
+A Planned Power Outage SHALL reference:
 
-- publication date;
-- start time;
-- end time;
+- operational time interval;
 - affected addresses;
-- official source reference.
+- official source.
 
 ---
 
 ## Emergency Power Outage
 
-Officially announced unscheduled interruption of electricity supply.
+Logical representation of an officially announced unscheduled interruption of electricity supply.
 
-Attributes SHALL include:
+An Emergency Power Outage SHALL reference:
 
 - publication timestamp;
 - affected addresses;
-- official source reference.
+- official source.
 
 ---
 
 ## Schedule
 
-Official electricity availability schedule for one Subqueue.
+Logical representation of electricity availability for one operational period.
 
-Each Schedule SHALL contain:
-
-- date;
-- subqueue identifier;
-- availability intervals.
+Schedules SHALL reference one Subqueue.
 
 ---
 
 ## Publication
 
-A logical publication generated by the Publisher.
+Logical representation of interpreted information prepared for public distribution.
 
-Each Publication SHALL represent exactly one Territory.
-
-Publication content SHALL be generated exclusively from normalized operational data.
-
-Publication formatting is defined by the Telegram Journal Specification.
+Each Publication SHALL be traceable to normalized operational data.
 
 ---
 
 ## Publication Package
 
-The complete collection of Publications generated for one reporting day.
-
-A Publication Package MAY contain:
-
-- today's planned publications;
-- today's emergency publications;
-- tomorrow publications.
+Logical collection of Publications generated during one reporting period.
 
 ---
 
 ## Daily Snapshot
 
-Immutable normalized representation of all operational data for one calendar day.
+Immutable representation of normalized operational information for one reporting day.
 
-A Daily Snapshot SHALL become read-only after archival.
+Archived Daily Snapshots SHALL become read-only.
 
 ---
 
 ## Analytics Record
 
-Statistical information derived from historical operational data.
+Logical representation of statistical information derived from historical datasets.
 
-Analytics SHALL NEVER modify operational data.
+Analytics SHALL NEVER modify operational information.
 
 ---
 
@@ -210,81 +244,96 @@ Archived operational information preserved by SvitloSk.
 
 ## Analytical Data
 
-Information derived from historical datasets.
+Information derived exclusively from Historical Data.
 
 Analytical Data SHALL NOT replace Operational Data.
 
 ---
 
+## Configuration Data
+
+Technical information governing system behaviour.
+
+Configuration Data SHALL NOT contain operational information.
+
+---
+
+## Reference Data
+
+Stable information describing entities used by the logical model.
+
+Reference Data changes infrequently.
+
+---
+
 # Data Lifecycle
 
-Every operational dataset SHALL pass through the following lifecycle.
+Every operational dataset SHALL follow the canonical lifecycle.
 
+```
 Collected
 
-↓
+    │
+
+    ▼
 
 Validated
 
-↓
+    │
+
+    ▼
 
 Normalized
 
-↓
+    │
+
+    ▼
 
 Interpreted
 
-↓
+    │
+
+    ▼
 
 Published
 
-↓
+    │
 
-Updated (if required)
-
-↓
+    ▼
 
 Archived
+```
+
+Archived datasets SHALL remain immutable.
 
 ---
 
 # Logical Relationships
 
-Address
-
-├── Planned Power Outage
-
-├── Emergency Power Outage
-
-└── Schedule
-
-Schedule
-
-└── Subqueue
-
-Publication
-
-└── Generated from normalized operational data
-
-Publication Package
-
-└── Collection of Publications
-
-Daily Snapshot
-
-└── Archive
+| Entity | Logical Relationship |
+|---------|----------------------|
+| Address | Referenced by Operational Entities |
+| Queue | Groups Subqueues |
+| Subqueue | Used by Schedule |
+| Schedule | References Operational Data |
+| Publication | Generated from normalized operational data |
+| Publication Package | Collection of Publications |
+| Daily Snapshot | Archive representation of operational data |
+| Analytics Record | Derived from Historical Data |
 
 ---
 
 # Data Integrity
 
-Every logical entity processed by SvitloSk SHALL be:
+Every logical entity SHALL be:
 
 - uniquely identifiable;
 - traceable;
 - reproducible;
-- timestamped;
+- timestamped where applicable;
 - linked to its official source.
+
+Logical integrity SHALL be preserved throughout the entire processing lifecycle.
 
 ---
 
@@ -292,25 +341,33 @@ Every logical entity processed by SvitloSk SHALL be:
 
 Every Publication SHALL originate from normalized operational data.
 
-Operational Data SHALL always remain recoverable from archived datasets.
+Historical datasets SHALL preserve the original operational state existing at publication time.
 
-Historical Data SHALL preserve the state of information that existed at the time of publication.
+Archived information SHALL remain reproducible.
+
+Logical entities SHALL remain internally consistent across all system components.
 
 ---
 
-# Compatibility
+# Model Evolution
 
-Future extensions of the Data Model SHOULD preserve backward compatibility.
+The logical data model is designed for long-term stability.
 
-Breaking changes SHALL be introduced only through the RFC process.
+New logical entities MAY be introduced through the RFC process.
+
+Existing entities SHOULD remain backward compatible whenever practical.
+
+Breaking changes SHALL require explicit architectural approval.
 
 ---
 
 # Repository Rule
 
-Normative documents SHALL reference logical entities defined in this document.
+Normative documents SHALL reference logical entities defined by this specification.
 
-Territorial hierarchy SHALL be referenced from TERRITORIAL_MODEL.md and SHALL NOT be duplicated elsewhere.
+Territorial hierarchy SHALL always be referenced from TERRITORIAL_MODEL.md.
+
+Logical entities SHALL NOT be redefined elsewhere in the repository.
 
 ---
 
@@ -322,10 +379,12 @@ Territorial hierarchy SHALL be referenced from TERRITORIAL_MODEL.md and SHALL NO
 - PROJECT_PRINCIPLES.md
 - GLOSSARY.md
 - TERRITORIAL_MODEL.md
+- ARCHITECTURE.md
 
 ## Referenced by
 
-- SSP-002 Parser
-- SSP-003 Publication Engine
-- SSP-005 Data Storage
-- Telegram Journal Specification
+- All SSP specifications
+
+---
+
+**End of Document**

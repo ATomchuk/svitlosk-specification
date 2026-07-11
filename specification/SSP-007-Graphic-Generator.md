@@ -1,10 +1,10 @@
 # SSP-007 — Graphic Generator
 
-Status: Draft
+Status: Draft (Чернетка)
 
 Specification ID: SSP-007
 
-Version: SSP-0.1
+Component: Graphic Generator
 
 Author: SvitloSk Project
 

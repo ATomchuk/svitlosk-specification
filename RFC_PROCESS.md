@@ -1,24 +1,16 @@
 # RFC_PROCESS
 
-Project Specification
-
----
-
-Document ID: DOC-005
-
-Document: RFC_PROCESS.md
-
-Project: SvitloSk
-
 Status: Stable (Стабільний)
+
+Document ID: DOC-006
 
 Document Class: Normative
 
-Maintainer: SvitloSk Project
+Author: SvitloSk Project
 
 ---
 
-## 1. Purpose
+# 1. Purpose
 
 This document defines the Request for Comments (RFC) process used by the SvitloSk Project Specification repository.
 
@@ -26,11 +18,11 @@ The RFC process provides a structured mechanism for proposing, discussing, appro
 
 ---
 
-## 2. Why this document exists
+# 2. Why this document exists
 
 Project specifications evolve over time.
 
-To preserve consistency, every significant architectural, organizational, or normative change shall follow a documented review process.
+To preserve consistency, every significant architectural, organizational, or normative change SHALL follow a documented review process.
 
 The RFC process ensures that:
 
@@ -41,7 +33,7 @@ The RFC process ensures that:
 
 ---
 
-## 3. Scope
+# 3. Scope
 
 The RFC process applies to:
 
@@ -57,7 +49,7 @@ Editorial corrections and typographical fixes do not require RFC.
 
 ---
 
-## 4. RFC Lifecycle
+# 4. RFC Lifecycle
 
 Every RFC passes through the following lifecycle.
 
@@ -85,7 +77,7 @@ Possible improvements are discussed.
 
 The proposal has been approved.
 
-Implementation may begin.
+Implementation MAY begin.
 
 ---
 
@@ -105,7 +97,7 @@ It must never be deleted.
 
 ---
 
-## 5. RFC Numbering
+# 5. RFC Numbering
 
 RFC documents use sequential numbering.
 
@@ -125,9 +117,9 @@ Deleted RFC numbers are prohibited.
 
 ---
 
-## 6. RFC Structure
+# 6. RFC Structure
 
-Each RFC shall contain:
+Each RFC SHALL contain:
 
 - Title
 - Author
@@ -143,9 +135,9 @@ Each RFC shall contain:
 
 ---
 
-## 7. Approval Rules
+# 7. Approval Rules
 
-An RFC may become Accepted only if:
+An RFC MAY become Accepted only if:
 
 - the proposal is technically complete;
 - terminology complies with GLOSSARY.md;
@@ -155,11 +147,11 @@ An RFC may become Accepted only if:
 
 ---
 
-## 8. Relationship with ADR
+# 8. Relationship with ADR
 
 Architecture Decision Records (ADR) document important architectural decisions.
 
-When an RFC changes project architecture, one or more ADR documents may be created.
+When an RFC changes project architecture, one or more ADR documents MAY be created.
 
 RFC explains *what changes*.
 
@@ -167,9 +159,9 @@ ADR explains *why the decision was made*.
 
 ---
 
-## 9. Relationship with Normative Documents
+# 9. Relationship with Normative Documents
 
-An approved RFC may update:
+An approved RFC MAY update:
 
 - CHARTER.md
 - PROJECT_PRINCIPLES.md
@@ -178,21 +170,21 @@ An approved RFC may update:
 - ARCHITECTURE.md
 - any future specification.
 
-Every normative modification shall reference the corresponding RFC.
+Every normative modification SHALL reference the corresponding RFC.
 
 ---
 
-## 10. Repository Principles
+# 10. Repository Principles
 
 RFC documents are permanent project history.
 
-They shall never be removed.
+They SHALL never be removed.
 
 Superseded RFCs remain available for historical reference.
 
 ---
 
-## 11. References
+# 11. References
 
 This document depends on:
 

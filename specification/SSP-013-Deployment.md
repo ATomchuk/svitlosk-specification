@@ -1,10 +1,10 @@
 # SSP-013 — Deployment
 
-Status: Draft
+Status: Draft (Чернетка)
 
 Specification ID: SSP-013
 
-Version: SSP-0.1
+Component: Deployment
 
 Author: SvitloSk Project
 

@@ -1,0 +1,6 @@
+# Local tooling and agent workspaces (not part of the specification)
+.zcode/
+.mimocode/
+
+# Audit artifacts — stored locally only, never pushed to GitHub
+audit/

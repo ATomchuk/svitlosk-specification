@@ -1,6 +1,6 @@
 # Specification
 
-This directory contains the official technical specifications of the SvitloSK project.
+This directory contains the official technical specifications of the SvitloSk project.
 
 Each specification defines one component or one aspect of the system.
 

@@ -1,14 +1,12 @@
 # SSP-003 — Publication Engine
 
-**Status:** Stable (Стабільний)
+Status: Stable (Стабільний)
 
-**Specification ID:** SSP-003
+Specification ID: SSP-003
 
-**Component:** Publication Engine
+Component: Publication Engine
 
-**Class:** Normative
-
-**Maintainer:** SvitloSk Project
+Author: SvitloSk Project
 
 ---
 

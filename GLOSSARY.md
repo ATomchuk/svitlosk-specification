@@ -1,66 +1,134 @@
 # GLOSSARY
 
-Project Specification
+Status: Stable (Стабільний)
 
-**Document ID:** DOC-004
+Document ID: DOC-004
 
-**Document:** GLOSSARY.md
+Document Class: Normative
 
-**Project:** SvitloSk
-
-**Status:** Stable (Стабільний)
-
-**Class:** Normative
-
-**Maintainer:** SvitloSk Project
+Author: SvitloSk Project
 
 ---
 
 # Purpose
 
-This document defines the official terminology of the SvitloSk Project Specification.
+This document establishes the canonical terminology of the SvitloSk Project Specification.
 
-Each term SHALL have exactly one meaning.
+Every normative term used throughout the repository SHALL be defined in this document.
 
-Normative documents MUST use the terminology defined in this document.
-
-New terminology MAY only be introduced by updating this document through the RFC process.
+All normative documents SHALL use these definitions consistently.
 
 ---
 
-# Why this document exists
+# Why this document matters
 
 Consistent terminology is essential for maintaining a long-lived technical specification.
 
-Using multiple words for the same concept creates ambiguity and increases maintenance costs.
+Using multiple terms for the same concept creates ambiguity, increases maintenance costs and complicates architectural evolution.
 
-This document establishes the canonical vocabulary of the SvitloSk project.
+This document provides the single authoritative vocabulary of the SvitloSk Project.
 
 ---
 
 # Stable Terminology Principle
 
-Every approved term SHALL have one official definition.
+Every approved term SHALL have exactly one official definition.
 
 Once approved, a term SHALL NOT change its meaning.
 
-If a definition must change, the change SHALL be proposed through an Architecture Decision Record (ADR) and approved through the RFC process.
+Changes to existing terminology SHALL be approved through the Architecture Decision Record (ADR) process.
+
+Every normative document SHALL use the definitions established by this Glossary.
 
 ---
 
-# Official Terms
+# 1. Core Concepts
+
+## SvitloSk
+
+A public information service that analyses, interprets, archives and distributes officially published information about electricity outages within the Starokostiantyniv Community.
+
+SvitloSk does not create facts.
+
+SvitloSk does not predict events.
+
+SvitloSk interprets officially published information.
+
+---
+
+## Specification
+
+The complete collection of normative and informative documentation maintained within the SvitloSk Project Specification repository.
+
+---
+
+## Repository
+
+The official GitHub repository containing the canonical SvitloSk Project Specification.
+
+---
+
+## Canonical Documentation
+
+The English normative documentation representing the authoritative source of the SvitloSk Project Specification.
+
+Official translations are derived from the Canonical Documentation.
+
+---
+
+## Canonical Repository
+
+The approved collection of normative project documentation.
+
+Temporary materials, audit artifacts and working drafts are not part of the Canonical Repository.
+
+---
+
+## Normative Document
+
+A document defining mandatory project requirements.
+
+Normative documents use RFC 2119 terminology where applicable.
+
+---
+
+## Informative Document
+
+A document providing explanations, examples or supporting information.
+
+Informative documents SHALL NOT introduce mandatory project requirements.
+
+---
+
+## RFC
+
+Request for Comments.
+
+A document proposing modifications to the Project Specification.
+
+---
+
+## ADR
+
+Architecture Decision Record.
+
+A document recording an approved architectural decision affecting the long-term evolution of the project.
+
+---
+
+# 2. Information Model
 
 ## Open Data
 
 Officially published information that is publicly accessible without authentication or special permission.
 
-SvitloSk only processes Open Data.
+Official Open Data remain authoritative at all times.
 
 ---
 
 ## Data Source
 
-The official organization that publishes Open Data.
+The official organization publishing Open Data.
 
 Example:
 
@@ -72,51 +140,81 @@ Example:
 
 The software component responsible for retrieving Open Data from official sources.
 
-The Parser never modifies the original data.
+The Parser preserves the integrity of the original data.
+
+The Parser never modifies official information.
 
 ---
 
 ## Data Model
 
-The internal structured representation of parsed information used by SvitloSk.
+The structured internal representation of parsed information used by SvitloSk.
 
-The Data Model is derived from Open Data.
+The Data Model is derived exclusively from Open Data.
 
 ---
 
 ## Interpretation
 
-The process of transforming structured Open Data into information understandable for residents.
+The process of transforming structured information into information understandable for residents.
+
+Interpretation transforms information without altering its factual meaning.
 
 Interpretation SHALL NOT introduce new facts.
 
 ---
 
+# 3. Publication Model
+
 ## Publisher
 
-The software component responsible for delivering interpreted information to public communication channels.
+The software component responsible for distributing interpreted information through supported public communication channels.
 
 ---
 
 ## Publication
 
-A public message automatically generated by the Publisher for one specific Territory.
+A public information message automatically generated by the Publisher.
 
-Every Publication SHALL represent exactly one Territory.
+Every Publication SHALL be traceable to official Open Data.
 
 ---
 
 ## Publication Package
 
-The complete set of Publications generated for one reporting day.
+The complete collection of Publications generated for one reporting period.
+
+---
+
+## Tomorrow Publication
+
+A Publication containing officially announced planned outages for the following calendar day.
+
+Tomorrow Publications are temporary and SHALL be removed after the reporting period ends.
 
 ---
 
 ## Telegram Journal
 
-The official Telegram communication channel of SvitloSk.
+The official public information journal of the SvitloSk Project.
 
-The Telegram Journal publishes Publications automatically generated by the Publisher.
+It publishes Publications automatically generated by the Publisher.
+
+---
+
+## Editorial Policy
+
+The normative rules governing the structure, formatting and presentation of Publications.
+
+---
+
+# 4. Territorial Model
+
+## Community
+
+The territorial community served by SvitloSk.
+
+Its canonical territorial hierarchy is defined in TERRITORIAL_MODEL.md.
 
 ---
 
@@ -124,26 +222,18 @@ The Telegram Journal publishes Publications automatically generated by the Publi
 
 A publication unit representing either:
 
-- the Administrative Centre; or
+- the Administrative Centre;
 - one Starosta District.
 
-Territory relationships SHALL follow **TERRITORIAL_MODEL.md**.
-
----
-
-## Community
-
-The Starokostiantyniv Territorial Community.
-
-Its canonical territorial hierarchy is defined in **TERRITORIAL_MODEL.md**.
+Territorial relationships SHALL follow TERRITORIAL_MODEL.md.
 
 ---
 
 ## Administrative Centre
 
-The administrative centre of the Community.
+The principal territorial unit of the Community.
 
-Its territorial role is defined in **TERRITORIAL_MODEL.md**.
+Its role is defined in TERRITORIAL_MODEL.md.
 
 ---
 
@@ -151,9 +241,9 @@ Its territorial role is defined in **TERRITORIAL_MODEL.md**.
 
 A territorial subdivision of the Community.
 
-Its canonical structure is defined in **TERRITORIAL_MODEL.md**.
-
 The abbreviation **SO** is normative.
+
+Its structure is defined in TERRITORIAL_MODEL.md.
 
 ---
 
@@ -161,9 +251,11 @@ The abbreviation **SO** is normative.
 
 A populated place belonging to the Community.
 
-Settlement relationships are defined in **TERRITORIAL_MODEL.md**.
+Settlement relationships are defined in TERRITORIAL_MODEL.md.
 
 ---
+
+# 5. Electricity Domain
 
 ## Planned Power Outage
 
@@ -177,25 +269,9 @@ An unplanned interruption of electricity supply published by the official Data S
 
 ---
 
-## Tomorrow Publication
-
-A Publication containing official planned outage information for the following calendar day.
-
-Tomorrow Publications are temporary.
-
-They SHALL be removed after the reporting period ends.
-
----
-
-## Outage Timeline
-
-A visual representation of planned electricity availability during one calendar day.
-
----
-
 ## Queue
 
-An official electricity distribution queue defined by the Distribution System Operator.
+An official electricity distribution queue published by the Distribution System Operator.
 
 ---
 
@@ -207,79 +283,25 @@ SvitloSk currently supports twelve Subqueues.
 
 ---
 
+## Outage Timeline
+
+A visual representation of planned electricity availability during one calendar day.
+
+---
+
+# 6. Users
+
 ## Resident
 
-A person using SvitloSk to obtain information about electricity outages within the Community.
-
----
-
-## Editorial Policy
-
-The normative rules governing the structure, formatting and presentation of Telegram Journal Publications.
-
----
-
-## Specification
-
-The complete collection of normative and informative documents contained in the SvitloSk Specification repository.
-
----
-
-## Repository
-
-The official GitHub repository containing the SvitloSk Project Specification.
-
----
-
-## Normative Document
-
-A document containing mandatory project rules.
-
-Normative documents use RFC 2119 terminology.
-
----
-
-## Informative Document
-
-A document containing explanations, examples or supporting information.
-
-Informative documents SHALL NOT introduce mandatory requirements.
-
----
-
-## RFC
-
-Request for Comments.
-
-A document proposing changes to the Specification.
-
----
-
-## ADR
-
-Architecture Decision Record.
-
-A document describing an architectural decision that permanently affects the project.
-
----
-
-## SvitloSk
-
-An Automated Open Data Information System that collects, interprets and publishes official information about electricity outages within the Starokostiantyniv Territorial Community.
-
-SvitloSk does not create facts.
-
-SvitloSk does not predict events.
-
-SvitloSk interprets officially published information.
+A person using SvitloSk to obtain official information about electricity outages within the Community.
 
 ---
 
 # Repository Rule
 
-No normative document MAY introduce terminology not defined in this Glossary.
+No normative document SHALL define terminology independently.
 
-New terminology SHALL first be added to this document.
+New terminology SHALL first be approved by updating this Glossary through the repository governance process.
 
 ---
 
@@ -294,4 +316,8 @@ New terminology SHALL first be added to this document.
 
 ## Referenced by
 
-All normative documents.
+All normative repository documents.
+
+---
+
+**End of Document**

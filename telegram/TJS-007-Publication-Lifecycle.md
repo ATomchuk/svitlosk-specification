@@ -1,10 +1,10 @@
 # TJS-007 — Publication Lifecycle
 
-**Status:** Draft (Проєкт)
+Status: Draft (Чернетка)
 
-**Specification ID:** TJS-007
+Specification ID: TJS-007
 
-**Author:** SvitloSk Project
+Author: SvitloSk Project
 
 ---
 

@@ -1,8 +1,10 @@
 # SSP-004 — Telegram Channel
 
-Status: Draft
+Status: Draft (Чернетка)
 
 Specification ID: SSP-004
+
+Component: Telegram Channel
 
 Author: SvitloSk Project
 

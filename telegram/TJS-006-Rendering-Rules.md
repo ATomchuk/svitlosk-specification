@@ -1,9 +1,9 @@
 # TJS-006 — Telegram Rendering Rules
 
-**Status:** Draft (Проєкт)  
-**Specification ID:** TJS-006  
-**Project:** SvitloSk  
-**Class:** Normative
+Status: Draft (Чернетка)
+Specification ID: TJS-006
+Project: SvitloSk
+Class: Normative
 
 ---
 

@@ -1,10 +1,10 @@
 # SSP-012 — Security
 
-Status: Draft
+Status: Draft (Чернетка)
 
 Specification ID: SSP-012
 
-Version: SSP-0.1
+Component: Security
 
 Author: SvitloSk Project
 

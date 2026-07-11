@@ -1,10 +1,10 @@
 # SSP-009 — Configuration
 
-Status: Draft
+Status: Draft (Чернетка)
 
 Specification ID: SSP-009
 
-Version: SSP-0.1
+Component: Configuration
 
 Author: SvitloSk Project
 

@@ -1,177 +1,244 @@
-# SYSTEM OVERVIEW
+# SYSTEM_OVERVIEW
 
-**Status:** Stable  
-**Version:** 1.0.0  
-**Owner:** SvitloSK Project  
-**Last updated:** 2026-07-07
+Status: Stable (Стабільний)
 
----
+Document ID: DOC-010
 
-## Purpose
+Document Class: Normative
 
-SvitloSK is an automated open data processing system designed to provide residents of the Starokostiantyniv Territorial Community with clear, timely and reliable information about planned and emergency power outages, outage schedules and related events.
-
-The system continuously collects publicly available information, transforms it into structured data and publishes it through multiple public information channels.
+Author: SvitloSk Project
 
 ---
 
-## Scope
+# Purpose
 
-The current scope of the project is limited to the territory of the Starokostiantyniv Territorial Community.
+This document provides a concise functional overview of the SvitloSk Project.
 
-Although the system architecture allows future adaptation for other communities, all current design decisions, data models and publications are optimized exclusively for the needs of the Starokostiantyniv community.
+It explains what the system is, who it serves, what capabilities it provides and how its major functional areas work together.
+
+Detailed architectural, data, territorial and governance requirements are defined by their corresponding normative documents.
 
 ---
 
-## Target Audience
+# Why this document matters
 
-SvitloSK is intended for:
+The SvitloSk Project Specification consists of multiple specialized normative documents.
 
-- residents of the Starokostiantyniv Territorial Community;
-- local government representatives;
+This document serves as the primary entry point for understanding the system as a whole before studying its detailed specifications.
+
+It provides a high-level functional description without introducing implementation details.
+
+---
+
+# Relationship with Core Documents
+
+This document summarizes the system from a functional perspective.
+
+| Document | Responsibility |
+|----------|----------------|
+| CHARTER.md | Defines the mission of the project |
+| PROJECT_PRINCIPLES.md | Defines engineering principles |
+| GLOSSARY.md | Defines canonical terminology |
+| ARCHITECTURE.md | Defines system organization |
+| DATA_MODEL.md | Defines logical data representation |
+| SYSTEM_OVERVIEW.md | Explains how the complete system operates |
+
+---
+
+# Scope
+
+This document provides an overview of:
+
+- system purpose;
+- functional capabilities;
+- supported users;
+- operational workflow;
+- public communication channels.
+
+Implementation details are intentionally excluded.
+
+---
+
+# System Overview
+
+SvitloSk is a public information service that continuously processes officially published Open Data related to electricity outages within the Starokostiantyniv Community.
+
+The system transforms complex operational information into clear, understandable and timely publications intended for residents, institutions and other community stakeholders.
+
+The project operates exclusively on officially published information.
+
+---
+
+# Primary Objectives
+
+The system is designed to:
+
+- improve public access to official information;
+- simplify interpretation of electricity outage schedules;
+- provide timely public communication;
+- preserve historical information;
+- ensure reproducibility of published information.
+
+---
+
+# Target Users
+
+SvitloSk primarily serves:
+
+- residents of the Starokostiantyniv Community;
 - community institutions;
+- local authorities;
 - businesses operating within the community;
-- anyone requiring reliable information about power outages.
+- other stakeholders requiring reliable operational information.
 
 ---
 
-## Data Sources
+# Functional Overview
 
-SvitloSK operates exclusively on publicly available information.
+The system continuously performs the following activities:
 
-The primary source of operational data is the official website of Khmelnytskyioblenergo.
-
-Additional public sources may be integrated in the future if they satisfy the project principles and quality requirements.
-
----
-
-## Core Components
-
-The system consists of several independent but interconnected components.
-
-### Open Data Parser
-
-Retrieves and validates official public information.
-
-### Data Processing Engine
-
-Normalizes, aggregates and structures collected information.
-
-### Publisher
-
-Generates public information for supported communication channels.
-
-### Telegram Journal
-
-Publishes operational information and maintains a historical public archive.
-
-### PWA Application
-
-Provides residents with a simple and user-friendly interface for accessing current information.
-
-### Analytics Module
-
-Produces statistical summaries and analytical reports based on collected historical data.
+- acquires Official Open Data;
+- validates incoming information;
+- interprets operational events;
+- generates public information;
+- archives historical information;
+- distributes publications through supported communication channels.
 
 ---
 
-## Information Flow
+# Operational Workflow
 
-The information lifecycle consists of the following stages:
+The functional workflow of SvitloSk consists of the following stages:
 
-1. Retrieve official public data.
-2. Validate collected information.
-3. Normalize and structure data.
-4. Detect changes.
-5. Generate publications.
-6. Update previously published information if required.
-7. Archive the final state of the day.
-8. Produce analytical datasets.
+```
+Official Open Data
 
----
+        │
 
-## Public Information Channels
+        ▼
 
-Current public communication channels include:
+Acquisition
 
-- Progressive Web Application (PWA);
-- Telegram Public Information Journal.
+        │
 
-Additional channels may be added in the future without changing the system architecture.
+        ▼
 
----
+Validation
 
-## Data Storage
+        │
 
-Operational data are stored for a limited period required for system operation.
+        ▼
 
-Historical public information is preserved through the Telegram Journal.
+Interpretation
 
-The project prioritizes reproducibility rather than long-term storage of raw operational datasets.
+        │
 
----
+        ▼
 
-## Automation
+Publication
 
-The entire publication workflow is designed for maximum automation.
+        │
 
-The system is capable of:
+        ▼
 
-- retrieving official data;
-- detecting updates;
-- regenerating publications;
-- editing Telegram posts during the current day;
-- generating graphical outage schedules;
-- producing analytical reports.
+Archive
+```
 
-Human intervention should only be required for maintenance or exceptional situations.
+The detailed architecture of these stages is defined by ARCHITECTURE.md.
 
 ---
 
-## Design Principles
+# Public Communication Channels
 
-The system is built according to the following principles:
+The system currently supports the following public communication channels:
 
-- Open Data First
-- Automation First
-- Human-Centered Information
-- Transparency
-- Simplicity
-- Reliability
-- Reproducibility
+- Telegram Public Information Journal;
+- Progressive Web Application (PWA).
+
+Additional communication channels MAY be introduced without changing the overall system architecture.
 
 ---
 
-## Current Limitations
+# Information Preservation
 
-Current implementation is optimized for:
+SvitloSk preserves the information necessary to:
 
-- Starokostiantyniv Territorial Community;
-- official public data sources;
-- electricity-related operational information.
+- reproduce published information;
+- maintain historical consistency;
+- support future analytical processing.
 
-The project intentionally avoids collecting personal or confidential information.
-
----
-
-## Future Evolution
-
-Future development may include:
-
-- support for additional public information channels;
-- integration of new open data sources;
-- improved analytical capabilities;
-- reusable architecture for other territorial communities.
-
-Such expansion shall never compromise the project's primary mission: serving the residents of the Starokostiantyniv Territorial Community.
+Historical information remains separate from current operational information.
 
 ---
 
-## Related Documents
+# Automation
+
+SvitloSk is designed for a high degree of automation.
+
+Routine operational activities are performed automatically wherever practical.
+
+Human participation is expected only for system maintenance, exceptional situations or repository governance.
+
+---
+
+# Current Operational Boundaries
+
+The current implementation is optimized for:
+
+- the Starokostiantyniv Community;
+- official electricity-related Open Data;
+- public information services.
+
+The system does not process personal or confidential information.
+
+---
+
+# Future Evolution
+
+The system is designed for controlled long-term evolution.
+
+Future development MAY include:
+
+- additional communication channels;
+- new Open Data sources;
+- expanded analytical capabilities;
+- support for additional territorial communities.
+
+Future evolution SHALL preserve the mission established by CHARTER.md and the architectural principles defined by ARCHITECTURE.md.
+
+---
+
+# Repository Rule
+
+SYSTEM_OVERVIEW.md provides a functional overview only.
+
+Architectural decisions SHALL be defined exclusively by ARCHITECTURE.md.
+
+Logical entities SHALL be defined exclusively by DATA_MODEL.md.
+
+Terminology SHALL be defined exclusively by GLOSSARY.md.
+
+Territorial hierarchy SHALL be defined exclusively by TERRITORIAL_MODEL.md.
+
+---
+
+# References
+
+## Depends on
 
 - CHARTER.md
 - PROJECT_PRINCIPLES.md
-- ARCHITECTURE.md
 - GLOSSARY.md
-- RFC_PROCESS.md
+- ARCHITECTURE.md
+- DATA_MODEL.md
 - DOCUMENT_INDEX.md
+
+## Referenced by
+
+- README.md
+- Future user documentation
+- Future deployment documentation
+
+---
+
+**End of Document**

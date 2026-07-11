@@ -1,10 +1,10 @@
 # SSP-010 — Logging
 
-Status: Draft
+Status: Draft (Чернетка)
 
 Specification ID: SSP-010
 
-Version: SSP-0.1
+Component: Logging
 
 Author: SvitloSk Project
 

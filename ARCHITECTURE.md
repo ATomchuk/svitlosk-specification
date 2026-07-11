@@ -1,82 +1,113 @@
 # ARCHITECTURE
 
-Project Specification
+Status: Stable (Стабільний)
 
----
+Document ID: DOC-007
 
-Document ID: DOC-006
+Document Class: Normative
 
-Document: ARCHITECTURE.md
-
-Project: SvitloSk
-
-Status: Draft (Чернетка)
-
-Class: Normative
-
-Maintainer: SvitloSk Project
+Author: SvitloSk Project
 
 ---
 
 # Purpose
 
-This document defines the official high-level architecture of the SvitloSk project.
+This document defines the canonical high-level architecture of the SvitloSk Project.
 
-It establishes the architectural boundaries of the system, defines the major system components, their responsibilities, interactions, and the principles governing future architectural evolution.
+It establishes the architectural organization of the system, defines its architectural layers, component boundaries, interaction model and architectural governance.
 
-This document serves as the primary architectural reference for all future specifications.
+This document is the authoritative architectural reference for the entire Project Specification.
 
 ---
 
 # Why this document exists
 
-Software implementation changes over time.
+Software implementation evolves continuously.
 
 Architecture should remain stable.
 
-Without a formally defined architecture:
+A stable architecture provides clear component boundaries, predictable system evolution and long-term maintainability.
 
-- component boundaries become unclear;
-- responsibilities overlap;
-- implementation diverges from project goals;
-- long-term maintenance becomes increasingly difficult.
+Implementation technologies may change.
 
-ARCHITECTURE.md defines the stable architectural foundation of the SvitloSk project independently from any programming language or implementation technology.
+Architectural principles SHALL remain stable.
+
+---
+
+# Relationship with Core Documents
+
+This document implements the architectural vision established by the Core Documents.
+
+| Document | Responsibility |
+|----------|----------------|
+| CHARTER.md | Defines the mission of the project |
+| PROJECT_PRINCIPLES.md | Defines engineering principles |
+| EDITORIAL_STANDARDS.md | Defines documentation standards |
+| GLOSSARY.md | Defines canonical terminology |
+| ARCHITECTURE.md | Defines the organization of the system |
+| DATA_MODEL.md | Defines the canonical logical data model |
 
 ---
 
 # Scope
 
-This document specifies:
+This document defines:
 
-- overall system architecture;
+- architectural boundaries;
 - architectural layers;
-- major system components;
-- component responsibilities;
-- data flow;
-- architectural constraints.
+- logical system components;
+- interaction model;
+- logical processing flow;
+- architectural constraints;
+- architectural governance.
 
 Implementation details are intentionally excluded.
+
+They belong to the SSP specifications.
+
+---
+
+# Architectural Mission
+
+The architecture exists to fulfil the mission defined by CHARTER.md.
+
+Every architectural decision SHALL support:
+
+- reliable interpretation of official information;
+- deterministic processing;
+- transparent publication;
+- reproducibility;
+- long-term maintainability.
 
 ---
 
 # Architectural Principles
 
-The architecture of SvitloSk SHALL comply with the following principles.
+## Mission First
+
+Architecture exists to support the mission of the project.
+
+Technology SHALL never redefine that mission.
+
+---
 
 ## Separation of Responsibilities
 
-Each component SHALL have a single clearly defined responsibility.
+Every architectural component SHALL have one clearly defined responsibility.
+
+Responsibilities SHALL NOT overlap.
 
 ---
 
 ## Open Data First
 
-Every published result SHALL originate from official publicly available data.
+Every published result SHALL originate from officially published Open Data.
+
+Official information SHALL remain the only operational source of truth.
 
 ---
 
-## Interpretation without Modification
+## Interpretation Without Modification
 
 The system SHALL interpret official information.
 
@@ -90,59 +121,83 @@ The system SHALL NOT predict future events.
 
 ## Automation First
 
-Every repetitive operation SHOULD be automated whenever technically feasible.
+Every repetitive engineering process SHOULD be automated whenever technically feasible.
+
+Automation SHALL improve consistency without reducing transparency.
 
 ---
 
-## Source of Truth
+## Deterministic Processing
 
-Official publicly available information SHALL always remain the single source of truth.
+Identical input SHALL always produce identical output.
+
+System behaviour SHALL remain deterministic.
 
 ---
 
 ## Stateless Processing
 
-Whenever possible, processing components SHOULD remain stateless.
+Processing components SHOULD remain stateless whenever practical.
 
-Persistent storage SHALL be delegated to dedicated archive components.
+Persistent storage SHALL be delegated to dedicated storage components.
 
 ---
 
-## Reproducibility
+## Traceability
 
-Identical input data SHALL always produce identical results.
+Every published artifact SHALL remain traceable to:
+
+- official source data;
+- processing time;
+- publication time.
+
+---
+
+# Architectural Boundaries
+
+This document defines **WHAT** the system is.
+
+It does not define **HOW** individual components are implemented.
+
+Implementation details belong exclusively to the SSP specifications.
 
 ---
 
 # High-Level Architecture
 
-```
-                    Official Open Data
-                            │
-                            ▼
-                   Data Acquisition Layer
-                            │
-                            ▼
-                      Parsing Engine
-                            │
-                            ▼
-                 Interpretation Engine
-                            │
-          ┌─────────────────┼─────────────────┐
-          ▼                 ▼                 ▼
-   Archive Engine   Publication Engine   Notification Engine
-          │                 │                 │
-          ▼                 ▼                 ▼
- Historical Archive   Telegram / PWA     Push Notifications
+```text
+                Official Open Data
+                        │
+                        ▼
+               Data Acquisition
+                        │
+                        ▼
+                  Validation Layer
+                        │
+                        ▼
+                  Parsing Engine
+                        │
+                        ▼
+              Interpretation Engine
+                        │
+                        ▼
+              Publication Model Layer
+            ┌───────────┼───────────┐
+            ▼           ▼           ▼
+        Archive      Telegram      PWA
+            │                       │
+            └───────────┬───────────┘
+                        ▼
+               Notification Services
 ```
 
 ---
 
 # Architectural Layers
 
-## Layer 1 — Data Sources
+## Layer 1 — Official Data Sources
 
-Provides official publicly available information.
+Provides officially published information.
 
 Examples include:
 
@@ -154,21 +209,27 @@ Examples include:
 
 ## Layer 2 — Data Acquisition
 
-Responsible for obtaining official data.
+Responsible for obtaining official information.
 
-Responsibilities:
+Responsibilities include:
 
 - downloading;
-- integrity verification;
-- scheduling.
+- scheduling;
+- integrity verification.
 
 ---
 
-## Layer 3 — Parsing
+## Layer 3 — Validation
 
-Transforms raw official data into normalized internal structures.
+Responsible for verifying the integrity and consistency of acquired information before processing.
 
-Responsibilities:
+---
+
+## Layer 4 — Parsing
+
+Transforms raw official information into normalized internal structures.
+
+Responsibilities include:
 
 - parsing;
 - validation;
@@ -176,121 +237,92 @@ Responsibilities:
 
 ---
 
-## Layer 4 — Interpretation
+## Layer 5 — Interpretation
 
-Core component of the project.
+The core layer of SvitloSk.
 
-Responsibilities:
+Responsibilities include:
 
-- interpret official information;
-- detect meaningful events;
-- classify outages;
-- prepare structured publication objects.
+- interpreting official information;
+- detecting meaningful events;
+- preparing publication objects.
 
-This layer SHALL NOT modify official facts.
-
----
-
-## Layer 5 — Publication
-
-Responsible for delivering information to residents.
-
-Publication channels may include:
-
-- Telegram;
-- PWA application;
-- Web interface;
-- Tomorrow Schedule graphics;
-- Public Information Journal.
+Interpretation SHALL NOT modify official facts.
 
 ---
 
-## Layer 6 — Archive
+## Layer 6 — Publication
+
+Responsible for transforming interpreted information into public communication.
+
+Supported publication channels include:
+
+- Telegram Public Information Journal;
+- Progressive Web Application (PWA).
+
+Additional publication channels MAY be introduced without changing the architectural principles defined by this document.
+
+---
+
+## Layer 7 — Archive
 
 Responsible for preserving historical information.
 
-Responsibilities:
+Responsibilities include:
 
-- long-term storage;
+- historical storage;
 - historical lookup;
-- statistics;
-- auditability.
+- auditability;
+- statistical analysis.
 
 ---
 
-## Layer 7 — Notification
+## Layer 8 — Notification
 
-Responsible for delivering notifications.
+Responsible for distributing notifications generated from publication events.
 
-Examples:
-
-- Push notifications;
-- Telegram alerts;
-- critical outage notifications.
+Notification mechanisms are implementation-specific and SHALL remain independent from publication logic.
 
 ---
 
-# Core Components
+# Component Model
 
-The SvitloSk architecture consists of the following logical components.
+The system consists of independent logical components.
 
-- Scheduler
-- Data Acquisition
-- Parser
-- Interpreter
-- Archive
-- Publication Engine
-- Graph Generator
-- Notification Engine
-- Configuration
-- Monitoring
+Each component SHALL be specified by its own SSP specification.
 
-Each component SHALL be specified by its own specification document.
+Components SHALL communicate only through documented interfaces.
+
+Internal implementation SHALL remain independent from external specifications.
 
 ---
 
-# Data Flow
+# Logical Processing Flow
 
-The logical processing flow SHALL follow the sequence below.
-
-```
-Official Data
-
-↓
-
-Download
-
-↓
-
+```text
+Official Open Data
+        │
+        ▼
+Data Acquisition
+        │
+        ▼
 Validation
-
-↓
-
+        │
+        ▼
 Parsing
-
-↓
-
-Normalization
-
-↓
-
+        │
+        ▼
 Interpretation
-
-↓
-
-Publication Object
-
-↓
-
-Archive
-
-↓
-
-Publication
-
-↓
-
-Notification
+        │
+        ▼
+Publication Objects
+        │
+ ┌──────┴─────────┐
+ ▼                ▼
+Archive      Publication
+                  │
+                  ▼
+           Notification
 ```
 
 ---
@@ -299,149 +331,58 @@ Notification
 
 The architecture SHALL satisfy the following constraints.
 
-- Components SHOULD remain loosely coupled.
-- Components SHOULD communicate through clearly defined interfaces.
+- Components SHALL remain loosely coupled.
+- Components SHALL communicate through documented interfaces.
 - Internal implementation SHALL NOT affect external specifications.
-- No component SHALL directly modify official source data.
-- All publications SHALL be reproducible from archived data.
+- Official source data SHALL never be modified.
+- Publications SHALL remain reproducible.
+- Architectural principles SHALL remain technology-independent.
 
 ---
 
-# Non-goals
+# Architecture Governance
 
-The architecture explicitly excludes the following responsibilities.
+Changes to this document SHALL require:
 
-SvitloSk SHALL NOT:
+- an approved RFC;
+- Architecture Review;
+- an ADR where applicable.
 
-- predict outages;
-- replace official information sources;
-- dispatch repair crews;
-- issue operational commands;
-- generate unofficial information.
+Architectural evolution SHALL preserve compatibility with the Core Documents.
 
 ---
 
-# Future Extensions
+# Future Evolution
 
-The architecture is designed to allow future expansion without modifying the existing architectural principles.
+The architecture is intentionally extensible.
 
-Possible future extensions include:
+Future evolution MAY introduce:
 
 - additional publication channels;
-- analytical dashboards;
-- open API;
-- multi-community deployments;
-- statistical reporting.
+- analytical services;
+- visualization modules;
+- additional parsers;
+- multi-community support.
 
-Future extensions SHALL comply with this specification.
+Future evolution SHALL preserve the architectural principles defined by this document.
 
 ---
 
 # References
 
-Depends on:
+## Depends on
 
 - CHARTER.md
 - PROJECT_PRINCIPLES.md
-- DOCUMENT_INDEX.md
+- EDITORIAL_STANDARDS.md
 - GLOSSARY.md
+- DOCUMENT_INDEX.md
 
-Referenced by:
+## Referenced by
 
 - DATA_MODEL.md
-- PARSER_SPECIFICATION.md
-- GRAPH_SPECIFICATION.md
-- TELEGRAM_PUBLICATION.md
-- DESIGN_SYSTEM.md
-- ENGINEERING.md
-
-# Core System Principles
-
-The SvitloSk architecture is based on a strict separation between data acquisition, interpretation, storage and publication.
-
-Every subsystem has a single responsibility.
-
-The system SHALL NOT contain components that perform unrelated functions.
+- All SSP specifications
 
 ---
 
-## Principle 1 — Single Source of Truth
-
-Every published message SHALL originate from officially published open data.
-
-The system SHALL NOT generate information from assumptions or unofficial sources.
-
----
-
-## Principle 2 — Interpretation
-
-The system interprets official data.
-
-Interpretation means transforming official technical information into a format understandable by residents of the Starokostiantyniv Community.
-
-Interpretation MAY include:
-
-- restructuring information;
-- grouping events;
-- calculating durations;
-- generating timelines;
-- generating visual schedules;
-- preparing publication layouts.
-
-Interpretation SHALL NEVER modify factual information.
-
----
-
-## Principle 3 — Automation
-
-All routine operations SHOULD be automated whenever possible.
-
-Automation includes:
-
-- downloading official data;
-- validation;
-- interpretation;
-- publication generation;
-- archive creation;
-- notification preparation.
-
-Human participation SHOULD be required only for exceptional situations.
-
----
-
-## Principle 4 — Deterministic Processing
-
-Identical input SHALL always produce identical output.
-
-The system SHALL avoid non-deterministic behaviour.
-
----
-
-## Principle 5 — Traceability
-
-Every published artifact SHALL be traceable to:
-
-- source data;
-- processing time;
-- software version;
-- publication time.
-
-Traceability SHALL be preserved for archived publications.
-
----
-
-## Principle 6 — Independence of Components
-
-Each architectural component SHALL have a clearly defined responsibility.
-
-Components SHOULD communicate only through documented interfaces.
-
-Internal implementation SHALL NOT affect external behaviour.
-
----
-
-## Principle 7 — Extensibility
-
-New publication channels, parsers or visualization modules SHALL be addable without redesigning the entire architecture.
-
-Future expansion SHALL preserve backward compatibility whenever practical.
+**End of Document**

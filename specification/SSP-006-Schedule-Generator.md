@@ -1,10 +1,10 @@
 # SSP-006 — Schedule Generator
 
-Status: Draft
+Status: Draft (Чернетка)
 
 Specification ID: SSP-006
 
-Version: SSP-0.1
+Component: Schedule Generator
 
 Author: SvitloSk Project
 

@@ -1,14 +1,12 @@
 # SSP-002 — Parser
 
-**Status:** Stable (Стабільний)
+Status: Stable (Стабільний)
 
-**Specification ID:** SSP-002
+Specification ID: SSP-002
 
-**Component:** Parser
+Component: Parser
 
-**Class:** Normative
-
-**Maintainer:** SvitloSk Project
+Author: SvitloSk Project
 
 ---
 

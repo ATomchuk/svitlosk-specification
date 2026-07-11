@@ -1,10 +1,10 @@
 # SSP-011 — Monitoring
 
-Status: Draft
+Status: Draft (Чернетка)
 
 Specification ID: SSP-011
 
-Version: SSP-0.1
+Component: Monitoring
 
 Author: SvitloSk Project
 

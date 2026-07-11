@@ -1,12 +1,12 @@
 # TJS-005 — Message Templates
 
-**Status:** Draft
+Status: Draft (Чернетка)
 
-**Specification ID:** TJS-005
+Specification ID: TJS-005
 
-**Project:** SvitloSk
+Project: SvitloSk
 
-**Class:** Normative
+Class: Normative
 
 ---
 

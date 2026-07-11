@@ -1,18 +1,12 @@
 # TERRITORIAL_MODEL
 
-Project Specification
+Status: Stable (Стабільний)
 
-**Document ID:** DOC-004
+Document ID: DOC-009
 
-**Document:** TERRITORIAL_MODEL.md
+Document Class: Normative
 
-**Project:** SvitloSk
-
-**Status:** Stable (Стабільний)
-
-**Class:** Normative
-
-**Maintainer:** SvitloSk Project
+Author: SvitloSk Project
 
 ---
 

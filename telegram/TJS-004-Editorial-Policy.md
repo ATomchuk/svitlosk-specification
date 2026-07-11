@@ -1,10 +1,12 @@
 # TJS-004 — Editorial Policy
 
-Document ID: TJS-004
 Status: Approved (Затверджено)
-Version: 004
-Language: English
-Owner: SvitloSk Project
+
+Specification ID: TJS-004
+
+Component: Editorial Policy
+
+Author: SvitloSk Project
 
 ---
 

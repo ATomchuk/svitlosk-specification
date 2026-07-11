@@ -1,10 +1,10 @@
 # SSP-008 — API Specification
 
-Status: Draft
+Status: Draft (Чернетка)
 
 Specification ID: SSP-008
 
-Version: SSP-0.1
+Component: Internal API
 
 Author: SvitloSk Project
 

@@ -1,18 +1,12 @@
 # DOCUMENT_INDEX
 
-Project Specification
+Status: Stable (Стабільний)
 
-**Document ID:** DOC-002
+Document ID: DOC-002
 
-**Document:** DOCUMENT_INDEX.md
+Document Class: Normative
 
-**Project:** SvitloSk
-
-**Status:** Stable (Стабільний)
-
-**Class:** Normative
-
-**Maintainer:** SvitloSk Project
+Author: SvitloSk Project
 
 ---
 
@@ -20,23 +14,23 @@ Project Specification
 
 This document defines the official structure of the SvitloSk Project Specification.
 
-It establishes the canonical organization of project documentation, the recommended reading order, document categories and repository rules.
+It establishes the canonical organization of project documentation, the recommended reading order, document categories, repository governance and repository rules.
 
-This document is normative.
+This document is the authoritative entry point to the Project Specification.
 
 ---
 
 # Why this document exists
 
-As the SvitloSk specification grows, documentation becomes a system rather than a collection of independent files.
+As the SvitloSk Project evolves, its documentation becomes an engineering system rather than a collection of independent documents.
 
-This document provides a single entry point into the specification and defines how documents are organized and maintained.
+This document defines how documentation is organized, maintained and governed throughout the project lifecycle.
 
 ---
 
 # Reading Order
 
-New contributors SHOULD read the documents in the following order.
+New contributors SHOULD read the documentation in the following order.
 
 1. README.md
 2. CHARTER.md
@@ -48,27 +42,30 @@ New contributors SHOULD read the documents in the following order.
 8. RFC_PROCESS.md
 9. ARCHITECTURE.md
 10. DATA_MODEL.md
-11. Component Specifications (SSP)
-12. Telegram Journal Specifications (TJS)
+11. SYSTEM_OVERVIEW.md
+12. Component Specifications (SSP)
+13. Telegram Journal Specifications (TJS)
+14. REPOSITORY_CERTIFICATION.md
+15. REPOSITORY_FREEZE.md
 
 ---
 
 # Repository Structure
 
-The specification is organized into four logical groups.
+The Project Specification is organized into five logical groups.
 
 ## 1. Core Governance
 
-Documents defining the project itself.
+Documents defining the mission, principles and governance of the project.
 
 - CHARTER.md
 - PROJECT_PRINCIPLES.md
 
 ---
 
-## 2. Repository Governance
+## 2. Documentation Governance
 
-Documents defining repository rules and common terminology.
+Documents defining documentation governance, editorial standards, terminology and repository-wide rules.
 
 - DOCUMENT_INDEX.md
 - EDITORIAL_STANDARDS.md
@@ -80,20 +77,21 @@ Documents defining repository rules and common terminology.
 
 ## 3. System Architecture
 
-Documents describing the overall architecture of SvitloSk.
+Documents defining the architecture, logical data model and overall system organization.
 
 - ARCHITECTURE.md
 - DATA_MODEL.md
+- SYSTEM_OVERVIEW.md
 
 ---
 
 ## 4. Component Specifications
 
-Detailed specifications of individual system components.
+Normative specifications describing individual architectural components.
 
 Directory:
 
-```
+```text
 /specification
 ```
 
@@ -121,23 +119,26 @@ Normative specifications describing the Public Information Journal.
 
 Directory:
 
-```
+```text
 /telegram
 ```
 
 Current specifications include:
 
 - TJS-001 — Journal Concept
-- TJS-002 — Publication Lifecycle
+- TJS-002 — Publication Model
 - TJS-003 — Post Structure
 - TJS-004 — Editorial Policy
-- TJS-005+ (future documents)
+- TJS-005 — Message Templates
+- TJS-006 — Rendering Rules
+- TJS-007 — Publication Lifecycle
+- TJS-008 — Publication Lifecycle
 
 ---
 
 # Document Classes
 
-The repository contains two classes of documents.
+The repository contains two document classes.
 
 ## Normative
 
@@ -147,30 +148,31 @@ Normative documents SHALL use RFC 2119 terminology where applicable.
 
 Examples include:
 
-- CHARTER
-- PROJECT_PRINCIPLES
-- GLOSSARY
-- TERRITORIAL_MODEL
-- ARCHITECTURE
-- DATA_MODEL
-- SSP Specifications
-- TJS Specifications
+- Core Governance documents;
+- Documentation Governance documents;
+- System Architecture documents;
+- SSP Specifications;
+- TJS Specifications;
+- REPOSITORY_CERTIFICATION.md;
+- REPOSITORY_FREEZE.md.
 
 ---
 
 ## Informative
 
-Informative documents provide explanations, examples and implementation guidance.
+Informative documents provide explanations, implementation guidance and supporting material.
 
 Informative documents SHALL NOT introduce mandatory requirements.
 
+Informative documents SHALL NOT supersede normative documents.
+
 Examples include:
 
-- ADR
-- Tutorials
-- Examples
-- Migration Guides
-- Design Notes
+- ADR documents;
+- tutorials;
+- migration guides;
+- examples;
+- design notes.
 
 ---
 
@@ -179,18 +181,23 @@ Examples include:
 | ID | Document | Class | Status | Purpose |
 |----|----------|-------|--------|---------|
 | DOC-000 | CHARTER.md | Normative | Stable | Project mission and governance |
-| DOC-001 | PROJECT_PRINCIPLES.md | Normative | Stable | Fundamental engineering principles |
-| DOC-002 | DOCUMENT_INDEX.md | Normative | Stable | Repository structure and navigation |
-| DOC-003 | EDITORIAL_STANDARDS.md | Normative | Stable | Editorial and writing rules |
-| DOC-004 | GLOSSARY.md | Normative | Stable | Official terminology |
-| DOC-005 | TERRITORIAL_MODEL.md | Normative | Stable | Canonical territorial hierarchy |
-| DOC-006 | RFC_PROCESS.md | Normative | Stable | RFC lifecycle |
+| DOC-001 | PROJECT_PRINCIPLES.md | Normative | Stable | Engineering principles |
+| DOC-002 | DOCUMENT_INDEX.md | Normative | Stable | Repository governance and navigation |
+| DOC-003 | EDITORIAL_STANDARDS.md | Normative | Stable | Editorial and documentation standards |
+| DOC-004 | GLOSSARY.md | Normative | Stable | Canonical project terminology |
+| DOC-006 | RFC_PROCESS.md | Normative | Stable | Specification change governance |
+| DOC-007 | ARCHITECTURE.md | Normative | Stable | Canonical system architecture |
+| DOC-008 | DATA_MODEL.md | Normative | Stable | Canonical logical data model |
+| DOC-009 | TERRITORIAL_MODEL.md | Normative | Stable | Canonical territorial hierarchy |
+| DOC-010 | SYSTEM_OVERVIEW.md | Normative | Stable | High-level system overview |
+| DOC-011 | REPOSITORY_CERTIFICATION.md | Normative | Stable | Repository certification |
+| DOC-012 | REPOSITORY_FREEZE.md | Normative | Stable | Repository freeze policy |
 
 ---
 
 # Specification Hierarchy
 
-```
+```text
 README
    │
    ▼
@@ -221,10 +228,19 @@ ARCHITECTURE
 DATA_MODEL
    │
    ▼
+SYSTEM_OVERVIEW
+   │
+   ▼
 Component Specifications (SSP)
    │
    ▼
 Telegram Journal Specifications (TJS)
+   │
+   ▼
+REPOSITORY_CERTIFICATION
+   │
+   ▼
+REPOSITORY_FREEZE
 ```
 
 ---
@@ -237,9 +253,17 @@ Document identifiers SHALL be unique.
 
 Reading order SHALL be maintained by this document.
 
-Normative documents SHALL belong to exactly one document group.
+Normative documents SHALL belong to exactly one logical group.
 
 New specifications SHALL be placed in their designated repository directory.
+
+Implementation details SHALL reside in SSP specifications and SHALL NOT be introduced into Core Documents.
+
+English documentation SHALL be treated as the canonical source of the repository.
+
+Translations SHALL always be derived from the canonical English documentation.
+
+Repository-wide modifications SHALL follow the approved governance process.
 
 ---
 
@@ -249,7 +273,12 @@ New specifications SHALL be placed in their designated repository directory.
 
 - CHARTER.md
 - PROJECT_PRINCIPLES.md
+- EDITORIAL_STANDARDS.md
 
 ## Referenced by
 
-All normative documents.
+All normative repository documents.
+
+---
+
+**End of Document**

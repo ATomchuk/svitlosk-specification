@@ -1,10 +1,10 @@
 # SSP-005 — Data Storage
 
-Status: Draft
+Status: Draft (Чернетка)
 
 Specification ID: SSP-005
 
-Version: SSP-0.1
+Component: Data Storage
 
 Author: SvitloSk Project
 

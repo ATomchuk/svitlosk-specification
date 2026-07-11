@@ -1,10 +1,10 @@
 # TJS-008 — Publication Lifecycle
 
-**Status:** Draft
+Status: Draft (Чернетка)
 
-**Specification ID:** TJS-008
+Specification ID: TJS-008
 
-**Author:** SvitloSk Project
+Author: SvitloSk Project
 
 ---
 

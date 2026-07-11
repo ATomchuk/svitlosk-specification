@@ -1,10 +1,12 @@
 # SSP-001 — Data Pipeline
 
-Status: Draft
+Status: Draft (Чернетка)
 
 Specification ID: SSP-001
 
-Version: SSP-0.1
+Component: Data Pipeline
+
+Document Class: Normative
 
 Author: SvitloSk Project
 
@@ -24,10 +26,10 @@ This document is normative.
 
 This specification applies to:
 
-- Data parser
-- Internal data model
-- Publication engine
-- Telegram publishing
+- Parser
+- Data Model
+- Publisher
+- Telegram Journal
 - PWA application
 - Historical archive
 
@@ -194,4 +196,21 @@ The overall pipeline architecture shall remain unchanged.
 
 ---
 
-End of Specification.
+# References
+
+## Depends on
+
+- CHARTER.md
+- PROJECT_PRINCIPLES.md
+- GLOSSARY.md
+- ARCHITECTURE.md
+- DATA_MODEL.md
+
+## Referenced by
+
+- SSP-002 — Parser
+- SSP-003 — Publication Engine
+
+---
+
+End of Specification
