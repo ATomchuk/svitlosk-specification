@@ -23,14 +23,17 @@ Concise summary of the project baseline.
 | Metric | Value |
 |--------|-------|
 | Project | SvitloSk |
+| Phase | 1 — Documentation Platform |
 | Version | 1.0 |
 | Documentation Platform | COMPLETE |
 | Repository Architecture | FROZEN |
 | Documentation Architecture | FROZEN |
-| Canonical Specifications | 5/5 |
+| Canonical Specifications | 5/5 (Phase 1) |
 | Repository Files | ~305 |
 | Git Synchronized | YES |
 | Overall Maturity | 9.9/10 |
+
+**Note:** TJS-010 (Publishing Model) belongs to Phase 2 (Publishing Platform) and is intentionally excluded from the Phase 1 completion count.
 
 ---
 

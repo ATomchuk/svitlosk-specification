@@ -34,7 +34,7 @@ Final certification of the Project Baseline v1.0.
 
 | Criterion | Status |
 |-----------|--------|
-| 5 canonical specifications complete | YES |
+| 5/5 (Phase 1) canonical specifications complete | YES |
 | Repository architecture implemented | YES |
 | Physical migration complete | YES |
 | GitHub synchronized | YES |

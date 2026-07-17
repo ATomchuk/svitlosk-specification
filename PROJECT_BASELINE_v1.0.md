@@ -16,6 +16,8 @@
 
 Official project status after completion of Telegram Documentation Platform v1.0.
 
+This baseline covers Phase 1 (Documentation Platform) only. TJS-010 belongs to Phase 2 (Publishing Platform) and is intentionally excluded from the Phase 1 completion count.
+
 ---
 
 # 1. Current Project State
@@ -76,7 +78,9 @@ Official project status after completion of Telegram Documentation Platform v1.0
 | Documentation Architecture | COMPLETE | Mature |
 | Repository Migration | COMPLETE | Mature |
 
-## 1.5 Canonical Specifications Completed
+## 1.5 Canonical Specifications Completed (Phase 1)
+
+The Telegram Documentation Platform v1.0 consists of the canonical specifications required to establish the documentation platform itself. TJS-010 belongs to the next development phase because it specifies the operational Publishing Platform rather than the Documentation Platform.
 
 | # | Document ID | Filename | Status | Purpose | Current State |
 |---|------------|----------|--------|---------|---------------|
