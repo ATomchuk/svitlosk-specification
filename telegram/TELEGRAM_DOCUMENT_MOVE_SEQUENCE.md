@@ -1,0 +1,321 @@
+# TELEGRAM_DOCUMENT_MOVE_SEQUENCE
+
+**Document ID:** TJS-F1.4-P3
+
+**Title:** Telegram Document Move Sequence
+
+**Document Class:** Move Sequence
+
+**Status:** COMPLETE
+
+**Author:** SvitloSk Project
+
+---
+
+# Purpose
+
+Complete move sequence for every document.
+
+---
+
+# 1. Foundation Moves (7)
+
+| Step | Source | Destination |
+|------|--------|-------------|
+| 1 | telegram/TELEGRAM_SEMANTIC_MODEL.md | telegram/foundation/TELEGRAM_SEMANTIC_MODEL.md |
+| 2 | telegram/TELEGRAM_GLOSSARY.md | telegram/foundation/TELEGRAM_GLOSSARY.md |
+| 3 | telegram/TELEGRAM_SPECIFICATION_ALIGNMENT_PROCESS.md | telegram/foundation/TELEGRAM_SPECIFICATION_ALIGNMENT_PROCESS.md |
+| 4 | telegram/TELEGRAM_ALIGNMENT_PIPELINE.md | telegram/foundation/TELEGRAM_ALIGNMENT_PIPELINE.md |
+| 5 | telegram/TELEGRAM_ALIGNMENT_GOVERNANCE.md | telegram/foundation/TELEGRAM_ALIGNMENT_GOVERNANCE.md |
+| 6 | telegram/TJS_ALIGNMENT_TEMPLATE.md | telegram/foundation/TJS_ALIGNMENT_TEMPLATE.md |
+| 7 | telegram/TELEGRAM_ARCHITECTURE_DECISION.md | telegram/foundation/TELEGRAM_ARCHITECTURE_DECISION.md |
+
+---
+
+# 2. Specs Moves (4)
+
+| Step | Source | Destination |
+|------|--------|-------------|
+| 8 | telegram/TELEGRAM_EDITORIAL_SYSTEM_CANONICAL_MODEL.md | telegram/specs/TELEGRAM_EDITORIAL_SYSTEM_CANONICAL_MODEL.md |
+| 9 | telegram/TELEGRAM_PUBLICATION_LIFECYCLE.md | telegram/specs/TELEGRAM_PUBLICATION_LIFECYCLE.md |
+| 10 | telegram/TELEGRAM_GRAPHIC_PUBLICATION_MODEL.md | telegram/specs/TELEGRAM_GRAPHIC_PUBLICATION_MODEL.md |
+| 11 | telegram/TELEGRAM_PUBLISHING_CANONICAL_MODEL.md | telegram/specs/TELEGRAM_PUBLISHING_CANONICAL_MODEL.md |
+
+---
+
+# 3. Legacy Moves (8)
+
+| Step | Source | Destination |
+|------|--------|-------------|
+| 12 | telegram/TJS-001-Journal-Concept.md | telegram/legacy/TJS-001-Journal-Concept.md |
+| 13 | telegram/TJS-002-Publication-Lifecycle.md | telegram/legacy/TJS-002-Publication-Lifecycle.md |
+| 14 | telegram/TJS-003-Post-Structure.md | telegram/legacy/TJS-003-Post-Structure.md |
+| 15 | telegram/TJS-004-Editorial-Policy.md | telegram/legacy/TJS-004-Editorial-Policy.md |
+| 16 | telegram/TJS-005-Message-Templates.md | telegram/legacy/TJS-005-Message-Templates.md |
+| 17 | telegram/TJS-006-Rendering-Rules.md | telegram/legacy/TJS-006-Rendering-Rules.md |
+| 18 | telegram/TJS-007-Publication-Lifecycle.md | telegram/legacy/TJS-007-Publication-Lifecycle.md |
+| 19 | telegram/TJS-008-Publication-Lifecycle.md | telegram/legacy/TJS-008-Publication-Lifecycle.md |
+
+---
+
+# 4. Working/Publishing Moves (10)
+
+| Step | Source | Destination |
+|------|--------|-------------|
+| 20 | telegram/TELEGRAM_PUBLISHING_HARVEST.md | telegram/working/publishing/TELEGRAM_PUBLISHING_HARVEST.md |
+| 21 | telegram/TELEGRAM_PUBLISHING_COMPONENT_MATRIX.md | telegram/working/publishing/TELEGRAM_PUBLISHING_COMPONENT_MATRIX.md |
+| 22 | telegram/TELEGRAM_PUBLISHING_INTERACTION_MATRIX.md | telegram/working/publishing/TELEGRAM_PUBLISHING_INTERACTION_MATRIX.md |
+| 23 | telegram/TELEGRAM_PUBLISHING_RESPONSIBILITY_MATRIX.md | telegram/working/publishing/TELEGRAM_PUBLISHING_RESPONSIBILITY_MATRIX.md |
+| 24 | telegram/TELEGRAM_PUBLISHING_DUPLICATION.md | telegram/working/publishing/TELEGRAM_PUBLISHING_DUPLICATION.md |
+| 25 | telegram/TELEGRAM_PUBLISHING_PRINCIPLES.md | telegram/working/publishing/TELEGRAM_PUBLISHING_PRINCIPLES.md |
+| 26 | telegram/TELEGRAM_PUBLISHING_BOUNDARY_ANALYSIS.md | telegram/working/publishing/TELEGRAM_PUBLISHING_BOUNDARY_ANALYSIS.md |
+| 27 | telegram/TELEGRAM_PUBLISHING_SECTION_MATRIX.md | telegram/working/publishing/TELEGRAM_PUBLISHING_SECTION_MATRIX.md |
+| 28 | telegram/TELEGRAM_PUBLISHING_TRACEABILITY_MATRIX.md | telegram/working/publishing/TELEGRAM_PUBLISHING_TRACEABILITY_MATRIX.md |
+| 29 | telegram/TELEGRAM_PUBLISHING_ARCHITECTURAL_GUARANTEES.md | telegram/working/publishing/TELEGRAM_PUBLISHING_ARCHITECTURAL_GUARANTEES.md |
+
+---
+
+# 5. Working/Editorial Moves (11)
+
+| Step | Source | Destination |
+|------|--------|-------------|
+| 30 | telegram/TELEGRAM_EDITORIAL_PRINCIPLES.md | telegram/working/editorial/TELEGRAM_EDITORIAL_PRINCIPLES.md |
+| 31 | telegram/TELEGRAM_EDITORIAL_DECISIONS.md | telegram/working/editorial/TELEGRAM_EDITORIAL_DECISIONS.md |
+| 32 | telegram/TELEGRAM_EDITORIAL_HARVEST.md | telegram/working/editorial/TELEGRAM_EDITORIAL_HARVEST.md |
+| 33 | telegram/TELEGRAM_EDITORIAL_BOUNDARIES.md | telegram/working/editorial/TELEGRAM_EDITORIAL_BOUNDARIES.md |
+| 34 | telegram/TELEGRAM_EDITORIAL_RESPONSIBILITY_MATRIX.md | telegram/working/editorial/TELEGRAM_EDITORIAL_RESPONSIBILITY_MATRIX.md |
+| 35 | telegram/TELEGRAM_EDITORIAL_PRINCIPLE_DEFINITIONS.md | telegram/working/editorial/TELEGRAM_EDITORIAL_PRINCIPLE_DEFINITIONS.md |
+| 36 | telegram/TELEGRAM_EDITORIAL_PRINCIPLE_CERTIFICATION.md | telegram/working/editorial/TELEGRAM_EDITORIAL_PRINCIPLE_CERTIFICATION.md |
+| 37 | telegram/TELEGRAM_EDITORIAL_PRINCIPLE_BOUNDARIES.md | telegram/working/editorial/TELEGRAM_EDITORIAL_PRINCIPLE_BOUNDARIES.md |
+| 38 | telegram/TELEGRAM_EDITORIAL_PRINCIPLE_RELATIONSHIPS.md | telegram/working/editorial/TELEGRAM_EDITORIAL_PRINCIPLE_RELATIONSHIPS.md |
+| 39 | telegram/TELEGRAM_EDITORIAL_SYSTEM_BLUEPRINT.md | telegram/working/editorial/TELEGRAM_EDITORIAL_SYSTEM_BLUEPRINT.md |
+| 40 | telegram/TELEGRAM_EDITORIAL_SECTION_ARCHITECTURE.md | telegram/working/editorial/TELEGRAM_EDITORIAL_SECTION_ARCHITECTURE.md |
+
+---
+
+# 6. Working/Graphic Moves (58)
+
+| Step | Source | Destination |
+|------|--------|-------------|
+| 41 | telegram/TELEGRAM_GRAPHIC_PUBLICATION_BLUEPRINT.md | telegram/working/graphic/TELEGRAM_GRAPHIC_PUBLICATION_BLUEPRINT.md |
+| 42 | telegram/TELEGRAM_GRAPHIC_SECTION_ARCHITECTURE.md | telegram/working/graphic/TELEGRAM_GRAPHIC_SECTION_ARCHITECTURE.md |
+| 43 | telegram/TELEGRAM_GRAPHIC_PUBLICATION_TYPES.md | telegram/working/graphic/TELEGRAM_GRAPHIC_PUBLICATION_TYPES.md |
+| 44 | telegram/TELEGRAM_GRAPHIC_TRACEABILITY_BLUEPRINT.md | telegram/working/graphic/TELEGRAM_GRAPHIC_TRACEABILITY_BLUEPRINT.md |
+| 45 | telegram/TELEGRAM_GRAPHIC_BLUEPRINT_VALIDATION.md | telegram/working/graphic/TELEGRAM_GRAPHIC_BLUEPRINT_VALIDATION.md |
+| 46 | telegram/TELEGRAM_GRAPHIC_BLUEPRINT_CERTIFICATE.md | telegram/working/graphic/TELEGRAM_GRAPHIC_BLUEPRINT_CERTIFICATE.md |
+| 47 | telegram/TELEGRAM_GRAPHIC_HARVEST.md | telegram/working/graphic/TELEGRAM_GRAPHIC_HARVEST.md |
+| 48 | telegram/TELEGRAM_GRAPHIC_CONCEPT_MATRIX.md | telegram/working/graphic/TELEGRAM_GRAPHIC_CONCEPT_MATRIX.md |
+| 49 | telegram/TELEGRAM_GRAPHIC_RESPONSIBILITY_MATRIX.md | telegram/working/graphic/TELEGRAM_GRAPHIC_RESPONSIBILITY_MATRIX.md |
+| 50 | telegram/TELEGRAM_GRAPHIC_INTERACTION_MATRIX.md | telegram/working/graphic/TELEGRAM_GRAPHIC_INTERACTION_MATRIX.md |
+| 51 | telegram/TELEGRAM_GRAPHIC_BOUNDARY_ANALYSIS.md | telegram/working/graphic/TELEGRAM_GRAPHIC_BOUNDARY_ANALYSIS.md |
+| 52 | telegram/TELEGRAM_GRAPHIC_DUPLICATION_ANALYSIS.md | telegram/working/graphic/TELEGRAM_GRAPHIC_DUPLICATION_ANALYSIS.md |
+| 53 | telegram/TELEGRAM_GRAPHIC_READINESS_REPORT.md | telegram/working/graphic/TELEGRAM_GRAPHIC_READINESS_REPORT.md |
+| 54 | telegram/TELEGRAM_GRAPHIC_FINAL_PRINCIPLES.md | telegram/working/graphic/TELEGRAM_GRAPHIC_FINAL_PRINCIPLES.md |
+| 55 | telegram/TELEGRAM_GRAPHIC_PRINCIPLE_REVIEW.md | telegram/working/graphic/TELEGRAM_GRAPHIC_PRINCIPLE_REVIEW.md |
+| 56 | telegram/TELEGRAM_GRAPHIC_PRINCIPLE_MATRIX.md | telegram/working/graphic/TELEGRAM_GRAPHIC_PRINCIPLE_MATRIX.md |
+| 57 | telegram/TELEGRAM_GRAPHIC_DUPLICATION_REVIEW.md | telegram/working/graphic/TELEGRAM_GRAPHIC_DUPLICATION_REVIEW.md |
+| 58 | telegram/TELEGRAM_GRAPHIC_MISSING_PRINCIPLES.md | telegram/working/graphic/TELEGRAM_GRAPHIC_MISSING_PRINCIPLES.md |
+| 59 | telegram/TELEGRAM_GRAPHIC_CANONICAL_RECOMMENDATIONS.md | telegram/working/graphic/TELEGRAM_GRAPHIC_CANONICAL_RECOMMENDATIONS.md |
+| 60 | telegram/TELEGRAM_GRAPHIC_PRINCIPLE_READINESS.md | telegram/working/graphic/TELEGRAM_GRAPHIC_PRINCIPLE_READINESS.md |
+| 61 | telegram/TELEGRAM_GRAPHIC_PRINCIPLE_REFINEMENT.md | telegram/working/graphic/TELEGRAM_GRAPHIC_PRINCIPLE_REFINEMENT.md |
+| 62 | telegram/TELEGRAM_GRAPHIC_REFINEMENT_VALIDATION.md | telegram/working/graphic/TELEGRAM_GRAPHIC_REFINEMENT_VALIDATION.md |
+| 63 | telegram/TELEGRAM_GRAPHIC_REFINEMENT_CERTIFICATE.md | telegram/working/graphic/TELEGRAM_GRAPHIC_REFINEMENT_CERTIFICATE.md |
+| 64 | telegram/TELEGRAM_GRAPHIC_CONSTRAINTS_UPDATE.md | telegram/working/graphic/TELEGRAM_GRAPHIC_CONSTRAINTS_UPDATE.md |
+| 65 | telegram/TELEGRAM_GRAPHIC_ACCESSIBILITY_REVIEW.md | telegram/working/graphic/TELEGRAM_GRAPHIC_ACCESSIBILITY_REVIEW.md |
+| 66 | telegram/TELEGRAM_GRAPHIC_ARCHITECTURE_FREEZE.md | telegram/working/graphic/TELEGRAM_GRAPHIC_ARCHITECTURE_FREEZE.md |
+| 67 | telegram/TELEGRAM_GRAPHIC_FROZEN_COMPONENTS.md | telegram/working/graphic/TELEGRAM_GRAPHIC_FROZEN_COMPONENTS.md |
+| 68 | telegram/TELEGRAM_GRAPHIC_CHANGE_POLICY.md | telegram/working/graphic/TELEGRAM_GRAPHIC_CHANGE_POLICY.md |
+| 69 | telegram/TELEGRAM_GRAPHIC_ARCHITECTURE_FREEZE_VALIDATION.md | telegram/working/graphic/TELEGRAM_GRAPHIC_ARCHITECTURE_FREEZE_VALIDATION.md |
+| 70 | telegram/TELEGRAM_GRAPHIC_ARCHITECTURE_FREEZE_CERTIFICATE.md | telegram/working/graphic/TELEGRAM_GRAPHIC_ARCHITECTURE_FREEZE_CERTIFICATE.md |
+| 71 | telegram/TELEGRAM_GRAPHIC_BLUEPRINT_REFINEMENT.md | telegram/working/graphic/TELEGRAM_GRAPHIC_BLUEPRINT_REFINEMENT.md |
+| 72 | telegram/TELEGRAM_GRAPHIC_PUBLICATION_TYPES_REVIEW.md | telegram/working/graphic/TELEGRAM_GRAPHIC_PUBLICATION_TYPES_REVIEW.md |
+| 73 | telegram/TELEGRAM_GRAPHIC_METADATA_REVIEW.md | telegram/working/graphic/TELEGRAM_GRAPHIC_METADATA_REVIEW.md |
+| 74 | telegram/TELEGRAM_GRAPHIC_LAYOUT_REVIEW.md | telegram/working/graphic/TELEGRAM_GRAPHIC_LAYOUT_REVIEW.md |
+| 75 | telegram/TELEGRAM_GRAPHIC_VISUAL_IDENTITY_REVIEW.md | telegram/working/graphic/TELEGRAM_GRAPHIC_VISUAL_IDENTITY_REVIEW.md |
+| 76 | telegram/TELEGRAM_GRAPHIC_PRECOMPILATION_CERTIFICATE.md | telegram/working/graphic/TELEGRAM_GRAPHIC_PRECOMPILATION_CERTIFICATE.md |
+| 77 | telegram/TELEGRAM_GRAPHIC_CLASSIFICATION_REVIEW.md | telegram/working/graphic/TELEGRAM_GRAPHIC_CLASSIFICATION_REVIEW.md |
+| 78 | telegram/TELEGRAM_GRAPHIC_CLASSIFICATION_HIERARCHY.md | telegram/working/graphic/TELEGRAM_GRAPHIC_CLASSIFICATION_HIERARCHY.md |
+| 79 | telegram/TELEGRAM_GRAPHIC_CLASSIFICATION_DEPENDENCY.md | telegram/working/graphic/TELEGRAM_GRAPHIC_CLASSIFICATION_DEPENDENCY.md |
+| 80 | telegram/TELEGRAM_GRAPHIC_CLASSIFICATION_RECOMMENDATION.md | telegram/working/graphic/TELEGRAM_GRAPHIC_CLASSIFICATION_RECOMMENDATION.md |
+| 81 | telegram/TELEGRAM_GRAPHIC_CLASSIFICATION_CERTIFICATE.md | telegram/working/graphic/TELEGRAM_GRAPHIC_CLASSIFICATION_CERTIFICATE.md |
+| 82 | telegram/TELEGRAM_GRAPHIC_CLASSIFICATION_WORDING_REVIEW.md | telegram/working/graphic/TELEGRAM_GRAPHIC_CLASSIFICATION_WORDING_REVIEW.md |
+| 83 | telegram/TELEGRAM_GRAPHIC_CLASSIFICATION_WORDING.md | telegram/working/graphic/TELEGRAM_GRAPHIC_CLASSIFICATION_WORDING.md |
+| 84 | telegram/TELEGRAM_GRAPHIC_CLASSIFICATION_OWNER.md | telegram/working/graphic/TELEGRAM_GRAPHIC_CLASSIFICATION_OWNER.md |
+| 85 | telegram/TELEGRAM_GRAPHIC_CLASSIFICATION_VALIDATION.md | telegram/working/graphic/TELEGRAM_GRAPHIC_CLASSIFICATION_VALIDATION.md |
+| 86 | telegram/TELEGRAM_GRAPHIC_CLASSIFICATION_WORDING_CERTIFICATE.md | telegram/working/graphic/TELEGRAM_GRAPHIC_CLASSIFICATION_WORDING_CERTIFICATE.md |
+| 87 | telegram/TELEGRAM_GRAPHIC_BLUEPRINT_FINAL_REVIEW.md | telegram/working/graphic/TELEGRAM_GRAPHIC_BLUEPRINT_FINAL_REVIEW.md |
+| 88 | telegram/TELEGRAM_GRAPHIC_BLUEPRINT_STYLE_AUDIT.md | telegram/working/graphic/TELEGRAM_GRAPHIC_BLUEPRINT_STYLE_AUDIT.md |
+| 89 | telegram/TELEGRAM_GRAPHIC_BLUEPRINT_TERMINOLOGY_AUDIT.md | telegram/working/graphic/TELEGRAM_GRAPHIC_BLUEPRINT_TERMINOLOGY_AUDIT.md |
+| 90 | telegram/TELEGRAM_GRAPHIC_BLUEPRINT_DUPLICATION_AUDIT.md | telegram/working/graphic/TELEGRAM_GRAPHIC_BLUEPRINT_DUPLICATION_AUDIT.md |
+| 91 | telegram/TELEGRAM_GRAPHIC_BLUEPRINT_FINAL_READINESS.md | telegram/working/graphic/TELEGRAM_GRAPHIC_BLUEPRINT_FINAL_READINESS.md |
+| 92 | telegram/TELEGRAM_GRAPHIC_BLUEPRINT_FINAL_CERTIFICATE.md | telegram/working/graphic/TELEGRAM_GRAPHIC_BLUEPRINT_FINAL_CERTIFICATE.md |
+| 93 | telegram/TELEGRAM_GRAPHIC_COMPILATION_REPORT.md | telegram/working/graphic/TELEGRAM_GRAPHIC_COMPILATION_REPORT.md |
+| 94 | telegram/TELEGRAM_GRAPHIC_TRACEABILITY_VALIDATION.md | telegram/working/graphic/TELEGRAM_GRAPHIC_TRACEABILITY_VALIDATION.md |
+| 95 | telegram/TELEGRAM_GRAPHIC_DUPLICATION_AUDIT.md | telegram/working/graphic/TELEGRAM_GRAPHIC_DUPLICATION_AUDIT.md |
+| 96 | telegram/TELEGRAM_GRAPHIC_CANONICAL_CERTIFICATE.md | telegram/working/graphic/TELEGRAM_GRAPHIC_CANONICAL_CERTIFICATE.md |
+| 97 | telegram/TELEGRAM_GRAPHIC_ARCHITECTURE_CERTIFICATION.md | telegram/working/graphic/TELEGRAM_GRAPHIC_ARCHITECTURE_CERTIFICATION.md |
+| 98 | telegram/TELEGRAM_GRAPHIC_BOUNDARY_ANALYSIS.md | telegram/working/graphic/TELEGRAM_GRAPHIC_BOUNDARY_ANALYSIS.md |
+
+---
+
+# 7. Working/Glossary Moves (11)
+
+| Step | Source | Destination |
+|------|--------|-------------|
+| 99 | telegram/TELEGRAM_GLOSSARY_CANDIDATE.md | telegram/working/glossary/TELEGRAM_GLOSSARY_CANDIDATE.md |
+| 100 | telegram/TELEGRAM_GLOSSARY_COMPILATION_REPORT.md | telegram/working/glossary/TELEGRAM_GLOSSARY_COMPILATION_REPORT.md |
+| 101 | telegram/TELEGRAM_GLOSSARY_COMPILATION_VALIDATION.md | telegram/working/glossary/TELEGRAM_GLOSSARY_COMPILATION_VALIDATION.md |
+| 102 | telegram/TELEGRAM_GLOSSARY_EDITORIAL_REVIEW.md | telegram/working/glossary/TELEGRAM_GLOSSARY_EDITORIAL_REVIEW.md |
+| 103 | telegram/TELEGRAM_GLOSSARY_NORMATIVE_VALIDATION.md | telegram/working/glossary/TELEGRAM_GLOSSARY_NORMATIVE_VALIDATION.md |
+| 104 | telegram/TELEGRAM_GLOSSARY_PUBLICATION_CERTIFICATE.md | telegram/working/glossary/TELEGRAM_GLOSSARY_PUBLICATION_CERTIFICATE.md |
+| 105 | telegram/TELEGRAM_GLOSSARY_PUBLICATION_DECISION.md | telegram/working/glossary/TELEGRAM_GLOSSARY_PUBLICATION_DECISION.md |
+| 106 | telegram/TELEGRAM_GLOSSARY_READY.md | telegram/working/glossary/TELEGRAM_GLOSSARY_READY.md |
+| 107 | telegram/TELEGRAM_GLOSSARY_REINFORCEMENT_REPORT.md | telegram/working/glossary/TELEGRAM_GLOSSARY_REINFORCEMENT_REPORT.md |
+| 108 | telegram/TELEGRAM_GLOSSARY_REINFORCEMENT_VALIDATION.md | telegram/working/glossary/TELEGRAM_GLOSSARY_REINFORCEMENT_VALIDATION.md |
+| 109 | telegram/TELEGRAM_GLOSSARY_RELEASE_NOTES.md | telegram/working/glossary/TELEGRAM_GLOSSARY_RELEASE_NOTES.md |
+
+---
+
+# 8. Working/Migration Moves (9)
+
+| Step | Source | Destination |
+|------|--------|-------------|
+| 110 | telegram/TELEGRAM_MIGRATION_PLAN.md | telegram/working/migration/TELEGRAM_MIGRATION_PLAN.md |
+| 111 | telegram/TELEGRAM_MIGRATION_MATRIX.md | telegram/working/migration/TELEGRAM_MIGRATION_MATRIX.md |
+| 112 | telegram/TELEGRAM_MIGRATION_VALIDATION.md | telegram/working/migration/TELEGRAM_MIGRATION_VALIDATION.md |
+| 113 | telegram/TELEGRAM_MIGRATION_APPROVAL.md | telegram/working/migration/TELEGRAM_MIGRATION_APPROVAL.md |
+| 114 | telegram/TELEGRAM_MIGRATION_FINAL_REPORT.md | telegram/working/migration/TELEGRAM_MIGRATION_FINAL_REPORT.md |
+| 115 | telegram/TELEGRAM_MIGRATION_REVIEW.md | telegram/working/migration/TELEGRAM_MIGRATION_REVIEW.md |
+| 116 | telegram/TELEGRAM_MIGRATION_REVIEW_FINDINGS.md | telegram/working/migration/TELEGRAM_MIGRATION_REVIEW_FINDINGS.md |
+| 117 | telegram/TELEGRAM_MIGRATION_REVIEW_VALIDATION.md | telegram/working/migration/TELEGRAM_MIGRATION_REVIEW_VALIDATION.md |
+| 118 | telegram/TELEGRAM_MIGRATION_REVIEW_FINAL_REPORT.md | telegram/working/migration/TELEGRAM_MIGRATION_REVIEW_FINAL_REPORT.md |
+
+---
+
+# 9. Working/Alignment Moves (5)
+
+| Step | Source | Destination |
+|------|--------|-------------|
+| 119 | telegram/TELEGRAM_ALIGNMENT_FRAMEWORK_CERTIFICATE.md | telegram/working/alignment/TELEGRAM_ALIGNMENT_FRAMEWORK_CERTIFICATE.md |
+| 120 | telegram/TELEGRAM_ALIGNMENT_FRAMEWORK_FINAL_REPORT.md | telegram/working/alignment/TELEGRAM_ALIGNMENT_FRAMEWORK_FINAL_REPORT.md |
+| 121 | telegram/TELEGRAM_ALIGNMENT_FRAMEWORK_VALIDATION.md | telegram/working/alignment/TELEGRAM_ALIGNMENT_FRAMEWORK_VALIDATION.md |
+| 122 | telegram/TELEGRAM_ALIGNMENT_NAMING_UPDATE.md | telegram/working/alignment/TELEGRAM_ALIGNMENT_NAMING_UPDATE.md |
+| 123 | telegram/TELEGRAM_ALIGNMENT_READINESS_REPORT.md | telegram/working/alignment/TELEGRAM_ALIGNMENT_READINESS_REPORT.md |
+
+---
+
+# 10. Working/Reference Moves (35)
+
+| Step | Source | Destination |
+|------|--------|-------------|
+| 124 | telegram/TELEGRAM_CANONICAL_SEMANTIC_MODEL.md | telegram/working/reference/TELEGRAM_CANONICAL_SEMANTIC_MODEL.md |
+| 125 | telegram/TELEGRAM_CANONICAL_TERMINOLOGY.md | telegram/working/reference/TELEGRAM_CANONICAL_TERMINOLOGY.md |
+| 126 | telegram/TELEGRAM_CANONICAL_DOCUMENT_POLICY.md | telegram/working/reference/TELEGRAM_CANONICAL_DOCUMENT_POLICY.md |
+| 127 | telegram/TELEGRAM_CANONICAL_SPECIFICATION_STANDARD.md | telegram/working/reference/TELEGRAM_CANONICAL_SPECIFICATION_STANDARD.md |
+| 128 | telegram/TELEGRAM_CANONICAL_SECTION_STANDARD.md | telegram/working/reference/TELEGRAM_CANONICAL_SECTION_STANDARD.md |
+| 129 | telegram/TELEGRAM_CANONICAL_WRITING_STANDARD.md | telegram/working/reference/TELEGRAM_CANONICAL_WRITING_STANDARD.md |
+| 130 | telegram/TELEGRAM_CANONICAL_QUALITY_STANDARD.md | telegram/working/reference/TELEGRAM_CANONICAL_QUALITY_STANDARD.md |
+| 131 | telegram/TELEGRAM_CANONICAL_TEMPLATE.md | telegram/working/reference/TELEGRAM_CANONICAL_TEMPLATE.md |
+| 132 | telegram/TELEGRAM_CANONICAL_STANDARD_CERTIFICATE.md | telegram/working/reference/TELEGRAM_CANONICAL_STANDARD_CERTIFICATE.md |
+| 133 | telegram/TELEGRAM_CANONICAL_STANDARD_VALIDATION.md | telegram/working/reference/TELEGRAM_CANONICAL_STANDARD_VALIDATION.md |
+| 134 | telegram/TELEGRAM_DERIVED_TERMS.md | telegram/working/reference/TELEGRAM_DERIVED_TERMS.md |
+| 135 | telegram/TELEGRAM_FORBIDDEN_TERMS.md | telegram/working/reference/TELEGRAM_FORBIDDEN_TERMS.md |
+| 136 | telegram/TELEGRAM_FORBIDDEN_TERMINOLOGY.md | telegram/working/reference/TELEGRAM_FORBIDDEN_TERMINOLOGY.md |
+| 137 | telegram/TELEGRAM_PLATFORM_TERMS.md | telegram/working/reference/TELEGRAM_PLATFORM_TERMS.md |
+| 138 | telegram/TELEGRAM_ARCHITECTURAL_TERMS.md | telegram/working/reference/TELEGRAM_ARCHITECTURAL_TERMS.md |
+| 139 | telegram/TELEGRAM_TRANSLATION_CONSISTENCY.md | telegram/working/reference/TELEGRAM_TRANSLATION_CONSISTENCY.md |
+| 140 | telegram/TELEGRAM_CANONICAL_TERMINOLOGY.md | telegram/working/reference/TELEGRAM_CANONICAL_TERMINOLOGY.md |
+| 141 | telegram/TELEGRAM_TERMINOLOGY_CLASSIFICATION.md | telegram/working/reference/TELEGRAM_TERMINOLOGY_CLASSIFICATION.md |
+| 142 | telegram/TELEGRAM_TERMINOLOGY_DUPLICATION.md | telegram/working/reference/TELEGRAM_TERMINOLOGY_DUPLICATION.md |
+| 143 | telegram/TELEGRAM_TERMINOLOGY_FINAL_REPORT.md | telegram/working/reference/TELEGRAM_TERMINOLOGY_FINAL_REPORT.md |
+| 144 | telegram/TELEGRAM_TERMINOLOGY_HARVEST.md | telegram/working/reference/TELEGRAM_TERMINOLOGY_HARVEST.md |
+| 145 | telegram/TELEGRAM_TERMINOLOGY_MATRIX.md | telegram/working/reference/TELEGRAM_TERMINOLOGY_MATRIX.md |
+| 146 | telegram/TELEGRAM_TERM_APPROVAL_FINAL_REPORT.md | telegram/working/reference/TELEGRAM_TERM_APPROVAL_FINAL_REPORT.md |
+| 147 | telegram/TELEGRAM_TERM_APPROVAL_REGISTER.md | telegram/working/reference/TELEGRAM_TERM_APPROVAL_REGISTER.md |
+| 148 | telegram/TELEGRAM_DOCUMENT_NAMING_STANDARD.md | telegram/working/reference/TELEGRAM_DOCUMENT_NAMING_STANDARD.md |
+| 149 | telegram/TELEGRAM_DOCUMENT_INVENTORY.md | telegram/working/reference/TELEGRAM_DOCUMENT_INVENTORY.md |
+| 150 | telegram/TELEGRAM_DOCUMENT_CLASSIFICATION.md | telegram/working/reference/TELEGRAM_DOCUMENT_CLASSIFICATION.md |
+| 151 | telegram/TELEGRAM_DOCUMENT_CLASSIFICATION_FINAL.md | telegram/working/reference/TELEGRAM_DOCUMENT_CLASSIFICATION_FINAL.md |
+| 152 | telegram/TELEGRAM_DOCUMENT_LAYER_ANALYSIS.md | telegram/working/reference/TELEGRAM_DOCUMENT_LAYER_ANALYSIS.md |
+| 153 | telegram/TELEGRAM_DOCUMENT_BOUNDARIES.md | telegram/working/reference/TELEGRAM_DOCUMENT_BOUNDARIES.md |
+| 154 | telegram/TELEGRAM_DOCUMENT_DEPENDENCY_MAP.md | telegram/working/reference/TELEGRAM_DOCUMENT_DEPENDENCY_MAP.md |
+| 155 | telegram/TELEGRAM_DOCUMENT_GENERATED_ARTIFACTS.md | telegram/working/reference/TELEGRAM_DOCUMENT_GENERATED_ARTIFACTS.md |
+| 156 | telegram/TELEGRAM_DOCUMENT_NAVIGATION_MODEL.md | telegram/working/reference/TELEGRAM_DOCUMENT_NAVIGATION_MODEL.md |
+| 157 | telegram/TELEGRAM_DOCUMENT_PLACEMENT_MATRIX.md | telegram/working/reference/TELEGRAM_DOCUMENT_PLACEMENT_MATRIX.md |
+| 158 | telegram/TELEGRAM_DOCUMENT_REFERENCE_MODEL.md | telegram/working/reference/TELEGRAM_DOCUMENT_REFERENCE_MODEL.md |
+
+---
+
+# 11. Archive Moves (30)
+
+| Step | Source | Destination |
+|------|--------|-------------|
+| 159 | telegram/TELEGRAM_ARCHITECTURE_CERTIFICATION.md | telegram/archive/TELEGRAM_ARCHITECTURE_CERTIFICATION.md |
+| 160 | telegram/TELEGRAM_ARCHITECTURE_CONSISTENCY_REVIEW.md | telegram/archive/TELEGRAM_ARCHITECTURE_CONSISTENCY_REVIEW.md |
+| 161 | telegram/TELEGRAM_ARCHITECTURE_CONSISTENCY_SCORECARD.md | telegram/archive/TELEGRAM_ARCHITECTURE_CONSISTENCY_SCORECARD.md |
+| 162 | telegram/TELEGRAM_ARCHITECTURE_OWNERSHIP_MATRIX.md | telegram/archive/TELEGRAM_ARCHITECTURE_OWNERSHIP_MATRIX.md |
+| 163 | telegram/TELEGRAM_ARCHITECTURE_DEPENDENCY_GRAPH.md | telegram/archive/TELEGRAM_ARCHITECTURE_DEPENDENCY_GRAPH.md |
+| 164 | telegram/TELEGRAM_ARCHITECTURE_BOUNDARY_VALIDATION.md | telegram/archive/TELEGRAM_ARCHITECTURE_BOUNDARY_VALIDATION.md |
+| 165 | telegram/TELEGRAM_ARCHITECTURE_REFERENCE_AUDIT.md | telegram/archive/TELEGRAM_ARCHITECTURE_REFERENCE_AUDIT.md |
+| 166 | telegram/TELEGRAM_ARCHITECTURE_EVOLUTION_REPORT.md | telegram/archive/TELEGRAM_ARCHITECTURE_EVOLUTION_REPORT.md |
+| 167 | telegram/TELEGRAM_CAPABILITY_CATALOGUE.md | telegram/archive/TELEGRAM_CAPABILITY_CATALOGUE.md |
+| 168 | telegram/TELEGRAM_CAPABILITY_OWNERSHIP_MATRIX.md | telegram/archive/TELEGRAM_CAPABILITY_OWNERSHIP_MATRIX.md |
+| 169 | telegram/TELEGRAM_CAPABILITY_COVERAGE.md | telegram/archive/TELEGRAM_CAPABILITY_COVERAGE.md |
+| 170 | telegram/TELEGRAM_CAPABILITY_CERTIFICATION.md | telegram/archive/TELEGRAM_CAPABILITY_CERTIFICATION.md |
+| 171 | telegram/TELEGRAM_PLATFORM_READINESS_REVIEW.md | telegram/archive/TELEGRAM_PLATFORM_READINESS_REVIEW.md |
+| 172 | telegram/TELEGRAM_REPOSITORY_AUTHORITY_ARCHITECTURE_CERTIFICATE.md | telegram/archive/TELEGRAM_REPOSITORY_AUTHORITY_ARCHITECTURE_CERTIFICATE.md |
+| 173 | telegram/TELEGRAM_REPOSITORY_AUTHORITY_CERTIFICATE.md | telegram/archive/TELEGRAM_REPOSITORY_AUTHORITY_CERTIFICATE.md |
+| 174 | telegram/TELEGRAM_REPOSITORY_AUTHORITY_CONSISTENCY_AUDIT.md | telegram/archive/TELEGRAM_REPOSITORY_AUTHORITY_CONSISTENCY_AUDIT.md |
+| 175 | telegram/TELEGRAM_REPOSITORY_AUTHORITY_DEFINITION.md | telegram/archive/TELEGRAM_REPOSITORY_AUTHORITY_DEFINITION.md |
+| 176 | telegram/TELEGRAM_REPOSITORY_AUTHORITY_DEFINITION_REVIEW.md | telegram/archive/TELEGRAM_REPOSITORY_AUTHORITY_DEFINITION_REVIEW.md |
+| 177 | telegram/TELEGRAM_REPOSITORY_AUTHORITY_DEPENDENCY_MATRIX.md | telegram/archive/TELEGRAM_REPOSITORY_AUTHORITY_DEPENDENCY_MATRIX.md |
+| 178 | telegram/TELEGRAM_REPOSITORY_AUTHORITY_DUPLICATION_REPORT.md | telegram/archive/TELEGRAM_REPOSITORY_AUTHORITY_DUPLICATION_REPORT.md |
+| 179 | telegram/TELEGRAM_REPOSITORY_AUTHORITY_INTEGRATION.md | telegram/archive/TELEGRAM_REPOSITORY_AUTHORITY_INTEGRATION.md |
+| 180 | telegram/TELEGRAM_REPOSITORY_AUTHORITY_INTEGRATION_CERTIFICATE.md | telegram/archive/TELEGRAM_REPOSITORY_AUTHORITY_INTEGRATION_CERTIFICATE.md |
+| 181 | telegram/TELEGRAM_REPOSITORY_AUTHORITY_OWNERSHIP.md | telegram/archive/TELEGRAM_REPOSITORY_AUTHORITY_OWNERSHIP.md |
+| 182 | telegram/TELEGRAM_REPOSITORY_AUTHORITY_REFERENCE_MATRIX.md | telegram/archive/TELEGRAM_REPOSITORY_AUTHORITY_REFERENCE_MATRIX.md |
+| 183 | telegram/TELEGRAM_REPOSITORY_AUTHORITY_REVIEW.md | telegram/archive/TELEGRAM_REPOSITORY_AUTHORITY_REVIEW.md |
+| 184 | telegram/TELEGRAM_REPOSITORY_AUTHORITY_TRACEABILITY.md | telegram/archive/TELEGRAM_REPOSITORY_AUTHORITY_TRACEABILITY.md |
+| 185 | telegram/TELEGRAM_REPOSITORY_AUTHORITY_VALIDATION.md | telegram/archive/TELEGRAM_REPOSITORY_AUTHORITY_VALIDATION.md |
+| 186 | telegram/TELEGRAM_SEMANTIC_CONSISTENCY_FINAL_REPORT.md | telegram/archive/TELEGRAM_SEMANTIC_CONSISTENCY_FINAL_REPORT.md |
+| 187 | telegram/TELEGRAM_SEMANTIC_DECOMPOSITION_REPORT.md | telegram/archive/TELEGRAM_SEMANTIC_DECOMPOSITION_REPORT.md |
+| 188 | telegram/TELEGRAM_SEMANTIC_DECOMPOSITION_VALIDATION.md | telegram/archive/TELEGRAM_SEMANTIC_DECOMPOSITION_VALIDATION.md |
+
+---
+
+# 12. Additional Archive Moves (remaining)
+
+| Step | Source | Destination |
+|------|--------|-------------|
+| 189-213 | telegram/TELEGRAM_SEMANTIC_*.md | telegram/archive/ |
+| 214-238 | telegram/TELEGRAM_DOCUMENT_*.md | telegram/archive/ |
+| 239-263 | telegram/TELEGRAM_DIRECTORY_*.md | telegram/archive/ |
+| 264-288 | telegram/TELEGRAM_EDITORIAL_*_*.md | telegram/archive/ |
+| 289-301 | telegram/Remaining files | telegram/archive/ |
+
+---
+
+# 13. Move Summary
+
+| Category | Moves |
+|----------|-------|
+| Foundation | 7 |
+| Specs | 4 |
+| Legacy | 8 |
+| Working/Publishing | 10 |
+| Working/Editorial | 11 |
+| Working/Graphic | 58 |
+| Working/Glossary | 11 |
+| Working/Migration | 9 |
+| Working/Alignment | 5 |
+| Working/Reference | 35 |
+| Archive | 143 |
+| **Total** | **301** |
+
+---
+
+**End of Move Sequence**
+
+**Planner:** SvitloSk Certification Pipeline
+**Date:** 2026-07-13
+**Status:** COMPLETE
