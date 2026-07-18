@@ -43,10 +43,11 @@ New contributors SHOULD read the documentation in the following order.
 9. ARCHITECTURE.md
 10. DATA_MODEL.md
 11. SYSTEM_OVERVIEW.md
-12. Component Specifications (SSP)
-13. Telegram Journal Specifications (TJS)
-14. REPOSITORY_CERTIFICATION.md
-15. REPOSITORY_FREEZE.md
+12. SPECIFICATION_ENGINEERING_PROCESS.md
+13. Component Specifications (SSP)
+14. Telegram Journal Specifications (TJS)
+15. REPOSITORY_CERTIFICATION.md
+16. REPOSITORY_FREEZE.md
 
 ---
 
@@ -72,6 +73,7 @@ Documents defining documentation governance, editorial standards, terminology an
 - GLOSSARY.md
 - TERRITORIAL_MODEL.md
 - RFC_PROCESS.md
+- SPECIFICATION_ENGINEERING_PROCESS.md (PROC-001) — Repository-wide engineering process
 
 ---
 
@@ -136,6 +138,68 @@ Current specifications include:
 
 ---
 
+## 6. Meta Review Methodology
+
+Normative documents defining the Meta Review methodology.
+
+Directory:
+
+```text
+/audit/audit-2026-07/methodology-extension/
+```
+
+Current documents:
+
+- META_REVIEW_PROTOCOL.md — Meta Review methodology
+- META_REVIEW_CHECKLIST.md — Meta Review verification checklist
+- META_REVIEW_OUTPUT_TEMPLATE.md — Meta Review output specification
+
+---
+
+# Architecture Decision Records (ADR)
+
+Normative records documenting approved architectural decisions.
+
+Directory:
+
+```text
+/adr
+```
+
+Current records:
+
+| ADR | Title | Status | Class | Description |
+|-----|-------|--------|-------|-------------|
+| ADR-001 | Component vs Role | Stable | Normative | Defines the distinction between architectural components and logical roles used throughout the repository |
+
+---
+
+# Canonical SSP Specifications
+
+| SSP | Status | Canonical Review | Current Baseline | Notes |
+|-----|--------|------------------|------------------|-------|
+| SSP-001 | Certified | review-v4 | Core + ADR-001 | Certified after repository canonicalization |
+| SSP-002 | Certified | review-v2 | Core + ADR-001 | Certified against revised Core Documents |
+| SSP-003 | Certified | review-v3 | Core + ADR-001 | Certified against ADR-001 and revised Core Documents |
+
+Only the review version listed above SHALL be considered the current canonical certification of the corresponding SSP specification.
+
+Earlier review versions remain archived exclusively for historical traceability.
+
+---
+
+# Meta Review Methodology
+
+Normative documents defining the Meta Review methodology.
+
+| ID | Document | Class | Status | Purpose |
+|----|----------|-------|--------|---------|
+| DOC-014 | META_REVIEW_PROTOCOL.md | Normative | Draft | Meta Review methodology |
+| DOC-015 | META_REVIEW_CHECKLIST.md | Normative | Draft | Meta Review verification checklist |
+| DOC-016 | META_REVIEW_OUTPUT_TEMPLATE.md | Normative | Draft | Meta Review output specification |
+
+---
+
 # Document Classes
 
 The repository contains two document classes.
@@ -192,6 +256,7 @@ Examples include:
 | DOC-010 | SYSTEM_OVERVIEW.md | Normative | Stable | High-level system overview |
 | DOC-011 | REPOSITORY_CERTIFICATION.md | Normative | Stable | Repository certification |
 | DOC-012 | REPOSITORY_FREEZE.md | Normative | Stable | Repository freeze policy |
+| DOC-013 | REPOSITORY_CERTIFICATION_STATUS.md | Normative | Stable | Repository certification register |
 
 ---
 
