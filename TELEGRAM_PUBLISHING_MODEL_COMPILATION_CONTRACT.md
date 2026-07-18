@@ -1,12 +1,12 @@
 # TELEGRAM_PUBLISHING_MODEL_COMPILATION_CONTRACT
 
-**Document ID:** TJS-P1-B5
+**Document ID:** TJS-P1.4-C1
 
 **Title:** TELEGRAM_PUBLISHING_MODEL Compilation Contract
 
 **Document Class:** Compilation Contract
 
-**Status:** COMPLETE
+**Status:** FROZEN
 
 **Author:** SvitloSk Project
 
@@ -14,67 +14,85 @@
 
 # Purpose
 
-Contract describing how Stage P-2 SHALL compile the specification.
+Formal contract governing Stage P-2 compilation of TELEGRAM_PUBLISHING_MODEL.md (TJS-010).
 
 ---
 
-# 1. Compilation Contract
+# 1. Contract Scope
 
-## 1.1 Input
+This contract defines:
 
-| Input | Source |
-|-------|--------|
-| TELEGRAM_PUBLISHING_MODEL_BLUEPRINT.md | Blueprint |
-| PROJECT_CANONICAL_KNOWLEDGE_BASE.md | Knowledge Base |
-| TELEGRAM_PUBLISHING_HARVEST.md | Harvest |
-| TELEGRAM_PUBLISHING_COMPONENT_MATRIX.md | Component Matrix |
-| TELEGRAM_PUBLISHING_INTERACTION_MATRIX.md | Interaction Matrix |
-| TELEGRAM_PUBLISHING_RESPONSIBILITY_MATRIX.md | Responsibility Matrix |
-| TELEGRAM_PUBLISHING_PRINCIPLES.md | Principles |
-| TELEGRAM_PUBLISHING_ARCHITECTURAL_GUARANTEES.md | Guarantees |
+- What may be generated
+- What shall remain unchanged
+- What is copied
+- What is composed
+- What is forbidden
 
-## 1.2 Output
+---
 
-| Output | Target |
-|--------|--------|
-| TELEGRAM_PUBLISHING_MODEL.md | specs/ |
+# 2. Contract Parties
 
-## 1.3 Compilation Rules
+| Party | Role |
+|-------|------|
+| Blueprint (TELEGRAM_PUBLISHING_MODEL_BLUEPRINT_POLISHED.md) | Source architecture |
+| Knowledge Base (PROJECT_CANONICAL_KNOWLEDGE_BASE.md) | Frozen knowledge source |
+| Canonical Specification (TJS-010) | Output document |
+| Compilation Contract (this document) | Governing rules |
+
+---
+
+# 3. Contract Statement
+
+**Stage P-2 SHALL compile TELEGRAM_PUBLISHING_MODEL.md (TJS-010) from the frozen Blueprint and Knowledge Base. The compilation process SHALL be deterministic. No architectural decisions SHALL be required during compilation.**
+
+---
+
+# 4. Contract Rules
 
 | Rule | Statement |
 |------|-----------|
-| CR-001 | Follow the Blueprint exactly |
-| CR-002 | Use ONLY Knowledge Base items |
-| CR-003 | No invention of new concepts |
-| CR-004 | No redefinition of canonical terms |
-| CR-005 | No duplication of Foundation |
-| CR-006 | No duplication of TJS-020, TJS-021, TJS-022 |
-| CR-007 | Every statement SHALL be traceable to a Knowledge ID |
-| CR-008 | Use RFC 2119 language |
-| CR-009 | Follow Canonical Specification Standard |
-| CR-010 | Follow Canonical Writing Standard |
-
-## 1.4 Verification
-
-| Verification | Method |
-|-------------|--------|
-| Traceability | Every section traced to Knowledge ID |
-| Duplication | No duplication with Foundation, TJS-020, TJS-021, TJS-022 |
-| Completeness | All 30 Knowledge Items appear |
-| Quality | Meets Canonical Quality Standard |
+| CR-001 | No architectural text may be invented |
+| CR-002 | Every normative statement SHALL originate from the Blueprint |
+| CR-003 | Every principle SHALL preserve its identifier |
+| CR-004 | No terminology changes |
+| CR-005 | No section ownership changes |
+| CR-006 | Every Knowledge Item SHALL appear exactly once |
+| CR-007 | Traceability SHALL be maintained 30/30 |
+| CR-008 | RFC 2119 language SHALL be used for normative statements |
+| CR-009 | Canonical Specification Standard SHALL be followed |
+| CR-010 | Canonical Writing Standard SHALL be followed |
+| CR-011 | No new concepts may be introduced |
+| CR-012 | No existing concepts may be redefined |
+| CR-013 | No Foundation may be duplicated |
+| CR-014 | No existing specifications may be duplicated |
+| CR-015 | The Blueprint SHALL be followed exactly |
+| CR-016 | The Knowledge Base SHALL be the sole source of architectural truth |
+| CR-017 | Every section SHALL have exactly one responsibility |
+| CR-018 | Every section SHALL be traceable to its Knowledge IDs |
+| CR-019 | Metadata SHALL follow the approved format |
+| CR-020 | Document ID SHALL be TJS-010 |
 
 ---
 
-# 2. Compilation Readiness
+# 5. Contract Enforcement
 
-| Check | Result |
-|-------|--------|
-| Blueprint complete | YES |
-| Knowledge Base frozen | YES |
-| All inputs available | YES |
-| No blocking issues | YES |
+| Enforcement | Mechanism |
+|-------------|-----------|
+| Architecture verification | Compare compiled spec against Blueprint |
+| Knowledge Base verification | Verify 30/30 Knowledge Items present |
+| Traceability verification | Verify every section traced to Knowledge IDs |
+| Terminology verification | Verify no new terms introduced |
+| Ownership verification | Verify no ownership changes |
 
-**Result:** PASS — compilation ready.
+---
+
+# 6. Contract Status
+
+| Metric | Value |
+|--------|-------|
+| Status | **FROZEN** |
+| Total Rules | 20 |
+| Enforcement Mechanisms | 5 |
 
 ---
 
@@ -82,4 +100,4 @@ Contract describing how Stage P-2 SHALL compile the specification.
 
 **Contractor:** SvitloSk Certification Pipeline
 **Date:** 2026-07-13
-**Status:** COMPLETE
+**Status:** FROZEN
