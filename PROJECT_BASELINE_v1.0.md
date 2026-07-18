@@ -217,7 +217,9 @@ The Telegram Documentation Platform v1.0 consists of the canonical specification
 
 # 6. Freeze Statement
 
-**The Telegram Documentation Platform v1.0 is complete.**
+**The Telegram subsystem is specification-complete.**
+
+**All 6 canonical specifications are Stable.**
 
 **Repository Architecture is frozen.**
 
@@ -229,15 +231,18 @@ The Telegram Documentation Platform v1.0 consists of the canonical specification
 
 # 7. Next Development Phase
 
-The documentation platform is complete. Future work focuses on functional development.
+The Telegram subsystem specification is complete. Future work focuses on functional development.
 
-**The next canonical specification is TJS-010 — TELEGRAM_PUBLISHING_CANONICAL_MODEL.md.**
+**All major subsystems have canonical specifications:**
 
-This is the highest priority because:
-1. The Publishing Model is the remaining major subsystem without a canonical specification
-2. All other subsystems (Semantic, Editorial, Lifecycle, Graphic) are complete
-3. The Publishing Model design is complete (Stage P-2) — only compilation remains
-4. Completing TJS-010 will make the Telegram subsystem 100% specification-complete
+| Document ID | Title | Status |
+|------------|-------|--------|
+| TJS-000 | TELEGRAM_SEMANTIC_MODEL | Stable |
+| TJS-000A | TELEGRAM_GLOSSARY | Stable |
+| TJS-010 | TELEGRAM_PUBLISHING_CANONICAL_MODEL | Stable |
+| TJS-020 | TELEGRAM_EDITORIAL_SYSTEM_CANONICAL_MODEL | Stable |
+| TJS-021 | TELEGRAM_PUBLICATION_LIFECYCLE | Stable |
+| TJS-022 | TELEGRAM_GRAPHIC_PUBLICATION_MODEL | Stable |
 
 ---
 

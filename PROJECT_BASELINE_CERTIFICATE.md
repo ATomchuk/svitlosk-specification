@@ -22,7 +22,7 @@ Final certification of the Project Baseline v1.0.
 
 | # | Question | Answer |
 |---|----------|--------|
-| 1 | Is Telegram Documentation Platform v1.0 complete? | **YES** |
+| 1 | Is the Telegram subsystem specification-complete? | **YES** — all 6 canonical specifications are Stable |
 | 2 | Is Repository Architecture frozen? | **YES** |
 | 3 | Is Documentation Architecture frozen? | **YES** |
 | 4 | Can future work focus on implementation? | **YES** |
@@ -34,7 +34,7 @@ Final certification of the Project Baseline v1.0.
 
 | Criterion | Status |
 |-----------|--------|
-| 5/5 (Phase 1) canonical specifications complete | YES |
+| 6/6 canonical specifications complete | YES |
 | Repository architecture implemented | YES |
 | Physical migration complete | YES |
 | GitHub synchronized | YES |
@@ -46,17 +46,15 @@ Final certification of the Project Baseline v1.0.
 
 # 3. Certification Statement
 
-**Telegram Documentation Platform v1.0 is complete.**
+**The Telegram subsystem is specification-complete.**
+
+**All 6 canonical specifications are Stable.**
 
 **Repository Architecture is frozen.**
 
 **Documentation Architecture is frozen.**
 
 **Future architectural modifications SHALL follow the ADR process.**
-
-**The next development phase is functional implementation.**
-
-**TJS-010 — TELEGRAM_PUBLISHING_CANONICAL_MODEL.md — is the next canonical specification.**
 
 ---
 
