@@ -1,7 +1,7 @@
-# SvitloSk Specification (SSP)
+# SvitloSk Specification
 
-![Status](https://img.shields.io/badge/status-active%20development-orange)
-![Specification](https://img.shields.io/badge/specification-stable-blue)
+![Status](https://img.shields.io/badge/status-v3.0-blue)
+![Specification](https://img.shields.io/badge/specification-stable-green)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
 > **Official Technical Specification of the SvitloSk Project**
@@ -82,9 +82,7 @@ The same input SHALL always produce the same output.
 
 ### Respect for Open Data
 
-Official public information is never modified.
-
-Only its presentation is improved.
+Official public information is never modified. Only its presentation is improved.
 
 ### Automation First
 
@@ -96,9 +94,7 @@ The specification grows by extending the existing architecture rather than repla
 
 ### Stable Specifications
 
-Published specifications remain stable.
-
-Architectural changes require documented decisions.
+Published specifications remain stable. Architectural changes require documented decisions.
 
 ---
 
@@ -106,164 +102,92 @@ Architectural changes require documented decisions.
 
 ```text
 Official Open Data
-        │
-        ▼
+        |
+        v
      Parser
-        │
-        ▼
+        |
+        v
  Interpretation
-        │
-        ▼
+        |
+        v
   Data Model
-        │
-        ▼
+        |
+        v
  Publication Engine
-        │
-        ├──────────────┐
-        ▼              ▼
+        |
+        +--------------+
+        v              v
  Telegram         Future Services
  Publisher
 ```
 
 ---
 
-# Repository Structure
+# Repository Architecture
+
+The repository is organized into the following zones.
 
 ```text
-.
-├── specification/
-│   ├── SSP-001-Data-Pipeline.md
-│   ├── SSP-002-Parser.md
-│   ├── SSP-003-Publication-Engine.md
-│   ├── ...
-│   └── SSP-013-Deployment.md
-│
-├── telegram/
-│   ├── TJS-001-Journal-Concept.md
-│   ├── TJS-002-Publication-Lifecycle.md
-│   ├── TJS-003-Post-Structure.md
-│   ├── TJS-004-Editorial-Policy.md
-│   └── TJS-005-...
-│
-├── README.md
-├── CHARTER.md
-├── PROJECT_PRINCIPLES.md
-├── DOCUMENT_INDEX.md
-├── EDITORIAL_STANDARDS.md
-├── GLOSSARY.md
-├── TERRITORIAL_MODEL.md
-├── RFC_PROCESS.md
-├── ARCHITECTURE.md
-├── SYSTEM_OVERVIEW.md
-├── DATA_MODEL.md
-└── LICENSE
+svitlosk-specification/
+|
++-- Foundation documents (root/)
+|   CHARTER, PRINCIPLES, DOCUMENT_INDEX, EDITORIAL_STANDARDS,
+|   GLOSSARY, RFC_PROCESS, ARCHITECTURE, DATA_MODEL,
+|   SYSTEM_OVERVIEW, TERRITORIAL_MODEL, DTS-001, PROC-001
+|
++-- specification/     Component Specifications (SSP-001 through SSP-013)
++-- telegram/          Telegram Subsystem
+|   +-- foundation/    Telegram Foundation (TJS-000, TJS-000A)
+|   +-- specs/         Canonical Specifications (TJS-010 through TJS-022)
+|   +-- working/       Working Documents
+|   +-- archive/       Telegram Archive
+|   +-- legacy/        Legacy Specifications (TJS-001 through TJS-008)
+|
++-- adr/               Architecture Decision Records
++-- archive/           Repository Historical Records
 ```
 
 ---
 
 # Documentation
 
-The specification is organized into five logical groups.
+The specification is organized into seven logical groups.
 
-## Core Governance
+See [DOCUMENT_INDEX.md](DOCUMENT_INDEX.md) for the complete authoritative listing of all normative documents.
 
-- CHARTER.md
-- PROJECT_PRINCIPLES.md
-
-## Repository Governance
-
-- DOCUMENT_INDEX.md
-- EDITORIAL_STANDARDS.md
-- GLOSSARY.md
-- TERRITORIAL_MODEL.md
-- RFC_PROCESS.md
-
-## System Architecture
-
-- ARCHITECTURE.md
-- SYSTEM_OVERVIEW.md
-- DATA_MODEL.md
-
-## Component Specifications
-
-Located in:
-
-```text
-/specification
-```
-
-Includes the SSP series describing individual system components.
-
-## Telegram Journal Specification
-
-Located in:
-
-```text
-/telegram
-```
-
-Includes the TJS series defining the Public Information Journal.
-
----
-
-# Specification Hierarchy
-
-```text
-README
-   │
-   ▼
-Core Governance
-   │
-   ▼
-Repository Governance
-   │
-   ▼
-System Architecture
-   │
-   ▼
-Component Specifications (SSP)
-   │
-   ▼
-Telegram Journal Specifications (TJS)
-```
-
----
-
-# Open Data Principles
-
-SvitloSk is built entirely upon official public information.
-
-The system:
-
-- never alters source information;
-- preserves official meaning;
-- records processing steps;
-- generates derived information transparently;
-- maintains historical consistency.
+| Group | Description | Location |
+|-------|-------------|----------|
+| Core Governance | Mission, principles, governance | root/ |
+| Documentation Governance | Editorial standards, terminology, translation rules | root/ |
+| Engineering Process | Repository-wide engineering process (PROC-001) | root/ |
+| System Architecture | Architecture, data model, system overview | root/ |
+| Component Specifications | SSP series (13 specifications) | specification/ |
+| Telegram Subsystem | TJS series (6 canonical specifications) | telegram/ |
+| Architecture Decision Records | ADR series | adr/ |
 
 ---
 
 # Current Status
 
-**Core Specification** — Complete
-
-**Telegram Journal Specification** — In Progress
-
-The repository currently contains the complete architectural specification of the SvitloSk platform.
-
-Development is focused on standardizing the Telegram Public Information Journal.
+| Milestone | Status |
+|-----------|--------|
+| Repository Foundation | COMPLETE |
+| Telegram Canonical Platform | RELEASED v2.0 |
+| Engineering Process (PROC-001) | INTEGRATED |
+| Translation Standard (DTS-001) | INTEGRATED |
+| Repository Physical Migration | COMPLETE |
+| Repository Architecture | FROZEN |
+| Project Baseline | v3.0 |
 
 ---
 
-# Roadmap
+# Next Phase
 
-Current priorities:
+The project enters the **bilingual documentation phase**.
 
-- Telegram Journal Specification
-- Repository Audit
-- Ukrainian Translation
-- Reference Implementation
-- Public Release
+Translation of canonical specifications will begin according to DTS-001.
+
+First translation target: TJS-000.uk.md (Telegram Semantic Model in Ukrainian).
 
 ---
 
@@ -277,14 +201,14 @@ Contribution guidelines will be published after Specification Version 1.0.
 
 # License
 
-Distributed under the terms of the MIT License.
-
-See `LICENSE`.
+Distributed under the terms of the MIT License. See `LICENSE`.
 
 ---
 
 # Project Status
 
-**Active Development**
+**Repository Engineering: COMPLETE**
 
-© SvitloSk Project
+**Knowledge Engineering: ACTIVE**
+
+(c) SvitloSk Project

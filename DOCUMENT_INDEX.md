@@ -1,12 +1,14 @@
 # DOCUMENT_INDEX
 
-Status: Stable (Стабільний)
+**Document ID:** DOC-002
 
-Document ID: DOC-002
+**Title:** Document Index
 
-Document Class: Normative
+**Document Class:** Normative Foundation Document
 
-Author: SvitloSk Project
+**Status:** STABLE
+
+**Author:** SvitloSk Project
 
 ---
 
@@ -38,29 +40,33 @@ New contributors SHOULD read the documentation in the following order.
 4. DOCUMENT_INDEX.md
 5. EDITORIAL_STANDARDS.md
 6. GLOSSARY.md
-7. TERRITORIAL_MODEL.md
-8. RFC_PROCESS.md
-9. ARCHITECTURE.md
-10. DATA_MODEL.md
-11. SYSTEM_OVERVIEW.md
-12. SPECIFICATION_ENGINEERING_PROCESS.md
-13. Component Specifications (SSP)
-14. Telegram Journal Specifications (TJS)
-15. REPOSITORY_CERTIFICATION.md
-16. REPOSITORY_FREEZE.md
+7. DOCUMENTATION_TRANSLATION_STANDARD.md
+8. TERRITORIAL_MODEL.md
+9. RFC_PROCESS.md
+10. ARCHITECTURE.md
+11. DATA_MODEL.md
+12. SYSTEM_OVERVIEW.md
+13. SPECIFICATION_ENGINEERING_PROCESS.md
+14. Component Specifications (SSP)
+15. Telegram Canonical Specifications (TJS)
+16. Architecture Decision Records (ADR)
 
 ---
 
 # Repository Structure
 
-The Project Specification is organized into five logical groups.
+The Project Specification is organized into seven logical groups.
+
+---
 
 ## 1. Core Governance
 
 Documents defining the mission, principles and governance of the project.
 
-- CHARTER.md
-- PROJECT_PRINCIPLES.md
+| Document ID | Document | Filename | Location | Status | Purpose |
+|------------|----------|----------|----------|--------|---------|
+| DOC-000 | Charter | CHARTER.md | root/ | Stable | Project mission and governance |
+| DOC-001 | Project Principles | PROJECT_PRINCIPLES.md | root/ | Stable | Engineering principles |
 
 ---
 
@@ -68,175 +74,96 @@ Documents defining the mission, principles and governance of the project.
 
 Documents defining documentation governance, editorial standards, terminology and repository-wide rules.
 
-- DOCUMENT_INDEX.md
-- EDITORIAL_STANDARDS.md
-- GLOSSARY.md
-- TERRITORIAL_MODEL.md
-- RFC_PROCESS.md
-- SPECIFICATION_ENGINEERING_PROCESS.md (PROC-001) — Repository-wide engineering process
+| Document ID | Document | Filename | Location | Status | Purpose |
+|------------|----------|----------|----------|--------|---------|
+| DOC-002 | Document Index | DOCUMENT_INDEX.md | root/ | Stable | Repository governance and navigation |
+| DOC-003 | Editorial Standards | EDITORIAL_STANDARDS.md | root/ | Stable | Editorial and documentation standards |
+| DOC-004 | Glossary | GLOSSARY.md | root/ | Stable | Canonical project terminology |
+| DOC-006 | RFC Process | RFC_PROCESS.md | root/ | Stable | Specification change governance |
+| DTS-001 | Documentation Translation Standard | DOCUMENTATION_TRANSLATION_STANDARD.md | root/ | Stable | Normative translation standard |
 
 ---
 
-## 3. System Architecture
+## 3. Engineering Process
+
+Repository-wide engineering process governing all future canonical specifications.
+
+| Document ID | Document | Filename | Location | Status | Purpose |
+|------------|----------|----------|----------|--------|---------|
+| PROC-001 | Specification Engineering Process | SPECIFICATION_ENGINEERING_PROCESS.md | root/ | Stable | Normative engineering process for all canonical specifications |
+
+---
+
+## 4. System Architecture
 
 Documents defining the architecture, logical data model and overall system organization.
 
-- ARCHITECTURE.md
-- DATA_MODEL.md
-- SYSTEM_OVERVIEW.md
+| Document ID | Document | Filename | Location | Status | Purpose |
+|------------|----------|----------|----------|--------|---------|
+| DOC-007 | Architecture | ARCHITECTURE.md | root/ | Stable | Canonical system architecture |
+| DOC-008 | Data Model | DATA_MODEL.md | root/ | Stable | Canonical logical data model |
+| DOC-009 | Territorial Model | TERRITORIAL_MODEL.md | root/ | Stable | Canonical territorial hierarchy |
+| DOC-010 | System Overview | SYSTEM_OVERVIEW.md | root/ | Stable | High-level system overview |
 
 ---
 
-## 4. Component Specifications
+## 5. Component Specifications (SSP)
 
 Normative specifications describing individual architectural components.
 
-Directory:
+Directory: specification/
 
-```text
-/specification
-```
-
-Current specifications include:
-
-- SSP-001 — Data Pipeline
-- SSP-002 — Parser
-- SSP-003 — Publication Engine
-- SSP-004 — Telegram Channel
-- SSP-005 — Data Storage
-- SSP-006 — Schedule Generator
-- SSP-007 — Graphic Generator
-- SSP-008 — API
-- SSP-009 — Configuration
-- SSP-010 — Logging
-- SSP-011 — Monitoring
-- SSP-012 — Security
-- SSP-013 — Deployment
+| Document ID | Document | Filename | Location | Status | Purpose |
+|------------|----------|----------|----------|--------|---------|
+| SSP-001 | Data Pipeline | SSP-001-Data-Pipeline.md | specification/ | Stable | Data pipeline architecture |
+| SSP-002 | Parser | SSP-002-Parser.md | specification/ | Stable | Parser component |
+| SSP-003 | Publication Engine | SSP-003-Publication-Engine.md | specification/ | Stable | Publication engine |
+| SSP-004 | Telegram Channel | SSP-004-Telegram-Channel.md | specification/ | Stable | Telegram channel integration |
+| SSP-005 | Data Storage | SSP-005-Data-Storage.md | specification/ | Stable | Data storage layer |
+| SSP-006 | Schedule Generator | SSP-006-Schedule-Generator.md | specification/ | Stable | Schedule generation |
+| SSP-007 | Graphic Generator | SSP-007-Graphic-Generator.md | specification/ | Stable | Graphic generation |
+| SSP-008 | API | SSP-008-API.md | specification/ | Stable | API layer |
+| SSP-009 | Configuration | SSP-009-Configuration.md | specification/ | Stable | Configuration management |
+| SSP-010 | Logging | SSP-010-Logging.md | specification/ | Stable | Logging infrastructure |
+| SSP-011 | Monitoring | SSP-011-Monitoring.md | specification/ | Stable | Monitoring and alerting |
+| SSP-012 | Security | SSP-012-Security.md | specification/ | Stable | Security model |
+| SSP-013 | Deployment | SSP-013-Deployment.md | specification/ | Stable | Deployment and operations |
 
 ---
 
-## 5. Telegram Journal Specifications
+## 6. Telegram Canonical Specifications
 
-Normative specifications describing the Public Information Journal.
+Normative specifications defining the Telegram Public Information Journal.
 
-Directory:
+Directory: telegram/
 
-```text
-/telegram
-```
+### 6.1 Telegram Foundation
 
-Current specifications include:
+| Document ID | Document | Filename | Location | Status | Purpose |
+|------------|----------|----------|----------|--------|---------|
+| TJS-000 | Telegram Semantic Model | TELEGRAM_SEMANTIC_MODEL.md | telegram/foundation/ | Stable | Semantic foundation for the Telegram subsystem |
+| TJS-000A | Telegram Glossary | TELEGRAM_GLOSSARY.md | telegram/foundation/ | Stable | Canonical Telegram terminology |
 
-- TJS-001 — Journal Concept
-- TJS-002 — Publication Model
-- TJS-003 — Post Structure
-- TJS-004 — Editorial Policy
-- TJS-005 — Message Templates
-- TJS-006 — Rendering Rules
-- TJS-007 — Publication Lifecycle
-- TJS-008 — Publication Lifecycle
+### 6.2 Telegram Canonical Specifications
 
----
-
-## 6. Meta Review Methodology
-
-Normative documents defining the Meta Review methodology.
-
-Directory:
-
-```text
-/audit/audit-2026-07/methodology-extension/
-```
-
-Current documents:
-
-- META_REVIEW_PROTOCOL.md — Meta Review methodology
-- META_REVIEW_CHECKLIST.md — Meta Review verification checklist
-- META_REVIEW_OUTPUT_TEMPLATE.md — Meta Review output specification
+| Document ID | Document | Filename | Location | Status | Purpose |
+|------------|----------|----------|----------|--------|---------|
+| TJS-010 | Publishing Model | TELEGRAM_PUBLISHING_CANONICAL_MODEL.md | telegram/specs/ | Stable | Publishing architecture and responsibilities |
+| TJS-020 | Editorial System Model | TELEGRAM_EDITORIAL_SYSTEM_CANONICAL_MODEL.md | telegram/specs/ | Stable | Editorial system architecture |
+| TJS-021 | Publication Lifecycle | TELEGRAM_PUBLICATION_LIFECYCLE.md | telegram/specs/ | Stable | Publication lifecycle management |
+| TJS-022 | Graphic Publication Model | TELEGRAM_GRAPHIC_PUBLICATION_MODEL.md | telegram/specs/ | Stable | Graphic publication architecture |
 
 ---
 
-# Architecture Decision Records (ADR)
+## 7. Architecture Decision Records (ADR)
 
 Normative records documenting approved architectural decisions.
 
-Directory:
+Directory: adr/
 
-```text
-/adr
-```
-
-Current records:
-
-| ADR | Title | Status | Class | Description |
-|-----|-------|--------|-------|-------------|
-| ADR-001 | Component vs Role | Stable | Normative | Defines the distinction between architectural components and logical roles used throughout the repository |
-
----
-
-# Canonical SSP Specifications
-
-| SSP | Status | Canonical Review | Current Baseline | Notes |
-|-----|--------|------------------|------------------|-------|
-| SSP-001 | Certified | review-v4 | Core + ADR-001 | Certified after repository canonicalization |
-| SSP-002 | Certified | review-v2 | Core + ADR-001 | Certified against revised Core Documents |
-| SSP-003 | Certified | review-v3 | Core + ADR-001 | Certified against ADR-001 and revised Core Documents |
-
-Only the review version listed above SHALL be considered the current canonical certification of the corresponding SSP specification.
-
-Earlier review versions remain archived exclusively for historical traceability.
-
----
-
-# Meta Review Methodology
-
-Normative documents defining the Meta Review methodology.
-
-| ID | Document | Class | Status | Purpose |
-|----|----------|-------|--------|---------|
-| DOC-014 | META_REVIEW_PROTOCOL.md | Normative | Draft | Meta Review methodology |
-| DOC-015 | META_REVIEW_CHECKLIST.md | Normative | Draft | Meta Review verification checklist |
-| DOC-016 | META_REVIEW_OUTPUT_TEMPLATE.md | Normative | Draft | Meta Review output specification |
-
----
-
-# Document Classes
-
-The repository contains two document classes.
-
-## Normative
-
-Normative documents define mandatory project requirements.
-
-Normative documents SHALL use RFC 2119 terminology where applicable.
-
-Examples include:
-
-- Core Governance documents;
-- Documentation Governance documents;
-- System Architecture documents;
-- SSP Specifications;
-- TJS Specifications;
-- REPOSITORY_CERTIFICATION.md;
-- REPOSITORY_FREEZE.md.
-
----
-
-## Informative
-
-Informative documents provide explanations, implementation guidance and supporting material.
-
-Informative documents SHALL NOT introduce mandatory requirements.
-
-Informative documents SHALL NOT supersede normative documents.
-
-Examples include:
-
-- ADR documents;
-- tutorials;
-- migration guides;
-- examples;
-- design notes.
+| Document ID | Document | Filename | Location | Status | Purpose |
+|------------|----------|----------|----------|--------|---------|
+| ADR-001 | Component vs Role | ADR-001-Component-vs-Role.md | adr/ | Stable | Distinction between architectural components and logical roles |
 
 ---
 
@@ -254,9 +181,8 @@ Examples include:
 | DOC-008 | DATA_MODEL.md | Normative | Stable | Canonical logical data model |
 | DOC-009 | TERRITORIAL_MODEL.md | Normative | Stable | Canonical territorial hierarchy |
 | DOC-010 | SYSTEM_OVERVIEW.md | Normative | Stable | High-level system overview |
-| DOC-011 | REPOSITORY_CERTIFICATION.md | Normative | Stable | Repository certification |
-| DOC-012 | REPOSITORY_FREEZE.md | Normative | Stable | Repository freeze policy |
-| DOC-013 | REPOSITORY_CERTIFICATION_STATUS.md | Normative | Stable | Repository certification register |
+| PROC-001 | SPECIFICATION_ENGINEERING_PROCESS.md | Normative | Stable | Normative engineering process |
+| DTS-001 | DOCUMENTATION_TRANSLATION_STANDARD.md | Normative | Stable | Normative translation standard |
 
 ---
 
@@ -264,48 +190,51 @@ Examples include:
 
 ```text
 README
-   │
-   ▼
+   |
+   v
 CHARTER
-   │
-   ▼
+   |
+   v
 PROJECT_PRINCIPLES
-   │
-   ▼
+   |
+   v
 DOCUMENT_INDEX
-   │
-   ▼
+   |
+   v
 EDITORIAL_STANDARDS
-   │
-   ▼
+   |
+   v
 GLOSSARY
-   │
-   ▼
+   |
+   v
+DOCUMENTATION_TRANSLATION_STANDARD
+   |
+   v
 TERRITORIAL_MODEL
-   │
-   ▼
+   |
+   v
 RFC_PROCESS
-   │
-   ▼
+   |
+   v
 ARCHITECTURE
-   │
-   ▼
+   |
+   v
 DATA_MODEL
-   │
-   ▼
+   |
+   v
 SYSTEM_OVERVIEW
-   │
-   ▼
+   |
+   v
+SPECIFICATION_ENGINEERING_PROCESS
+   |
+   v
 Component Specifications (SSP)
-   │
-   ▼
-Telegram Journal Specifications (TJS)
-   │
-   ▼
-REPOSITORY_CERTIFICATION
-   │
-   ▼
-REPOSITORY_FREEZE
+   |
+   v
+Telegram Canonical Specifications (TJS)
+   |
+   v
+Architecture Decision Records (ADR)
 ```
 
 ---
