@@ -1,4 +1,4 @@
-﻿# REPOSITORY_MIGRATION_STATISTICS
+# REPOSITORY_MIGRATION_STATISTICS
 
 **Document_ID:** TJS-R4-B6
 
@@ -26,9 +26,9 @@ Calculate migration operations.
 | KEEP (telegram) | 241 |
 | KEEP (specification) | 14 |
 | KEEP (adr) | 1 |
-| MOVE (root → archive) | ~198 |
+| MOVE (root → various destinations) | ~198 |
 | RENAME | 0 |
-| ARCHIVE (root) | ~198 |
+| RELOCATION (root) | ~198 |
 | LEGACY | 0 |
 | Directories to create | 0 |
 

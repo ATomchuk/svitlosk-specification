@@ -1,4 +1,4 @@
-﻿# ROOT_EXCLUSION_CRITERIA
+# ROOT_EXCLUSION_CRITERIA
 
 **Document ID:** TJS-R4.3-A3
 
@@ -50,13 +50,13 @@ The following documents currently in Root VIOLATE the exclusion criteria:
 |---|----------|-----------|-----------------|
 | 1 | ~198 audit/certification/report files | EC-004, EC-005, EC-006, EC-010, EC-011, EC-012, EC-013, EC-014, EC-015 | archive/ |
 
-**Note:** These violations will be resolved during Stage R-5 (Dry Run) when ~198 files are moved to archive/.
+**Note:** These violations will be resolved during Stage R-5 (Dry Run) when ~198 files are relocated to their architectural destinations per the approved Repository Blueprint.
 
 ---
 
 # 3. Exclusion Verdict
 
-**13 Foundation documents are COMPLIANT.** ~198 documents violate exclusion criteria — all scheduled for archive during R-5 migration.
+**13 Foundation documents are COMPLIANT.** ~198 documents violate exclusion criteria — all scheduled for relocation according to the approved Repository Blueprint during R-5 migration.
 
 ---
 

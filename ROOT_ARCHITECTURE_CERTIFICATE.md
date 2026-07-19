@@ -1,4 +1,4 @@
-﻿# ROOT_ARCHITECTURE_CERTIFICATE
+# ROOT_ARCHITECTURE_CERTIFICATE
 
 **Document ID:** TJS-R4.3-A6
 
@@ -39,7 +39,7 @@ Final certification of the Repository Root Architecture Principle.
 | Inclusion criteria | 6 (normative) |
 | Exclusion criteria | 15 (normative) |
 | Foundation documents compliant | 13/13 |
-| Non-Foundation documents in Root | ~198 — all scheduled for archive |
+| Non-Foundation documents in Root | ~198 — all scheduled for relocation per approved Blueprint |
 | Principle integrated into Foundation | YES |
 
 ---

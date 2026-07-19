@@ -1,4 +1,4 @@
-﻿# ARCHIVE_CLASSIFICATION_REPORT
+# ARCHIVE_CLASSIFICATION_REPORT
 
 **Document ID:** TJS-R4.1-V3
 
@@ -14,7 +14,7 @@
 
 # Purpose
 
-Classify all 198 archive-bound documents.
+Classify all 198 root-level documents scheduled for relocation.
 
 ---
 

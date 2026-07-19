@@ -1,4 +1,4 @@
-﻿# ROOT_DOCUMENT_COMPLIANCE_AUDIT
+# ROOT_DOCUMENT_COMPLIANCE_AUDIT
 
 **Document ID:** TJS-R4.3-A4
 
@@ -47,13 +47,13 @@ Verify every current Root document against the new Principle.
 | Compliance rate | 100% |
 | Non-Foundation documents in Root | ~198 |
 | Non-Foundation documents violating Principle | ~198 |
-| Migration will resolve violations | YES — all ~198 scheduled for archive/ |
+| Migration will resolve violations | YES — all ~198 scheduled for relocation per Blueprint |
 
 ---
 
 # 3. Compliance Verdict
 
-**13/13 Foundation documents PASS the Repository Root Architecture Principle.** ~198 non-Foundation documents violate the Principle — all scheduled for archive during Stage R-5 migration.
+**13/13 Foundation documents PASS the Repository Root Architecture Principle.** ~198 non-Foundation documents violate the Principle — all scheduled for relocation according to the approved Repository Blueprint during Stage R-5 migration.
 
 ---
 
