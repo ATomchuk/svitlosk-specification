@@ -1,4 +1,4 @@
-﻿# TRANSLATION_STANDARD_BLUEPRINT
+# TRANSLATION_STANDARD_BLUEPRINT
 
 **Document ID:** TJS-L2-S7
 
@@ -44,7 +44,7 @@ Prepare everything necessary for creating the future DOCUMENTATION_TRANSLATION_S
 | # | Appendix | Purpose |
 |---|----------|---------|
 | A | Translation Terminology Matrix | 45 terms with Ukrainian equivalents |
-| B | Translation Metadata Template | YAML front matter template |
+| B | Translation Metadata Template | Repository header format template |
 | C | Translation Lifecycle Diagram | Visual lifecycle representation |
 | D | Translation Order Reference | Phase 1→3 reference |
 

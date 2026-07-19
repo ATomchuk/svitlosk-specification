@@ -1,4 +1,4 @@
-﻿# TRANSLATION_SYSTEM_CERTIFICATE
+# TRANSLATION_SYSTEM_CERTIFICATE
 
 **Document ID:** TJS-L2-S8
 
@@ -42,7 +42,7 @@ Final certification of the Translation System Audit.
 | Total terms | 45 |
 | Translation order | 3 phases |
 | Bilingual strategy | Document.uk.md |
-| Metadata standard | YAML front matter |
+| Metadata standard | Repository header format |
 | Translation lifecycle | 6 states |
 | Translation risks | 3 MEDIUM |
 

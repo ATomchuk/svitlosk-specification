@@ -1,4 +1,4 @@
-﻿# DOCUMENTATION_TRANSLATION_STANDARD
+# DOCUMENTATION_TRANSLATION_STANDARD
 
 **Document ID:** DTS-001
 
@@ -231,14 +231,26 @@ This convention was selected because:
 
 ## 10.3 Translation Status Block Example
 
-`yaml
----
-translation_status: Official Translation
-original_document: TELEGRAM_GLOSSARY.md
-canonical_version: 1.0
-translation_version: 1.0
-last_synchronization: 2026-07-13
----
+`
+Document ID: TJS-000A
+
+Title: Telegram Glossary (Ukrainian)
+
+Document Class: Foundational
+
+Status: Stable
+
+Translation Status: Official Translation
+
+Original Document: TELEGRAM_GLOSSARY.md
+
+Canonical Version: 1.0
+
+Translation Version: 1.0
+
+Last Synchronization: 2026-07-13
+
+Author: SvitloSk Project
 `
 
 ---
