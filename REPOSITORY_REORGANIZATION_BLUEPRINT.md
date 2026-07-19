@@ -1,4 +1,4 @@
-﻿# REPOSITORY_REORGANIZATION_BLUEPRINT
+# REPOSITORY_REORGANIZATION_BLUEPRINT
 
 **Document ID:** TJS-R4-B1
 
@@ -61,13 +61,6 @@ svitlosk-specification/
 │   ├── working/ (130+)
 │   ├── legacy/ (8)
 │   └── archive/ (53)
-├── core/                      (0 files — reserved for SvitloSk Core)
-├── power/                     (0 files — reserved for Power Outage Engine)
-├── pwa/                       (0 files — reserved for PWA)
-├── infrastructure/            (0 files — reserved for Infrastructure)
-├── deployment/                (0 files — reserved for Deployment)
-├── testing/                   (0 files — reserved for Testing)
-├── analytics/                 (0 files — reserved for Analytics)
 ├── adr/                       (1 file — Architecture Decision Records)
 ├── audit/                     (existing — audit artifacts)
 ├── Temp/                      (existing — temporary files)
