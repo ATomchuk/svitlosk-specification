@@ -6,6 +6,8 @@ Specification ID: SSP-010
 
 Component: Logging
 
+Document Class: Normative
+
 Author: SvitloSk Project
 
 ---
@@ -36,7 +38,7 @@ This specification defines:
 
 # 3. Principles
 
-Logging shall be:
+Logging SHALL be:
 
 - consistent;
 - machine-readable;
@@ -45,7 +47,7 @@ Logging shall be:
 - searchable;
 - secure.
 
-Logs shall never alter application behavior.
+Logs SHALL never alter application behavior.
 
 ---
 
@@ -64,7 +66,7 @@ Logging supports:
 
 # 5. Log Levels
 
-The following levels shall be used.
+The following levels SHALL be used.
 
 | Level | Purpose |
 |--------|---------|
@@ -78,7 +80,7 @@ The following levels shall be used.
 
 # 6. Log Structure
 
-Every log record shall contain:
+Every log record SHALL contain:
 
 - Timestamp (UTC)
 - Log level
@@ -98,7 +100,7 @@ Example:
 
 # 7. Service Identification
 
-Every service shall identify itself.
+Every service SHALL identify itself.
 
 Examples:
 
@@ -132,22 +134,22 @@ Typical categories include:
 
 # 9. Error Logging
 
-Every unexpected error shall be logged.
+Every unexpected error SHALL be logged.
 
-Each error record should include:
+Each error record SHOULD include:
 
 - error description;
 - affected service;
 - operation;
 - stack trace (development mode only).
 
-Sensitive information shall never be logged.
+Sensitive information SHALL never be logged.
 
 ---
 
 # 10. Log Storage
 
-Logs shall be stored outside the application source code.
+Logs SHALL be stored outside the application source code.
 
 Recommended directory:
 
@@ -165,13 +167,13 @@ Default retention period:
 
 90 days.
 
-Archived logs may be compressed.
+Archived logs MAY be compressed.
 
 ---
 
 # 12. Privacy
 
-Logs shall never contain:
+Logs SHALL never contain:
 
 - passwords;
 - access tokens;
@@ -182,7 +184,7 @@ Logs shall never contain:
 
 # 13. Audit Events
 
-The following events shall always be logged:
+The following events SHALL always be logged:
 
 - service startup;
 - service shutdown;
@@ -197,7 +199,7 @@ The following events shall always be logged:
 
 # 14. Performance
 
-Logging shall not significantly reduce application performance.
+Logging SHALL not significantly reduce application performance.
 
 Asynchronous logging is recommended.
 
@@ -214,3 +216,17 @@ Possible future additions:
 - log dashboards.
 
 These extensions require separate specifications.
+
+---
+
+# References
+
+## Depends on
+
+- GLOSSARY.md — canonical terminology
+- ARCHITECTURE.md — system architecture
+- EDITORIAL_STANDARDS.md — editorial requirements
+
+## Referenced by
+
+- All services

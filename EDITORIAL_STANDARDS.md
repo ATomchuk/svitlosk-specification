@@ -78,6 +78,10 @@ Changing established terminology requires an approved Architecture Decision Reco
 
 Terminology SHALL remain consistent across all documents.
 
+Architectural component names and glossary terms SHALL be treated as independent concepts when an approved ADR explicitly defines their relationship.
+
+A glossary term SHALL NOT replace the name of an architectural component unless such a change has been approved through an ADR.
+
 ---
 
 # 5. Normative Language
@@ -111,6 +115,10 @@ Every normative document SHALL contain the following sections where applicable:
 - References
 
 Documents SHOULD follow a consistent logical structure.
+
+Metadata fields SHALL identify the purpose of the document rather than glossary terminology.
+
+Where a metadata field identifies an architectural component, its value SHALL correspond to the approved system architecture.
 
 ---
 
@@ -191,6 +199,18 @@ Additional metadata fields SHALL NOT be introduced without repository-wide appro
 
 Metadata formatting SHALL remain consistent across the repository.
 
+Metadata field semantics SHALL remain consistent across the repository.
+
+The field:
+
+```text
+Component:
+```
+
+SHALL identify the architectural component defined by the system architecture.
+
+It SHALL NOT be interpreted as a glossary term unless explicitly defined as such by an approved ADR.
+
 ---
 
 # 12. Repository Documentation Principles
@@ -232,12 +252,27 @@ Repository-wide inconsistencies SHOULD be resolved before introducing new docume
 
 ---
 
+# 15. Architecture Decision Records (ADR)
+
+Architecture Decision Records (ADR) document repository-wide architectural decisions.
+
+An approved ADR SHALL become normative for all future documentation.
+
+When an ADR defines the relationship between architectural concepts and glossary terminology, all repository documents SHALL follow that decision.
+
+Editorial standards SHALL be interpreted consistently with approved ADRs.
+
+Repository-wide architectural changes SHALL be introduced through ADRs before they are reflected in normative documentation.
+
+---
+
 # References
 
 ## Depends on
 
 - CHARTER.md
 - PROJECT_PRINCIPLES.md
+- ADR-001-Component-vs-Role.md
 
 ## Referenced by
 

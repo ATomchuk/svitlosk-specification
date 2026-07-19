@@ -6,6 +6,8 @@ Specification ID: SSP-006
 
 Component: Schedule Generator
 
+Document Class: Normative
+
 Author: SvitloSk Project
 
 ---
@@ -34,14 +36,14 @@ The schedule generator is responsible for:
 
 # 3. Design Principles
 
-The generator shall be:
+The generator SHALL be:
 
 - deterministic;
 - predictable;
 - reproducible;
 - independent from presentation.
 
-The same input shall always produce the same output.
+The same input SHALL always produce the same output.
 
 ---
 
@@ -49,7 +51,7 @@ The same input shall always produce the same output.
 
 Input consists only of normalized data.
 
-The generator shall not process raw source files.
+The generator SHALL not process raw source files.
 
 Required input includes:
 
@@ -80,15 +82,15 @@ Each object contains:
 
 # 6. Schedule Rules
 
-Every schedule shall represent one calendar day.
+Every schedule SHALL represent one calendar day.
 
 Time range:
 
 00:00–24:00
 
-Intervals shall never overlap.
+Intervals SHALL never overlap.
 
-Intervals shall always be ordered chronologically.
+Intervals SHALL always be ordered chronologically.
 
 ---
 
@@ -111,7 +113,7 @@ No additional states are permitted.
 
 # 8. Validation
 
-Before publication every schedule shall be validated.
+Before publication every schedule SHALL be validated.
 
 Validation includes:
 
@@ -121,13 +123,13 @@ Validation includes:
 - complete daily coverage;
 - valid queue identifiers.
 
-Invalid schedules shall not be published.
+Invalid schedules SHALL not be published.
 
 ---
 
 # 9. Change Detection
 
-The generator shall compare the newly generated schedule with the previous version.
+The generator SHALL compare the newly generated schedule with the previous version.
 
 Detected changes include:
 
@@ -153,9 +155,9 @@ Generated schedules are consumed by:
 
 # 11. Error Handling
 
-Generation errors shall produce structured log records.
+Generation errors SHALL produce structured log records.
 
-Errors shall never generate incomplete schedules.
+Errors SHALL never generate incomplete schedules.
 
 ---
 
@@ -163,7 +165,7 @@ Errors shall never generate incomplete schedules.
 
 The generator should complete processing within a few seconds after normalized data becomes available.
 
-The generator shall support repeated execution without side effects.
+The generator SHALL support repeated execution without side effects.
 
 ---
 
@@ -176,10 +178,32 @@ Possible future enhancements:
 - manual correction layer;
 - predictive schedule generation.
 
-These extensions shall remain compatible with this specification.
+These extensions SHALL remain compatible with this specification.
 
 ---
 
 # 14. Compliance
 
-Every SvitloSk component that consumes outage schedules shall use the schedule objects defined by this specification.
+Every SvitloSk component that consumes outage schedules SHALL use the schedule objects defined by this specification.
+
+---
+
+# References
+
+## Depends on
+
+- GLOSSARY.md
+- ARCHITECTURE.md
+- EDITORIAL_STANDARDS.md
+- SSP-002 (Parser)
+- SSP-005 (Data Storage)
+
+## Referenced by
+
+- SSP-003 (Publication Engine)
+- SSP-007 (Graphic Generator)
+- SSP-008 (Internal API)
+
+---
+
+End of Specification.

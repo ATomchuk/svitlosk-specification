@@ -6,6 +6,8 @@ Specification ID: SSP-008
 
 Component: Internal API
 
+Document Class: Normative
+
 Author: SvitloSk Project
 
 ---
@@ -42,7 +44,7 @@ This specification covers:
 
 # 3. Principles
 
-The API shall be:
+The API SHALL be:
 
 - deterministic;
 - stateless;
@@ -82,7 +84,7 @@ Telegram Channel
 
 # 5. Request Format
 
-JSON shall be the default format.
+JSON SHALL be the default format.
 
 UTF-8 encoding is mandatory.
 
@@ -113,7 +115,7 @@ Successful response
 
 # 7. Errors
 
-Standard HTTP status codes shall be used.
+Standard HTTP status codes SHALL be used.
 
 Examples
 
@@ -133,7 +135,7 @@ Examples
 
 # 8. Versioning
 
-API versions shall follow semantic versioning.
+API versions SHALL follow semantic versioning.
 
 Example
 
@@ -147,7 +149,7 @@ Future versions
 
 # 9. Authentication
 
-Internal services shall authenticate before exchanging data.
+Internal services SHALL authenticate before exchanging data.
 
 Authentication method is implementation-specific.
 
@@ -155,9 +157,9 @@ Authentication method is implementation-specific.
 
 # 10. Logging
 
-Every API request shall be logged.
+Every API request SHALL be logged.
 
-Logs shall include:
+Logs SHALL include:
 
 - timestamp
 
@@ -173,15 +175,15 @@ Logs shall include:
 
 # 11. Reliability
 
-Services shall retry transient failures.
+Services SHALL retry transient failures.
 
-Retry strategy shall use exponential backoff.
+Retry strategy SHALL use exponential backoff.
 
 ---
 
 # 12. Security
 
-The API shall:
+The API SHALL:
 
 - validate every request;
 
@@ -208,3 +210,17 @@ Possible future additions:
 - Webhooks
 
 These additions require separate specifications.
+
+---
+
+# References
+
+## Depends on
+
+- GLOSSARY.md — canonical terminology
+- ARCHITECTURE.md — system architecture
+- EDITORIAL_STANDARDS.md — editorial requirements
+
+## Referenced by
+
+- All downstream services

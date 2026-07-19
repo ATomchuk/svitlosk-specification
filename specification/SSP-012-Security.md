@@ -6,6 +6,8 @@ Specification ID: SSP-012
 
 Component: Security
 
+Document Class: Normative
+
 Author: SvitloSk Project
 
 ---
@@ -203,6 +205,20 @@ Future versions may include:
 - audit trails;
 - hardware-backed secrets;
 - automated vulnerability scanning.
+
+---
+
+# References
+
+## Depends on
+
+- GLOSSARY.md — canonical terminology
+- ARCHITECTURE.md — system architecture
+- EDITORIAL_STANDARDS.md — editorial requirements
+
+## Referenced by
+
+- All services
 
 ---
 

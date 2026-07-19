@@ -6,6 +6,8 @@ Specification ID: SSP-004
 
 Component: Telegram Channel
 
+Document Class: Normative
+
 Author: SvitloSk Project
 
 ---
@@ -32,7 +34,7 @@ The channel publishes structured public information.
 
 # 3. Principles
 
-The Telegram channel shall operate according to the following principles:
+The Telegram channel SHALL operate according to the following principles:
 
 - Official information only.
 - Automation first.
@@ -91,9 +93,9 @@ The publication history reflects the final official state for that day.
 
 If official information for the following day becomes available:
 
-- a temporary publication shall be created;
-- the publication may be updated throughout the current day;
-- the publication shall be removed before it becomes obsolete.
+- a temporary publication SHALL be created;
+- the publication MAY be updated throughout the current day;
+- the publication SHALL be removed before it becomes obsolete.
 
 Tomorrow publications are informational only.
 
@@ -105,7 +107,7 @@ They are not part of the permanent archive.
 
 The outage chart is the flagship publication of SvitloSk.
 
-It shall:
+It SHALL:
 
 - present the official outage schedule visually;
 - be generated automatically;
@@ -113,13 +115,13 @@ It shall:
 - include the SvitloSk identity;
 - use the official project design system.
 
-The chart shall never be edited manually.
+The chart SHALL never be edited manually.
 
 ---
 
 # 8. Administrative Structure
 
-Publications shall follow the official administrative hierarchy.
+Publications SHALL follow the official administrative hierarchy.
 
 The order is:
 
@@ -127,7 +129,7 @@ The order is:
 - Starosta districts;
 - Settlements.
 
-Every Starosta district shall be visually distinguishable.
+Every Starosta district SHALL be visually distinguishable.
 
 ---
 
@@ -135,13 +137,13 @@ Every Starosta district shall be visually distinguishable.
 
 Every publication represents the official state at the time of generation.
 
-Historical publications shall preserve the final official state.
+Historical publications SHALL preserve the final official state.
 
 ---
 
 # 10. Editorial Policy
 
-The Publication Engine shall never:
+The Publication Engine SHALL never:
 
 - rewrite official information;
 - simplify addresses;
@@ -152,7 +154,7 @@ The Publication Engine shall never:
 
 # 11. Future Channels
 
-The Publication Engine may support additional channels in the future.
+The Publication Engine MAY support additional channels in the future.
 
 Telegram remains the reference implementation.
 
@@ -160,12 +162,22 @@ Telegram remains the reference implementation.
 
 # 12. References
 
+## Depends on
+
+- CHARTER.md
+- PROJECT_PRINCIPLES.md
+- GLOSSARY.md
+- ARCHITECTURE.md
+- DATA_MODEL.md
 - SSP-001 — Data Pipeline
 - SSP-002 — Parser
 - SSP-003 — Publication Engine
-- ARCHITECTURE.md
-- SYSTEM_OVERVIEW.md
+- ADR-001-Component-vs-Role.md
+
+## Referenced by
+
+- Telegram Journal Specification
 
 ---
 
-End of Specification.
+End of Specification

@@ -6,19 +6,21 @@ Specification ID: SSP-003
 
 Component: Publication Engine
 
+Document Class: Normative
+
 Author: SvitloSk Project
 
 ---
 
 # 1. Purpose
 
-This specification defines the normative requirements for the SvitloSk Publication Engine.
+This specification defines the normative requirements for the SvitloSk Publisher.
 
-The Publication Engine transforms the canonical Normalized Dataset into a deterministic Publication Package.
+The Publisher transforms the canonical Normalized Dataset into a deterministic Publication Package.
 
 Each Publication represents exactly one Territory and is rendered according to the Telegram Journal Specification.
 
-The Publication Engine SHALL NOT modify operational data produced by the Parser.
+The Publisher SHALL NOT modify operational data produced by the Parser.
 
 ---
 
@@ -38,7 +40,7 @@ This specification applies to:
 
 # 3. Design Principles
 
-The Publication Engine SHALL operate according to the following principles:
+The Publisher SHALL operate according to the following principles:
 
 - determinism;
 - reproducibility;
@@ -53,7 +55,7 @@ The same Normalized Dataset SHALL always produce the same Publication Package.
 
 # 4. Responsibilities
 
-The Publication Engine SHALL:
+The Publisher SHALL:
 
 - consume the canonical Normalized Dataset;
 - group operational data by Territory;
@@ -64,7 +66,7 @@ The Publication Engine SHALL:
 - update existing Publications;
 - generate publication metadata.
 
-The Publication Engine SHALL NOT:
+The Publisher SHALL NOT:
 
 - retrieve Official Open Data;
 - modify operational data;
@@ -111,7 +113,7 @@ Each Publication SHALL:
 - preserve source accuracy;
 - remain deterministic.
 
-The Publication Engine SHALL NOT merge multiple Territories into one Publication.
+The Publisher SHALL NOT merge multiple Territories into one Publication.
 
 ---
 
@@ -143,7 +145,7 @@ Temporary Tomorrow Publications SHALL always appear after current-day Publicatio
 
 # 10. Publication Content
 
-The Publication Engine defines WHAT information is published.
+The Publisher defines WHAT information is published.
 
 The Telegram Journal Specification defines HOW the information is presented.
 
@@ -155,7 +157,7 @@ Publication formatting SHALL NOT be defined by this specification.
 
 Every Publication SHALL be rendered using a Canonical Template defined by the Telegram Journal Specification.
 
-The Publication Engine SHALL select the appropriate template based on:
+The Publisher SHALL select the appropriate template based on:
 
 - Territory;
 - publication purpose;
@@ -221,7 +223,7 @@ Partial publication SHALL NOT corrupt an existing Publication Package.
 
 # 16. Artificial Intelligence
 
-The Publication Engine MAY use AI-assisted techniques as implementation details.
+The Publisher MAY use AI-assisted techniques as implementation details.
 
 AI MAY assist with:
 
@@ -243,7 +245,7 @@ All generated Publications SHALL remain fully deterministic.
 
 # 17. Multi-Channel Publishing
 
-The Publication Engine SHALL remain independent of any specific publication platform.
+The Publisher SHALL remain independent of any specific publication platform.
 
 Telegram Journal is the current primary publication channel.
 
@@ -260,7 +262,7 @@ Publication generation SHALL remain channel-independent.
 
 # 18. Non-Goals
 
-The Publication Engine SHALL NOT:
+The Publisher SHALL NOT:
 
 - collect Official Open Data;
 - normalize datasets;
@@ -274,7 +276,7 @@ These responsibilities belong to other system components.
 
 # 19. Repository Rule
 
-Normative documents SHALL reference the Publication Engine as the only component responsible for generating Publications from the Normalized Dataset.
+Normative documents SHALL reference the Publisher as the only component responsible for generating Publications from the Normalized Dataset.
 
 Editorial presentation SHALL be defined exclusively by the Telegram Journal Specification.
 
@@ -291,6 +293,7 @@ Editorial presentation SHALL be defined exclusively by the Telegram Journal Spec
 - DATA_MODEL.md
 - SSP-001 — Data Pipeline
 - SSP-002 — Parser
+- ADR-001-Component-vs-Role.md
 
 ## Referenced by
 

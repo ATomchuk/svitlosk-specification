@@ -6,6 +6,8 @@ Specification ID: SSP-013
 
 Component: Deployment
 
+Document Class: Normative
+
 Author: SvitloSk Project
 
 ---
@@ -37,7 +39,7 @@ This specification applies to:
 
 # 3. Deployment Principles
 
-Deployment shall be:
+Deployment SHALL be:
 
 - reproducible;
 - automated;
@@ -46,7 +48,7 @@ Deployment shall be:
 - version controlled;
 - fully documented.
 
-Manual deployment steps should be minimized.
+Manual deployment steps SHOULD be minimized.
 
 ---
 
@@ -60,13 +62,13 @@ The system supports the following environments.
 | Testing | Verification and validation |
 | Production | Public operation |
 
-Each environment shall have its own configuration.
+Each environment SHALL have its own configuration.
 
 ---
 
 # 5. Deployment Package
 
-Every deployment package shall contain:
+Every deployment package SHALL contain:
 
 - application source code;
 - configuration templates;
@@ -74,13 +76,13 @@ Every deployment package shall contain:
 - dependency definitions;
 - deployment instructions.
 
-No generated runtime data shall be included.
+No generated runtime data SHALL be included.
 
 ---
 
 # 6. Dependency Management
 
-All dependencies shall be explicitly declared.
+All dependencies SHALL be explicitly declared.
 
 Examples include:
 
@@ -89,50 +91,50 @@ Examples include:
 - system requirements;
 - external services.
 
-Dependency versions shall be controlled.
+Dependency versions SHALL be controlled.
 
 ---
 
 # 7. Release Process
 
-Each release shall include:
+Each release SHALL include:
 
 - version identifier;
 - release notes;
 - compatibility information;
 - deployment instructions.
 
-Releases shall be reproducible from the repository.
+Releases SHALL be reproducible from the repository.
 
 ---
 
 # 8. Configuration
 
-Deployment shall not require source code modification.
+Deployment SHALL NOT require source code modification.
 
-Configuration shall follow SSP-009.
+Configuration SHALL follow SSP-009.
 
-Environment-specific values shall be externalized.
+Environment-specific values SHALL be externalized.
 
 ---
 
 # 9. Rollback
 
-The deployment process shall support rollback.
+The deployment process SHALL support rollback.
 
-Rollback shall restore:
+Rollback SHALL restore:
 
 - previous application version;
 - previous configuration;
 - service availability.
 
-Rollback procedures shall be documented.
+Rollback procedures SHALL be documented.
 
 ---
 
 # 10. Validation
 
-Deployment shall be verified before entering production.
+Deployment SHALL be verified before entering production.
 
 Validation includes:
 
@@ -146,7 +148,7 @@ Validation includes:
 
 # 11. Service Startup
 
-Services shall start in a predictable order.
+Services SHALL start in a predictable order.
 
 Recommended sequence:
 
@@ -170,15 +172,15 @@ Future versions may support:
 - automated deployment;
 - release automation.
 
-Automation shall not change deployment behavior.
+Automation SHALL NOT change deployment behavior.
 
 ---
 
 # 13. Disaster Recovery
 
-Deployment documentation shall support complete system restoration.
+Deployment documentation SHALL support complete system restoration.
 
-Recovery shall include:
+Recovery SHALL include:
 
 - application;
 - configuration;
@@ -190,7 +192,7 @@ Recovery shall include:
 
 # 14. Documentation
 
-Every deployment shall be accompanied by:
+Every deployment SHALL be accompanied by:
 
 - installation guide;
 - update guide;
@@ -210,6 +212,21 @@ Possible future enhancements:
 - zero-downtime deployment.
 
 These extensions require separate specifications.
+
+---
+
+# References
+
+## Depends on
+
+- GLOSSARY.md — canonical terminology
+- ARCHITECTURE.md — system architecture
+- EDITORIAL_STANDARDS.md — editorial requirements
+- SSP-009 (Configuration) — configuration model
+
+## Referenced by
+
+- All services
 
 ---
 

@@ -6,6 +6,8 @@ Specification ID: SSP-009
 
 Component: Configuration
 
+Document Class: Normative
+
 Author: SvitloSk Project
 
 ---
@@ -35,7 +37,7 @@ This specification defines:
 
 # 3. Principles
 
-Configuration shall be:
+Configuration SHALL be:
 
 - centralized;
 - deterministic;
@@ -44,7 +46,7 @@ Configuration shall be:
 - reproducible;
 - environment-independent.
 
-No configuration shall be hardcoded.
+No configuration SHALL be hardcoded.
 
 ---
 
@@ -81,13 +83,13 @@ Examples:
 
 Temporary values generated during execution.
 
-Runtime configuration shall never modify permanent configuration.
+Runtime configuration SHALL never modify permanent configuration.
 
 ---
 
 # 5. Configuration Sources
 
-Configuration may originate from:
+Configuration MAY originate from:
 
 - YAML files
 - JSON files
@@ -121,7 +123,7 @@ config/
 
 # 7. Environment Variables
 
-Environment variables shall use the prefix:
+Environment variables SHALL use the prefix:
 
 ```
 SVITLOSK_
@@ -143,7 +145,7 @@ SVITLOSK_DATA_PATH
 
 # 8. Secrets
 
-Secrets shall never be stored inside the repository.
+Secrets SHALL never be stored inside the repository.
 
 Examples:
 
@@ -151,15 +153,15 @@ Examples:
 - API Keys
 - SMTP Passwords
 
-Secrets shall be provided externally.
+Secrets SHALL be provided externally.
 
 ---
 
 # 9. Validation
 
-Configuration shall be validated before startup.
+Configuration SHALL be validated before startup.
 
-Startup shall fail if:
+Startup SHALL fail if:
 
 - required fields are missing;
 - invalid values are detected;
@@ -169,7 +171,7 @@ Startup shall fail if:
 
 # 10. Default Values
 
-Every optional parameter shall have a documented default value.
+Every optional parameter SHALL have a documented default value.
 
 Hidden defaults are prohibited.
 
@@ -177,7 +179,7 @@ Hidden defaults are prohibited.
 
 # 11. Configuration Changes
 
-Configuration changes shall:
+Configuration changes SHALL:
 
 - be documented;
 - be traceable;
@@ -188,7 +190,7 @@ Configuration changes shall:
 
 # 12. Backup
 
-Configuration shall be backed up together with the system.
+Configuration SHALL be backed up together with the system.
 
 Secrets are backed up separately.
 
@@ -205,3 +207,17 @@ Possible future additions:
 - Municipality-specific configuration
 
 These extensions require separate specifications.
+
+---
+
+# References
+
+## Depends on
+
+- GLOSSARY.md — canonical terminology
+- ARCHITECTURE.md — system architecture
+- EDITORIAL_STANDARDS.md — editorial requirements
+
+## Referenced by
+
+- All services

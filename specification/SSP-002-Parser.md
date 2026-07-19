@@ -6,6 +6,8 @@ Specification ID: SSP-002
 
 Component: Parser
 
+Document Class: Normative
+
 Author: SvitloSk Project
 
 ---

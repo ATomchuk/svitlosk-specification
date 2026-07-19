@@ -6,6 +6,8 @@ Specification ID: SSP-005
 
 Component: Data Storage
 
+Document Class: Normative
+
 Author: SvitloSk Project
 
 ---
@@ -37,7 +39,7 @@ It defines:
 
 # 3. Design Principles
 
-The storage subsystem shall be:
+The storage subsystem SHALL be:
 
 - deterministic;
 - lightweight;
@@ -45,7 +47,7 @@ The storage subsystem shall be:
 - recoverable;
 - platform independent.
 
-Data shall never depend on proprietary software.
+Data SHALL never depend on proprietary software.
 
 ---
 
@@ -123,7 +125,7 @@ Preferred formats:
 | Vector graphics | SVG |
 | Documents | Markdown |
 
-No binary proprietary document formats shall be used internally.
+No binary proprietary document formats SHALL be used internally.
 
 ---
 
@@ -149,13 +151,13 @@ cache/
 logs/
 ```
 
-Directory names shall remain stable.
+Directory names SHALL remain stable.
 
 ---
 
 # 7. Data Integrity
 
-Every stored object should contain:
+Every stored object SHOULD contain:
 
 - generation timestamp;
 - source identifier;
@@ -166,7 +168,7 @@ Every stored object should contain:
 
 # 8. Historical Archive
 
-Historical records shall never be overwritten.
+Historical records SHALL never be overwritten.
 
 Every publication remains reproducible.
 
@@ -186,7 +188,7 @@ Rules:
 - automatically regenerated;
 - never treated as source data.
 
-Deleting cache shall never affect correctness.
+Deleting cache SHALL never affect correctness.
 
 ---
 
@@ -203,19 +205,19 @@ Recommended:
 
 # 11. Recovery
 
-The system shall support recovery from:
+The system SHALL support recovery from:
 
 - raw source files;
 - normalized data;
 - archived publications.
 
-No manual reconstruction should be required.
+No manual reconstruction SHOULD be required.
 
 ---
 
 # 12. Security
 
-Stored data shall be:
+Stored data SHALL be:
 
 - read-only where possible;
 - protected from accidental modification;
@@ -232,10 +234,27 @@ Possible future additions:
 - object storage;
 - distributed archive.
 
-These extensions shall not change the logical storage model.
+These extensions SHALL not change the logical storage model.
 
 ---
 
 # 14. Compliance
 
-Every SvitloSk component that stores persistent information shall comply with this specification.
+Every SvitloSk component that stores persistent information SHALL comply with this specification.
+
+---
+
+# 15. References
+
+## Depends on
+
+- CHARTER.md
+- PROJECT_PRINCIPLES.md
+- GLOSSARY.md
+- ARCHITECTURE.md
+- DATA_MODEL.md
+- SSP-001 — Data Pipeline
+
+## Referenced by
+
+- SSP-003 — Publication Engine

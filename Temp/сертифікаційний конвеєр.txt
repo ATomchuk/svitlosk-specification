@@ -1,0 +1,274 @@
+сертифікаційний конвеєр
+
+
+TASK: Fully Automated Certification Pipeline — SSP-005
+
+OBJECTIVE
+
+Execute the complete Repository Certification Pipeline for SSP-005.
+
+From this point forward the Repository Certification Pipeline SHALL be treated as stable.
+
+The Pipeline SHALL be executed exactly as defined.
+
+Pipeline Version:
+
+v1.1
+
+No Pipeline redesign SHALL occur during SSP certification.
+
+Pipeline improvements SHALL NOT be introduced unless a systemic Pipeline defect is detected.
+
+==================================================
+CERTIFICATION TARGET
+==================================================
+
+Target Specification
+
+SSP-005
+
+Pipeline Version
+
+v1.1
+
+==================================================
+PHASE 1
+CERTIFICATION REVIEW
+==================================================
+
+Perform the complete Certification Review according to
+
+SSP_REVIEW_PROTOCOL.md
+
+Execute every required methodology document.
+
+Generate
+
+01_SSP-005_REVIEW.md
+
+02_SSP-005_FINDINGS.md
+
+03_SSP-005_VALIDATION.md
+
+==================================================
+PHASE 2
+META REVIEW
+==================================================
+
+Execute Meta Review according to
+
+META_REVIEW_PROTOCOL.md
+
+META_REVIEW_CHECKLIST.md
+
+META_REVIEW_OUTPUT_TEMPLATE.md
+
+Verify
+
+• Certification Review correctness
+
+• Methodology compliance
+
+• Workflow compliance
+
+• SSOT compliance
+
+• RFC 2119 compliance
+
+• Review consistency
+
+Generate
+
+04_SSP-005_META_REVIEW.md
+
+05_SSP-005_META_FINDINGS.md
+
+==================================================
+DECISION
+==================================================
+
+If Meta Review
+
+FAIL
+
+STOP.
+
+Do NOT modify SSP-005.
+
+Generate
+
+Pipeline Stop Report.
+
+Otherwise
+
+continue automatically.
+
+==================================================
+PHASE 3
+AUTOMATIC CORRECTION
+==================================================
+
+Correct every SAFE finding.
+
+A correction SHALL be SAFE only if fully determined by
+
+• CHARTER.md
+
+• PROJECT_PRINCIPLES.md
+
+• GLOSSARY.md
+
+• ARCHITECTURE.md
+
+• ADR
+
+• RFC 2119
+
+• DOCUMENT_INDEX.md
+
+Automatic correction SHALL NOT replace one canonical project concept with another canonical project concept unless explicitly required by
+
+• GLOSSARY.md
+
+• ARCHITECTURE.md
+
+• ADR
+
+Every correction SHALL record
+
+• Reason
+
+• Source document
+
+• Normative clause
+
+Generate
+
+06_SSP-005_CORRECTION_LOG.md
+
+==================================================
+PHASE 4
+REVALIDATION
+==================================================
+
+Execute complete revalidation.
+
+Verify
+
+• every Major finding resolved
+
+• every Critical finding resolved
+
+• corrected findings absent
+
+• unchanged sections unchanged
+
+• no semantic substitutions introduced
+
+• no new findings introduced
+
+Generate
+
+07_SSP-005_REVALIDATION.md
+
+==================================================
+PHASE 5
+FINAL CERTIFICATION
+==================================================
+
+Generate
+
+08_SSP-005_FINAL_REPORT.md
+
+09_SSP-005_CONSISTENCY_CHECK.md
+
+10_SSP-005_CERTIFICATION_STATUS.md
+
+The Certification Status SHALL contain
+
+Pipeline Version
+
+v1.1
+
+==================================================
+PHASE 6
+LESSONS LEARNED
+==================================================
+
+Generate
+
+11_SSP-005_LESSONS_LEARNED.md
+
+Record
+
+• specification lessons
+
+• certification lessons
+
+• observations
+
+Pipeline Improvements SHALL NOT be proposed unless the issue is systemic.
+
+Specification-specific observations SHALL remain inside Lessons Learned.
+
+==================================================
+PIPELINE DISCIPLINE
+==================================================
+
+During this task
+
+CLI SHALL NOT
+
+• redesign Repository Governance
+
+• redesign Methodology
+
+• redesign Meta Review
+
+• redesign Pipeline
+
+• change Pipeline Version
+
+• modify any SSP except SSP-005
+
+• modify Repository documents
+
+• modify Governance documents
+
+• modify Methodology documents
+
+unless a Critical systemic Pipeline defect is discovered.
+
+==================================================
+FINAL SUMMARY
+==================================================
+
+Report
+
+• Initial Findings
+
+• Meta Review Result
+
+• Safe Corrections Applied
+
+• Unsafe Corrections Rejected
+
+• Remaining Findings
+
+• Certification Verdict
+
+• Pipeline Version
+
+• Repository Impact
+
+• Lessons Learned
+
+Recommendation
+
+READY FOR SSP-006
+
+or
+
+PIPELINE IMPROVEMENT REQUIRED
+
+END OF TASK.

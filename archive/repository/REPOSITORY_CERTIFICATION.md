@@ -164,6 +164,8 @@ Both documents complement one another.
 - EDITORIAL_STANDARDS.md
 - PROJECT_PRINCIPLES.md
 - ARCHITECTURE.md
+- GLOSSARY.md
+- ADR-001-Component-vs-Role.md
 
 ## Referenced by
 

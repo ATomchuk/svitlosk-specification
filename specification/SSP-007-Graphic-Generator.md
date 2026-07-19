@@ -6,6 +6,8 @@ Specification ID: SSP-007
 
 Component: Graphic Generator
 
+Document Class: Normative
+
 Author: SvitloSk Project
 
 ---
@@ -31,13 +33,13 @@ The Graphic Generator produces:
 - Public statistics;
 - Visual reports.
 
-Every graphic shall be generated automatically.
+Every graphic SHALL be generated automatically.
 
 ---
 
 # 3. Design Principles
 
-Graphics shall be:
+Graphics SHALL be:
 
 - clear;
 - minimalistic;
@@ -46,13 +48,13 @@ Graphics shall be:
 - deterministic;
 - brand consistent.
 
-The same input shall always produce identical output.
+The same input SHALL always produce identical output.
 
 ---
 
 # 4. Branding
 
-Every generated graphic shall contain official SvitloSk branding.
+Every generated graphic SHALL contain official SvitloSk branding.
 
 Mandatory elements:
 
@@ -83,7 +85,7 @@ Inter
 
 # 5. Supported Formats
 
-The generator shall support:
+The generator SHALL support:
 
 PNG
 
@@ -153,13 +155,13 @@ Powered
 
 Outage
 
-Intervals shall always be proportional to time.
+Intervals SHALL always be proportional to time.
 
 ---
 
 # 8. Visual Rules
 
-Colors shall always represent state.
+Colors SHALL always represent state.
 
 Powered
 
@@ -169,13 +171,13 @@ Outage
 
 Dark Gray
 
-No additional semantic colors shall be introduced.
+No additional semantic colors SHALL NOT be introduced.
 
 ---
 
 # 9. Layout
 
-Graphics shall be optimized for:
+Graphics SHALL be optimized for:
 
 Telegram
 
@@ -189,15 +191,15 @@ Printing (future)
 
 # 10. Automation
 
-Graphics shall be generated without manual editing.
+Graphics SHALL be generated without manual editing.
 
-Generation shall be triggered automatically after successful schedule generation.
+Generation SHALL be triggered automatically after successful schedule generation.
 
 ---
 
 # 11. Validation
 
-Before publication every generated graphic shall be validated.
+Before publication every generated graphic SHALL be validated.
 
 Validation includes:
 
@@ -208,13 +210,13 @@ Validation includes:
 - subqueue count;
 - image dimensions.
 
-Invalid graphics shall never be published.
+Invalid graphics SHALL never be published.
 
 ---
 
 # 12. Accessibility
 
-Graphics shall remain readable on:
+Graphics SHALL remain readable on:
 
 light displays;
 
@@ -226,7 +228,7 @@ small mobile screens.
 
 # 13. Future Extensions
 
-Future versions may include:
+Future versions MAY include:
 
 animated graphics;
 
@@ -236,10 +238,26 @@ multi-language graphics;
 
 regional themes.
 
-These extensions shall remain compatible with this specification.
+These extensions SHALL remain compatible with this specification.
 
 ---
 
 # 14. Compliance
 
-Every public graphic published by SvitloSk shall comply with this specification.
+Every public graphic published by SvitloSk SHALL comply with this specification.
+
+---
+
+# References
+
+## Depends on
+
+- GLOSSARY.md — canonical terminology
+- ARCHITECTURE.md — system architecture
+- EDITORIAL_STANDARDS.md — editorial requirements
+
+## Referenced by
+
+- SSP-008 (Internal API) — exposes graphic data
+- SSP-003 (Publication Engine) — consumes graphics
+- SSP-004 (Telegram Channel) — delivers graphics

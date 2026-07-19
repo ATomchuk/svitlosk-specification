@@ -6,6 +6,8 @@ Specification ID: SSP-011
 
 Component: Monitoring
 
+Document Class: Normative
+
 Author: SvitloSk Project
 
 ---
@@ -36,7 +38,7 @@ This specification defines:
 
 # 3. Principles
 
-Monitoring shall be:
+Monitoring SHALL be:
 
 - continuous;
 - automated;
@@ -45,13 +47,13 @@ Monitoring shall be:
 - measurable;
 - extensible.
 
-Monitoring shall never modify application behavior.
+Monitoring SHALL never modify application behavior.
 
 ---
 
 # 4. Monitoring Targets
 
-The following components shall be monitored:
+The following components SHALL be monitored:
 
 - Parser
 - Data Storage
@@ -65,7 +67,7 @@ The following components shall be monitored:
 
 # 5. Health Status
 
-Every service shall expose one of the following states.
+Every service SHALL expose one of the following states.
 
 | Status | Description |
 |---------|-------------|
@@ -77,7 +79,7 @@ Every service shall expose one of the following states.
 
 # 6. Health Checks
 
-Each service shall periodically verify:
+Each service SHALL periodically verify:
 
 - configuration validity;
 - storage availability;
@@ -89,7 +91,7 @@ Each service shall periodically verify:
 
 # 7. Scheduled Tasks Monitoring
 
-The monitoring system shall verify successful execution of:
+The monitoring system SHALL verify successful execution of:
 
 - data retrieval;
 - parsing;
@@ -98,13 +100,13 @@ The monitoring system shall verify successful execution of:
 - publication creation;
 - Telegram publication.
 
-Missed executions shall be recorded.
+Missed executions SHALL be recorded.
 
 ---
 
 # 8. Publication Monitoring
 
-The system shall monitor:
+The system SHALL monitor:
 
 - successful publication generation;
 - publication timestamp;
@@ -129,7 +131,7 @@ Recommended metrics include:
 
 # 10. Availability Metrics
 
-The system shall record:
+The system SHALL record:
 
 - service uptime;
 - restart count;
@@ -140,7 +142,7 @@ The system shall record:
 
 # 11. Alerts
 
-Alerts shall be generated when:
+Alerts SHALL be generated when:
 
 - service becomes unavailable;
 - scheduled task fails;
@@ -153,7 +155,7 @@ Alerts shall be generated when:
 
 # 12. Monitoring Dashboard
 
-A monitoring dashboard may display:
+A monitoring dashboard MAY display:
 
 - service status;
 - execution history;
@@ -168,7 +170,7 @@ Dashboard implementation is outside the scope of this specification.
 
 # 13. Historical Data
 
-Monitoring history shall be retained.
+Monitoring history SHALL be retained.
 
 Historical metrics support:
 
@@ -191,3 +193,17 @@ Possible future additions:
 - distributed monitoring.
 
 These extensions require separate specifications.
+
+---
+
+# References
+
+## Depends on
+
+- GLOSSARY.md — canonical terminology
+- ARCHITECTURE.md — system architecture
+- EDITORIAL_STANDARDS.md — editorial requirements
+
+## Referenced by
+
+- All services
