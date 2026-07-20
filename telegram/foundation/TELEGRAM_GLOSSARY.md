@@ -222,11 +222,13 @@ When writing a Telegram specification:
 
 ## Publication Engine
 
-**Ukrainian:** Публікаційний движок
+**Ukrainian:** Движок публікацій
 
 **Definition:** The architectural Component implementing the Publisher Role. The Publication Engine is responsible for generating and distributing Publications.
 
-**Referenced by:** TJS-001 §10, GLOSSARY.md
+**Referenced by:** TJS-001 §10, TJS-010 §4.1, TTDR-001
+
+**Category:** A — Architecture Terms
 
 ---
 
@@ -627,6 +629,18 @@ Platform concepts describe Telegram-specific technical concepts. They MAY appear
 **Ukrainian:** Обробка помилок
 
 **Definition:** The rules governing failure recovery. Publication lifecycle failures SHALL never corrupt existing Publications, never delete permanent Publications, and never modify administrator-created Publications.
+
+---
+
+## Powered
+
+**Ukrainian:** Без знеструмлення
+
+**Definition:** A state indicating that a territory is NOT currently experiencing an outage. In graphic publications, Powered is represented by the color Orange. The opposite of Powered is Outage (Dark Gray).
+
+**Referenced by:** TJS-022 §8.3, TTDR-001
+
+**Category:** C — Public Communication Terms
 
 ---
 
