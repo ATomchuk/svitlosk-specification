@@ -1,0 +1,75 @@
+# KF-002_Identity_Not_Equal_Identifier
+
+**Document ID:** KF-002
+
+**Title:** Identity ≠ Identifier
+
+**Document Class:** Knowledge Finding
+
+**Status:** Validated
+
+---
+
+# Statement
+
+Identity is WHAT an object IS; Identifier is HOW it is referred to. They are fundamentally different concepts.
+
+---
+
+# Meaning
+
+Identity is the intrinsic property that makes an object the same over time. Identifier is an external label assigned to reference the object. An object can change its Identifier without changing its Identity. An object can exist without any Identifier.
+
+---
+
+# Evidence
+
+- CASE-001D: "Identity is WHAT an object IS; Identifier is HOW it is referred to"
+- CASE-001D: "Publication has identity but no explicit Identifier"
+- CASE-001C: "Identity is Territory + Date + Template"
+- CASE-001C: "Telegram Message ID is external reference, not identity"
+
+---
+
+# Supporting Investigations
+
+- CASE-001D (Identity vs Identifier)
+- CASE-001C (Identity Investigation)
+
+---
+
+# Contradicting Investigations
+
+None found.
+
+---
+
+# Confidence
+
+**HIGH** — 4 independent investigations reached same conclusion.
+
+---
+
+# Repository Impact
+
+**NOT PRESERVED** — Repository does not distinguish Identity from Identifier.
+
+---
+
+# Related Concepts
+
+- Identity
+- Identifier
+- Publication
+- Telegram Message ID
+- Territory + Date + Template
+
+---
+
+# Status
+
+**Validated** — confirmed by multiple independent investigations.
+
+---
+
+# End of Knowledge Finding

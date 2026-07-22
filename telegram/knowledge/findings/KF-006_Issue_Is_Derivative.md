@@ -1,0 +1,77 @@
+# KF-006_Issue_Is_Derivative
+
+**Document ID:** KF-006
+
+**Title:** Issue Is Derivative of Publication
+
+**Document Class:** Knowledge Finding
+
+**Status:** Validated
+
+---
+
+# Statement
+
+Issue depends on Publication for its existence. Issue cannot exist without Publication. Issue is triggered by Publication, not the other way around.
+
+---
+
+# Meaning
+
+Issue is not a fundamental concept. Issue exists only because Publications need to be grouped by calendar day. If Publications did not exist, Issue would have no purpose. Issue is a convenience abstraction, not a foundational entity.
+
+---
+
+# Evidence
+
+- CASE-002A: "Issue cannot exist without Publication"
+- CASE-002B: "Issue is triggered by Publication, not the other way around"
+- CASE-001: "Circular dependency between Publication and Issue"
+- CASE-001D: "Issue identity depends on Publication existence"
+
+---
+
+# Supporting Investigations
+
+- CASE-002A (Issue Hearing)
+- CASE-002B (Issue Object vs Process)
+- CASE-001 (Publication Investigation)
+- CASE-001D (Identity vs Identifier)
+
+---
+
+# Contradicting Investigations
+
+None found.
+
+---
+
+# Confidence
+
+**HIGH** — 4 independent investigations reached same conclusion.
+
+---
+
+# Repository Impact
+
+**PARTIALLY CANONICAL** — TJS-021 §8.1 states "Issue opens when first Publication generated" but does not explicitly state derivative relationship.
+
+---
+
+# Related Concepts
+
+- Issue
+- Publication
+- Circular Dependency
+- Derivative Concept
+- Convenience Abstraction
+
+---
+
+# Status
+
+**Validated** — confirmed by multiple independent investigations.
+
+---
+
+# End of Knowledge Finding

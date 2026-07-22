@@ -1,0 +1,78 @@
+# KF-001_Publication_Creates_Identity
+
+**Document ID:** KF-001
+
+**Title:** Publication Creates Its Own Identity
+
+**Document Class:** Knowledge Finding
+
+**Status:** Validated
+
+---
+
+# Statement
+
+Publication creates its own identity (Territory + Date + Template) and does NOT inherit identity from Information.
+
+---
+
+# Meaning
+
+Publication is not merely Information packaged for distribution. Publication creates a new identity that did not exist before. This identity is unique to Publication and cannot be found in Information, Representation, or Carrier.
+
+---
+
+# Evidence
+
+- CASE-001C: "Publication identity is Territory + Date + Template"
+- CASE-001D: "Publication creates its own identity, does not inherit"
+- CASE-COM-001: "Publication CREATES its own identity"
+- CASE-001B: "Publication has identity at birth"
+
+---
+
+# Supporting Investigations
+
+- CASE-001C (Identity Investigation)
+- CASE-001D (Identity vs Identifier)
+- CASE-COM-001 (Communication Ontology)
+- CASE-001B (Publication as Living Domain Object)
+
+---
+
+# Contradicting Investigations
+
+None found.
+
+---
+
+# Confidence
+
+**HIGH** — 4 independent investigations reached same conclusion.
+
+---
+
+# Repository Impact
+
+**PARTIALLY CANONICAL** — TJS-005, TJS-006 imply identity but do not explicitly define creation.
+
+---
+
+# Related Concepts
+
+- Identity
+- Identifier
+- Territory
+- Date
+- Template
+- Information
+
+---
+
+# Status
+
+**Validated** — confirmed by multiple independent investigations.
+
+---
+
+# End of Knowledge Finding

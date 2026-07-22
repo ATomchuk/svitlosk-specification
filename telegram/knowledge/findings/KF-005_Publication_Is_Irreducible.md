@@ -1,0 +1,76 @@
+# KF-005_Publication_Is_Irreducible
+
+**Document ID:** KF-005
+
+**Title:** Publication Is Irreducible
+
+**Document Class:** Knowledge Finding
+
+**Status:** Validated
+
+---
+
+# Statement
+
+Publication cannot be removed from the ontology without breaking the system. It is the ONLY concept that is mathematically irreducible.
+
+---
+
+# Meaning
+
+Publication is the central concept of the entire SvitloSk ontology. Removing Publication breaks the data flow, the lifecycle, the identity model, and the communication chain. No other concept can replace Publication. No other concept can absorb Publication's responsibilities.
+
+---
+
+# Evidence
+
+- CASE-001F: "Publication CANNOT be removed — system breaks"
+- CASE-001G: "Publication appears in ALL 5 reduction kernels"
+- A-6.7: "Publication is the CENTRAL layer in 12-layer chain"
+- CASE-COM-001: "Publication is essential for Communication"
+
+---
+
+# Supporting Investigations
+
+- CASE-001F (Existence Proof)
+- CASE-001G (Minimal Kernel)
+- A-6.7 (Semantic Layer Reconstruction)
+- CASE-COM-001 (Communication Ontology)
+
+---
+
+# Contradicting Investigations
+
+None found.
+
+---
+
+# Confidence
+
+**HIGH** — 4 independent investigations reached same conclusion.
+
+---
+
+# Repository Impact
+
+**NOT PRESERVED** — Repository does not explicitly state Publication is irreducible.
+
+---
+
+# Related Concepts
+
+- Publication
+- Minimal Kernel
+- Semantic Center
+- Ontological Chain
+
+---
+
+# Status
+
+**Validated** — confirmed by multiple independent investigations.
+
+---
+
+# End of Knowledge Finding

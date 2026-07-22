@@ -1,0 +1,77 @@
+# KF-008_Eight_Meta_Levels_Exist
+
+**Document ID:** KF-008
+
+**Title:** Eight Meta-Levels Exist
+
+**Document Class:** Knowledge Finding
+
+**Status:** Validated
+
+---
+
+# Statement
+
+The 20 "fundamental types" from META-001 belong to 8 different meta-levels, not to a single flat level.
+
+---
+
+# Meaning
+
+META-001 presented 20 types as "fundamental" at the same level. META-002 revealed that these types actually belong to 8 distinct meta-levels: Reality, Ontological, Epistemological, Semantic, Communicative, Structural, Social, and Temporal. This means the ontology is multi-layered, not flat.
+
+---
+
+# Evidence
+
+- META-001: "20 fundamental types identified"
+- META-002: "20 types belong to 8 different meta-levels"
+- META-002: "8 meta-levels: Reality, Ontological, Epistemological, Semantic, Communicative, Structural, Social, Temporal"
+
+---
+
+# Supporting Investigations
+
+- META-001 (Fundamental Ontological Types)
+- META-002 (Meta-Ontology Investigation)
+
+---
+
+# Contradicting Investigations
+
+None found.
+
+---
+
+# Confidence
+
+**HIGH** — 2 independent investigations reached same conclusion.
+
+---
+
+# Repository Impact
+
+**NOT PRESERVED** — Repository does not define meta-levels.
+
+---
+
+# Related Concepts
+
+- Meta-Levels
+- Ontological Level
+- Epistemological Level
+- Semantic Level
+- Communicative Level
+- Structural Level
+- Social Level
+- Temporal Level
+
+---
+
+# Status
+
+**Validated** — confirmed by multiple independent investigations.
+
+---
+
+# End of Knowledge Finding
